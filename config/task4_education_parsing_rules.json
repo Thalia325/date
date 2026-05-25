@@ -1,0 +1,258 @@
+{
+  "task": "task4_chemical_education_document_parsing_and_understanding",
+  "goal": "clean and audit datasets for chemistry and chemical-engineering education document structure parsing plus science education content understanding",
+  "target_outputs": [
+    "data/processed/task4_dataset_review.csv",
+    "data/processed/task4_page_layout_regions.jsonl",
+    "data/processed/task4_question_choice_answer_explanation.jsonl",
+    "data/processed/task4_self_collected_annotation_manifest.csv",
+    "future data/processed/task4_experiment_handout.jsonl"
+  ],
+  "target_region_labels": [
+    "page_title",
+    "section_title",
+    "paragraph",
+    "question_block",
+    "question_stem",
+    "choice_block",
+    "choice_item",
+    "figure",
+    "figure_caption",
+    "table",
+    "table_caption",
+    "formula",
+    "chemical_equation",
+    "experiment_purpose",
+    "experiment_principle",
+    "experiment_apparatus",
+    "experiment_reagents",
+    "experiment_steps",
+    "experiment_observation",
+    "experiment_conclusion",
+    "safety_note",
+    "answer_area",
+    "analysis_area"
+  ],
+  "chemistry_keep_signals": [
+    "chemistry subject metadata",
+    "chemical formula or equation",
+    "element, compound, ion, solution, gas, precipitate, oxidation, reduction, acid, base, salt",
+    "laboratory apparatus, reagent, procedure, observation, safety note",
+    "chemical engineering concept such as separation, distillation, reactor, process flow, material balance"
+  ],
+  "drop_criteria": [
+    "not related to chemistry, chemical engineering, science experiment, or science education",
+    "missing image/page/question text required by the dataset task",
+    "duplicate page or near-duplicate question after normalization",
+    "unreadable scan, severe occlusion, or broken image/PDF",
+    "annotation cannot be mapped to any target schema field",
+    "license or source does not allow research reuse"
+  ],
+  "datasets": {
+    "M6Doc": {
+      "root": "data/raw/M6Doc",
+      "role": "page_layout_structure_core",
+      "source_type": "document_pages",
+      "keep": [
+        "Chemistry pages",
+        "textbook pages",
+        "test paper pages",
+        "chemistry-related scientific article or handout-like pages if present",
+        "pages with usable region bounding boxes or layout labels"
+      ],
+      "cleaning_actions": [
+        "filter by subject equals Chemistry where metadata exists",
+        "filter document type to textbook and test paper as first priority",
+        "map native layout classes to target_region_labels",
+        "retain image path, page id, document type, subject, split, native labels, normalized labels, bbox or polygon",
+        "flag labels that are too coarse for question stem, option, answer, or experiment-step extraction"
+      ],
+      "limitations": [
+        "labels may be coarse and may not distinguish stem, choices, analysis, answer, experiment purpose, steps, and observations",
+        "mostly a layout dataset, not a fine-grained chemistry reasoning dataset"
+      ],
+      "first_pass_decision": "keep_as_core_layout_dataset"
+    },
+    "ScienceQA": {
+      "root": "data/raw/ScienceQA",
+      "role": "structured_science_question_understanding",
+      "source_type": "multimodal_questions",
+      "keep": [
+        "questions tagged or inferred as Chemistry",
+        "questions with choice list and answer index",
+        "records with image context, text context, lecture, or solution when available"
+      ],
+      "cleaning_actions": [
+        "normalize question text, choices, answer index, subject/topic/category, hint, lecture, solution, image path, split",
+        "convert each record to question_choice_answer_explanation_json",
+        "derive chemistry topic tags using metadata first and keyword fallback second",
+        "deduplicate by normalized question and choices"
+      ],
+      "limitations": [
+        "already structured and not suitable for OCR page-layout training",
+        "mostly English K-12 science and not a Chinese chemistry exam corpus"
+      ],
+      "first_pass_decision": "keep_as_core_question_understanding_dataset"
+    },
+    "TQA": {
+      "root": "data/raw/TQA",
+      "role": "textbook_context_multimodal_qa",
+      "source_type": "textbook_lessons_questions",
+      "keep": [
+        "chemistry-related lessons, diagrams, and questions",
+        "records where question can be linked to textbook text or image context",
+        "records with answer labels or machine-comprehension targets"
+      ],
+      "cleaning_actions": [
+        "keep lesson id, question id, context text, image references, question, answer, answer type, split",
+        "tag chemistry concepts from lesson title, topic metadata, and content keywords",
+        "build links between question, supporting paragraph, and supporting figure where available",
+        "drop orphan questions whose context files are missing"
+      ],
+      "limitations": [
+        "not a dedicated chemistry lab handout parsing dataset",
+        "needs topic filtering because it covers broader middle-school science"
+      ],
+      "first_pass_decision": "keep_as_auxiliary_textbook_qa_dataset"
+    },
+    "ChineseChemExam": {
+      "root": "data/raw/ChineseChemExam",
+      "role": "self_collected_chinese_exam_core",
+      "source_type": "self_collected_pages",
+      "keep": [
+        "Chinese middle-school, high-school, vocational, or college chemistry exam pages",
+        "pages with complete question blocks and visible options or answer areas",
+        "pages that can be annotated for question stem, choices, figure, formula, table, and answer area"
+      ],
+      "cleaning_actions": [
+        "remove pages with personal information or copyright-problematic redistribution risk",
+        "split PDF into page images and assign stable page ids",
+        "deduplicate by perceptual hash and normalized OCR text",
+        "annotate 500 to 2000 high-value pages with fine-grained education layout regions",
+        "reserve a Chinese-only test set from different sources and years"
+      ],
+      "limitations": [
+        "requires manual collection, licensing review, OCR quality control, and annotation",
+        "no public ground truth until the project creates it"
+      ],
+      "first_pass_decision": "create_as_primary_chinese_layout_and_exam_dataset"
+    },
+    "ChineseChemLabHandout": {
+      "root": "data/raw/ChineseChemLabHandout",
+      "role": "self_collected_lab_handout_core",
+      "source_type": "self_collected_pages",
+      "keep": [
+        "Chinese chemistry experiment handouts",
+        "experiment report templates",
+        "lab safety sheets and apparatus diagrams",
+        "pages containing purpose, principle, reagents, apparatus, steps, observations, conclusion, or precautions"
+      ],
+      "cleaning_actions": [
+        "split documents into page images and preserve source document id",
+        "deduplicate templates and repeated school handouts",
+        "annotate experiment purpose, principle, reagents, apparatus, steps, observation, conclusion, safety note, and answer areas",
+        "extract experiment names and map to curriculum concepts",
+        "separate instruction text from student-fillable answer/report regions"
+      ],
+      "limitations": [
+        "public datasets do not directly cover this fine-grained Chinese lab-handout structure",
+        "manual annotation is the core value of the task"
+      ],
+      "first_pass_decision": "create_as_primary_chinese_experiment_handout_dataset"
+    }
+  },
+  "schemas": {
+    "question_choice_answer_explanation_json": {
+      "question_id": "string",
+      "source_dataset": "string",
+      "language": "string",
+      "subject": "chemistry|chemical_engineering|science",
+      "topic_tags": [
+        "string"
+      ],
+      "question_stem": "string",
+      "choices": [
+        {
+          "label": "A",
+          "text": "string"
+        }
+      ],
+      "answer": {
+        "label": "A",
+        "text": "string"
+      },
+      "explanation": "string",
+      "context": {
+        "text": "string",
+        "image_paths": [
+          "string"
+        ]
+      },
+      "page_regions": [
+        {
+          "label": "question_block",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "split": "train|val|test"
+    },
+    "experiment_handout_json": {
+      "document_id": "string",
+      "page_id": "string",
+      "source_dataset": "ChineseChemLabHandout",
+      "language": "zh",
+      "experiment_name": "string",
+      "curriculum_tags": [
+        "string"
+      ],
+      "sections": [
+        {
+          "type": "experiment_steps",
+          "order": 1,
+          "text": "string",
+          "regions": [
+            {
+              "bbox": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "type": "apparatus_diagram",
+          "caption": "string",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "safety_notes": [
+        "string"
+      ],
+      "answer_regions": [
+        {
+          "prompt": "string",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schema_name": "task5_lightweight_chemical_process_graph",
+  "version": "0.1",
+  "graph_record": {
+    "diagram_id": "string",
+    "source_dataset": "string",
+    "image_path": "string",
+    "split": "train|val|test",
+    "nodes": [
+      {
+        "node_id": "string",
+        "type": [
+          "reactor",
+          "heater",
+          "cooler",
+          "filter",
+          "distillation",
+          "mixer",
+          "pump",
+          "valve",
+          "vessel",
+          "chemical_structure",
+          "text_label",
+          "generic_diagram_object"
+        ],
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "text": "optional string",
+        "attributes": {
+          "smiles": "optional string",
+          "equipment_tag": "optional string",
+          "confidence": "optional number"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "string",
+        "type": [
+          "material_flow",
+          "energy_flow",
+          "information_flow",
+          "reaction_arrow",
+          "generic_arrow",
+          "line_connection"
+        ],
+        "source_node_id": "string",
+        "target_node_id": "string",
+        "polyline": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "arrowhead": "none|source|target|both",
+        "parameters": [
+          {
+            "type": [
+              "temperature",
+              "pressure",
+              "flow_rate",
+              "time",
+              "concentration",
+              "pH",
+              "catalyst",
+              "solvent",
+              "reagent",
+              "yield",
+              "generic_condition"
+            ],
+            "text": "string",
+            "value": "optional string or number",
+            "unit": "optional string",
+            "bbox": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "text_blocks": [
+      {
+        "text_id": "string",
+        "text": "string",
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "linked_node_id": "optional string",
+        "linked_edge_id": "optional string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>任务 2 数据集筛选结果</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d2939;
+      --muted: #667085;
+      --line: #d0d5dd;
+      --panel: #f8fafc;
+      --accent: #0f766e;
+      --warn: #b54708;
+      --bad: #b42318;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.55;
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+    h1, h2 {
+      line-height: 1.2;
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      margin-top: 34px;
+      font-size: 22px;
+    }
+    p {
+      margin: 8px 0 14px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 820px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--panel);
+      font-weight: 650;
+    }
+    code {
+      background: var(--panel);
+      border: 1px solid #eaecf0;
+      border-radius: 4px;
+      padding: 1px 4px;
+      font-family: Consolas, monospace;
+      font-size: 0.94em;
+    }
+    .badge {
+      display: inline-block;
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 12px;
+      font-weight: 650;
+      color: #fff;
+    }
+    .keep { background: var(--accent); }
+    .aux { background: #175cd3; }
+    .hold { background: var(--warn); }
+    .missing { color: var(--bad); font-weight: 650; }
+    .box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    a { color: #175cd3; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>任务 2 数据集筛选结果</h1>
+  <p class="lead">目标是化学表达式 OCR，并将结果规范化为 <code>mhchem</code> 或 reaction JSON。本地审计显示原始数据尚未放入 <code>data/raw</code>，所以当前只能完成方案级筛选和自动清洗脚本准备。</p>
+
+  <h2>本地状态</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>数据集</th>
+        <th>任务角色</th>
+        <th>本地状态</th>
+        <th>判断</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PEaCE</td>
+        <td>表达式 OCR 主数据</td>
+        <td class="missing">缺失</td>
+        <td><span class="badge keep">核心保留</span> 有 <code>final_renders</code>、<code>labels.jsonl</code> 和 split 文件后可训练 OCR，并做 LaTeX 到 mhchem/JSON 的二次规范化。</td>
+      </tr>
+      <tr>
+        <td>DECIMER-Segmentation</td>
+        <td>结构图区域检测</td>
+        <td class="missing">缺失</td>
+        <td><span class="badge aux">辅助保留</span> 用来找结构图区域，不直接提供方程式 mhchem 标签。</td>
+      </tr>
+      <tr>
+        <td>MolScribe</td>
+        <td>结构图到 SMILES / graph</td>
+        <td class="missing">缺失</td>
+        <td><span class="badge aux">辅助保留</span> 用于分子结构图识别，可输出 SMILES、molfile、atom-bond JSON。</td>
+      </tr>
+      <tr>
+        <td>PatCID</td>
+        <td>专利域结构图数据</td>
+        <td class="missing">缺失</td>
+        <td><span class="badge hold">谨慎使用</span> 第一阶段只建议 benchmark；全量数据大且偏专利域，不应直接混进 PEaCE OCR 训练。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>清洗入口</h2>
+  <div class="box">
+    <p>本地审计：</p>
+    <p><code>python scripts\audit_task2_datasets.py</code></p>
+    <p>PEaCE 表达式 manifest：</p>
+    <p><code>python scripts\build_peace_expression_manifest.py</code></p>
+    <p>LaTeX 到 mhchem / reaction JSON 候选：</p>
+    <p><code>python scripts\build_task2_normalization_candidates.py</code></p>
+  </div>
+
+  <h2>输出文件</h2>
+  <ul>
+    <li><code>config/task2_chemical_expression_rules.json</code></li>
+    <li><code>scripts/audit_task2_datasets.py</code></li>
+    <li><code>scripts/build_peace_expression_manifest.py</code></li>
+    <li><code>scripts/build_task2_normalization_candidates.py</code></li>
+    <li><code>TASK2_DATASET_PREP.md</code></li>
+    <li><code>TASK2_NEXT_STEPS.md</code></li>
+    <li><code>data/reports/task2_local_audit.md</code></li>
+    <li><code>data/processed/peace_expression_manifest.csv</code></li>
+    <li><code>data/processed/peace_normalization_candidates.csv</code></li>
+    <li><code>data/processed/peace_reaction_json_candidates.jsonl</code></li>
+  </ul>
+
+  <h2>官方页面</h2>
+  <ul>
+    <li><a href="https://github.com/ZN1010/PEaCE">PEaCE GitHub</a></li>
+    <li><a href="https://github.com/Kohulan/DECIMER-Image-Segmentation">DECIMER-Segmentation GitHub</a></li>
+    <li><a href="https://github.com/thomas0809/MolScribe">MolScribe GitHub</a></li>
+    <li><a href="https://github.com/DS4SD/PatCID">PatCID GitHub</a></li>
+  </ul>
+</main>
+</body>
+</html>

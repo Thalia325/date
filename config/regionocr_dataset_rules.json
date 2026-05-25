@@ -1,0 +1,89 @@
+{
+  "target_labels": [
+    "title",
+    "paragraph",
+    "table",
+    "figure",
+    "figure_caption",
+    "table_caption",
+    "question",
+    "answer",
+    "chemical_structure",
+    "chemical_structure_single",
+    "chemical_structure_multiple",
+    "reaction_scheme",
+    "chemical_equation",
+    "experiment_step",
+    "non_chemical_image",
+    "markush_structure"
+  ],
+  "datasets": {
+    "M6Doc": {
+      "root": "data/raw/M6Doc",
+      "role": "main_layout_detection",
+      "keep_document_types": [
+        "textbook",
+        "test paper",
+        "scientific article"
+      ],
+      "keep_subjects": [
+        "Chemistry"
+      ],
+      "label_mapping": {
+        "title": "title",
+        "paragraph": "paragraph",
+        "text": "paragraph",
+        "figure": "figure",
+        "table": "table",
+        "caption": "figure_caption",
+        "figure_caption": "figure_caption",
+        "table_caption": "table_caption",
+        "question": "question",
+        "answer": "answer"
+      },
+      "first_pass_decision": "use_if_train_val_annotations_are_available"
+    },
+    "DECIMER-Segmentation": {
+      "root": "data/raw/DECIMER-Segmentation",
+      "role": "chemical_structure_detection",
+      "label_mapping": {
+        "chemical_structure": "chemical_structure",
+        "structure": "chemical_structure",
+        "molecule": "chemical_structure"
+      },
+      "first_pass_decision": "use_for_chemical_structure_class"
+    },
+    "Chemical Images Classifier Dataset": {
+      "root": "data/raw/ChemicalImagesClassifier",
+      "role": "crop_level_chemical_image_classification",
+      "required_class_dirs": [
+        "one_molecule",
+        "several_molecules",
+        "reactions",
+        "other"
+      ],
+      "label_mapping": {
+        "one_molecule": "chemical_structure_single",
+        "several_molecules": "chemical_structure_multiple",
+        "reactions": "reaction_scheme",
+        "other": "non_chemical_image"
+      },
+      "first_pass_decision": "use_as_second_stage_classifier"
+    },
+    "PatCID": {
+      "root": "data/raw/PatCID",
+      "role": "patent_domain_chemical_structure_detection",
+      "prefer_subsets": [
+        "D2C-RND",
+        "D2C-UNI",
+        "benchmark"
+      ],
+      "label_mapping": {
+        "Molecular Structure": "chemical_structure",
+        "Markush Structure": "markush_structure",
+        "Background": "non_chemical_image"
+      },
+      "first_pass_decision": "use_benchmark_first_avoid_full_download"
+    }
+  }
+}

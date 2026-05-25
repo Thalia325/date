@@ -1,0 +1,102 @@
+{
+  "task": "chemical_expression_ocr_mhchem_json_normalization",
+  "target_outputs": [
+    "latex_ocr",
+    "mhchem",
+    "reaction_json",
+    "smiles",
+    "structure_json"
+  ],
+  "keep_criteria": {
+    "primary_expression_ocr": [
+      "image has a line-level or cell-level chemical expression label",
+      "label preserves superscripts, subscripts, charges, arrows, and reaction conditions",
+      "ground truth can be converted or audited toward mhchem"
+    ],
+    "structure_ocsr": [
+      "image is a molecular structure depiction or reaction diagram",
+      "label provides SMILES, molfile, graph, bounding box, or segmentation metadata",
+      "sample is used for structure recognition, not as direct mhchem equation OCR"
+    ]
+  },
+  "datasets": {
+    "PEaCE": {
+      "root": "data/raw/PEaCE",
+      "role": "primary_expression_ocr",
+      "expected_paths": [
+        "final_renders",
+        "train.txt",
+        "dev.txt",
+        "test.txt",
+        "labels.jsonl"
+      ],
+      "label_kind": "latex_ground_truth",
+      "recommended_use": [
+        "train chemical expression OCR",
+        "evaluate LaTeX to mhchem conversion",
+        "mine pseudo-chemical-equation records for reaction JSON normalization"
+      ],
+      "limitations": [
+        "labels are LaTeX, not native mhchem",
+        "records are cell-level or record-level, not full-page document parsing",
+        "real-world test set is small and should be kept for evaluation"
+      ],
+      "first_pass_decision": "core_dataset_keep_when_labels_and_images_exist"
+    },
+    "DECIMER-Segmentation": {
+      "root": "data/raw/DECIMER-Segmentation",
+      "role": "structure_region_detection",
+      "expected_label_types": [
+        "mask",
+        "bbox",
+        "segmentation"
+      ],
+      "recommended_use": [
+        "detect chemical structure regions before OCSR",
+        "extract structure crops from scientific pages"
+      ],
+      "limitations": [
+        "does not provide mhchem equation OCR labels",
+        "main target is structure depiction segmentation"
+      ],
+      "first_pass_decision": "keep_as_auxiliary_structure_detection"
+    },
+    "MolScribe": {
+      "root": "data/raw/MolScribe",
+      "role": "molecular_image_to_structure",
+      "expected_label_types": [
+        "SMILES",
+        "molfile",
+        "atom_bond_graph"
+      ],
+      "recommended_use": [
+        "convert molecular structure crops to SMILES or graph JSON",
+        "combine structure outputs with reaction-level JSON"
+      ],
+      "limitations": [
+        "not designed for text chemical equation OCR",
+        "does not normalize LaTeX or mhchem expressions"
+      ],
+      "first_pass_decision": "keep_as_auxiliary_ocsr"
+    },
+    "PatCID": {
+      "root": "data/raw/PatCID",
+      "role": "patent_domain_structure_dataset",
+      "prefer_subsets": [
+        "D2C-UNI",
+        "D2C-RND",
+        "benchmark"
+      ],
+      "recommended_use": [
+        "patent-domain molecular structure retrieval and evaluation",
+        "large-scale weakly supervised structure data only after separate quality control"
+      ],
+      "limitations": [
+        "large download and patent-domain bias",
+        "not a direct source of mhchem equation ground truth",
+        "full data should not be mixed into the first OCR training round"
+      ],
+      "first_pass_decision": "use_benchmark_first_not_full_dataset"
+    }
+  }
+}

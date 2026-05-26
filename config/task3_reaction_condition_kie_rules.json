@@ -21,12 +21,17 @@
     "source_table_id": "string|null",
     "source_row_id": "string|null",
     "experiment_id": "string|null",
+    "table": "object{table_id, document_id, page, bbox, table_type, caption, source_dataset}|null",
+    "cells": "array<object{cell_id, row_index, col_index, row_span, col_span, text, normalized_text, bbox}>",
+    "entities": "array<object{entity_id, type, text, normalized_text, smiles, cell_id, evidence}>",
+    "relations": "array<object{relation_id, relation_type, source_entity_id, target_entity_id, row_id, cell_id, evidence}>",
     "table_type": "condition_optimization|substrate_screening|reaction_feature|synthesis_recipe|patent_reaction_step|ord_reaction|null",
     "reactants": "array<object{name, smiles, role, amount, unit, evidence}>",
     "products": "array<object{name, smiles, role, yield, unit, evidence}>",
     "catalysts": "array<object{name, amount, unit, evidence}>",
     "reagents": "array<object{name, amount, unit, evidence}>",
     "solvents": "array<object{name, amount, unit, evidence}>",
+    "conditions": "object{reagents, catalysts, solvents, temperature, time, ph, pressure, selectivity, conversion, molar_ratio, operation}",
     "temperature": "object{value, unit, range, evidence}|null",
     "time": "object{value, unit, range, evidence}|null",
     "ph": "object{value, evidence}|null",
@@ -37,6 +42,7 @@
     "molar_ratio": "array<object{left, right, value, evidence}>",
     "operation": "array<object{name, conditions, evidence}>",
     "balanced_equation": "string|null",
+    "smiles_refs": "array<object{name, smiles, source_entity_id, source_cell_id, confidence}>",
     "evidence": "array<object{page, bbox, cell, text}>",
     "quality_flags": "array<string>"
   },
@@ -103,9 +109,9 @@
     "ChemTable": {
       "roots": ["data/raw/ChemTable"],
       "role": "primary_visual_table_kie",
-      "source_url": "https://github.com/lqzxt/ChemTable",
-      "source_notes": "Real-world chemical table benchmark with table recognition and table understanding annotations; arXiv page is https://arxiv.org/abs/2506.11375.",
-      "expected_paths": ["images", "annotations"],
+      "source_url": "https://github.com/ustc-ai4science/ChemTable",
+      "source_notes": "Real-world chemical table benchmark with table recognition and table understanding annotations; the public repository includes table images under data/img and metadata under data/metadata.csv.",
+      "expected_paths": ["data/img", "data/metadata.csv"],
       "priority": "P0",
       "keep_table_types": [
         "condition optimisation tables",
@@ -134,8 +140,12 @@
       "roots": ["data/raw/ChemTables"],
       "role": "table_type_classifier",
       "source_url": "https://data.mendeley.com/datasets/g7tjh7tbrj",
-      "source_notes": "Chemical patent table semantic classification dataset. Public sample/standard split is described in the paper at https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00568-2; full sample page notes 7,886 patent tables and a 10% public sample.",
-      "expected_paths": ["train", "dev", "test"],
+      "source_notes": "Chemical patent table semantic classification dataset with 788 labeled patent tables and a stratified 60:20:20 train/dev/test split, according to the Mendeley Data page.",
+      "expected_paths": [
+        "ChemTables_Sample_StandardSplit/*Train.json",
+        "ChemTables_Sample_StandardSplit/*Dev.json",
+        "ChemTables_Sample_StandardSplit/*Test.json"
+      ],
       "priority": "P1",
       "keep_table_types": [
         "reaction table",
@@ -162,7 +172,12 @@
       "role": "patent_text_entity_event_kie",
       "source_url": "https://researchcollaborations.elsevier.com/en/datasets/chemu-dataset-for-information-extraction-from-chemical-patents/",
       "source_notes": "Chemical patent snippets with entities and reaction event steps.",
-      "expected_paths": ["train", "dev", "test"],
+      "expected_paths": [
+        "chemu.ner.train",
+        "chemu.ner.dev",
+        "chemu.ee.train",
+        "chemu.ee.dev"
+      ],
       "priority": "P0",
       "keep_entity_types": [
         "STARTING_MATERIAL",
@@ -191,7 +206,7 @@
       "role": "structured_reaction_schema_and_benchmark",
       "source_url": "https://github.com/sustainable-processes/ORDerly",
       "source_notes": "ORDerly extracts and cleans Open Reaction Database records and provides reaction benchmarks.",
-      "expected_paths": ["data", "ord-data", "condition_prediction"],
+      "expected_paths": ["data", "condition_prediction"],
       "priority": "P1",
       "keep_record_types": [
         "structured reaction",

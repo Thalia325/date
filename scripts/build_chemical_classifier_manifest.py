@@ -12,6 +12,7 @@ import csv
 import hashlib
 import json
 import random
+import zipfile
 from pathlib import Path
 from typing import Any
 
@@ -54,6 +55,34 @@ def collect_images(class_dir: Path) -> list[Path]:
     )
 
 
+def collect_zip_images(root: Path, class_names: list[str], aliases: dict[str, list[str]]) -> list[tuple[Path, str, str]]:
+    rows: list[tuple[Path, str, str]] = []
+    alias_lookup = {
+        alias: class_name
+        for class_name in class_names
+        for alias in aliases.get(class_name, [class_name])
+    }
+    for archive in sorted(root.rglob("*.zip")):
+        try:
+            with zipfile.ZipFile(archive) as zf:
+                for member in sorted(zf.namelist()):
+                    if member.endswith("/") or member.startswith("__MACOSX/"):
+                        continue
+                    if Path(member).suffix.lower() not in IMAGE_EXTS:
+                        continue
+                    parts = [part for part in member.split("/") if part]
+                    for index, part in enumerate(parts):
+                        if part != "classified" or index + 1 >= len(parts):
+                            continue
+                        source_label = alias_lookup.get(parts[index + 1])
+                        if source_label:
+                            rows.append((archive.resolve(), member, source_label))
+                        break
+        except zipfile.BadZipFile:
+            continue
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("data/raw/ChemicalImagesClassifier"))
@@ -75,14 +104,17 @@ def main() -> int:
     dataset_rules = config["datasets"]["Chemical Images Classifier Dataset"]
     label_mapping = dataset_rules["label_mapping"]
     required_class_dirs = dataset_rules["required_class_dirs"]
+    class_aliases = dataset_rules.get("class_aliases", {})
 
     rows: list[dict[str, str]] = []
     missing: list[str] = []
+    found: set[str] = set()
     for source_label in required_class_dirs:
         class_dir = find_class_dir(args.root, source_label)
         if class_dir is None:
             missing.append(source_label)
             continue
+        found.add(source_label)
         target_label = label_mapping[source_label]
         for image_path in collect_images(class_dir):
             rows.append(
@@ -94,6 +126,26 @@ def main() -> int:
                     "split": stable_split(image_path.resolve(), args.seed, args.train, args.val),
                 }
             )
+
+    for archive_path, member_path, source_label in collect_zip_images(
+        args.root,
+        required_class_dirs,
+        class_aliases,
+    ):
+        found.add(source_label)
+        target_label = label_mapping[source_label]
+        image_ref = f"{archive_path}!{member_path}"
+        rows.append(
+            {
+                "image_path": image_ref,
+                "source_dataset": "Chemical Images Classifier Dataset",
+                "source_label": source_label,
+                "target_label": target_label,
+                "split": stable_split(Path(member_path), args.seed, args.train, args.val),
+            }
+        )
+
+    missing = [source_label for source_label in required_class_dirs if source_label not in found]
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as f:

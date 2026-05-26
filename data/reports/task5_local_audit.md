@@ -1,16 +1,18 @@
 # 任务 5 数据集清洗与审查报告
 
-目标：清洗出与化学/化工有关、可支撑轻量化工流程图节点-箭头-参数解析的数据源。
+目标：清洗出与化学、化工相关，并可支撑轻量化工流程图/反应路线图节点-箭头-参数解析的数据源。
 
-说明：用户写的是“五个数据集”，但清单实际包含 6 个数据源；本报告全部纳入审查，并按核心、辅助、迁移、后续大规模四档清洗。
+说明：本次审查纳入 8 个候选源，覆盖反应图解析数据、P&ID/PFD 工程图代理数据，以及通用图表迁移数据；审查口径统一为是否能映射到 node-edge-parameter graph schema。
 
 ## 总览
 
-| 数据集 | 清洗档位 | 决策 | 化学相关 | 图结构适配 | 本地状态 | 关键用途 |
+| 数据集 | 清洗档位 | 决策 | 化学/化工相关 | 图结构适配 | 本地状态 | 关键用途 |
 |---|---|---|---:|---:|---|---|
+| PID2Graph | core | keep_core_for_graph_eval | 5/5 | 5/5 | missing | core_pid_graph_structure_extraction |
 | PID_dataset | later_or_hold | keep_later_large_scale | 5/5 | 5/5 | missing | industrial_pfd_pid_symbol_detection_reference |
 | PIDCon | core | keep_core_for_graph_eval | 5/5 | 5/5 | missing | graph_recovery_evaluation_and_connectivity_transfer |
 | Dataset-P&ID / Digitize-PID | auxiliary | keep_auxiliary_with_license_check | 5/5 | 4/5 | missing | synthetic_symbol_detection_pretraining |
+| RxnCaption / U-RxnDiagram-15k | core | keep_core | 5/5 | 4/5 | missing | large_reaction_diagram_node_arrow_condition_training |
 | ReactionDataExtractor2 | auxiliary | keep_auxiliary | 5/5 | 3/5 | missing | baseline_parser_and_schema_reference |
 | RxnScribe | core | keep_core | 5/5 | 3/5 | missing | core_reaction_scheme_graph_pretraining |
 | AI2D | transfer_only | keep_transfer_only | 2/5 | 4/5 | missing | generic_diagram_node_arrow_text_pretraining |
@@ -32,12 +34,28 @@
 ## 推荐路线
 
 1. 用 RxnScribe 建立反应 scheme graph 的节点、箭头、条件参数抽取基线。
-2. 用 ReactionDataExtractor2 作为 baseline 和结构化输出参考。
-3. 用 AI2D 做通用 diagram node-arrow-text 迁移，只保留化学或箭头密集样本。
-4. 用 PIDCon 验证 node-edge graph recovery 指标，包括 GED 和 NCA。
-5. PID_dataset 和 Dataset-P&ID/Digitize-PID 作为 P&ID/PFD 扩展，不建议一开始全量进入。
+2. 用 RxnCaption / U-RxnDiagram-15k 扩大反应图拓扑、箭头和条件解析训练覆盖。
+3. 用 ReactionDataExtractor2 作为 baseline parser 和结构化输出参考。
+4. 用 PID2Graph 验证 P&ID/PFD 代理图的 node-edge graph recovery。
+5. 将 PIDCon、PID_dataset、Dataset-P&ID/Digitize-PID 放入工程图扩展阶段；AI2D 仅用于通用 node-arrow-text 迁移预训练。
 
 ## 数据集细审
+
+### PID2Graph
+
+- 原始目录：`D:\competition\date\data\raw\PID2Graph`
+- 来源：https://zenodo.org/records/14803338
+- 下载：https://zenodo.org/records/14803338
+- 许可/访问：CC BY-SA 4.0 for referenced PID sources noted in Zenodo record; verify exact archive terms before redistribution
+- 数据形态：pid_graph_structure_dataset
+- 规模说明：P&ID images paired with graph structures; includes complete plans and symbol/line relationship annotations
+- 标注形态：Symbols as graph nodes with bbox coordinates (xmin, ymin, xmax, ymax) and label; lines represent graph edges or symbol connections
+- 清洗规则：Keep images with complete node bbox/label and edge graph annotations; convert symbols to equipment nodes, lines to edges, and preserve connection direction or undirected connectivity where direction is not annotated.
+- 局限：P&ID is an engineering proxy for PFD/process flow diagrams and may not contain reaction-route chemistry conditions.
+- 下一步：Download from Zenodo, checksum archives, inspect complete-plan graph files, then convert a 20-image sample into task5_graph_schema.json for validation.
+- 本地统计：images=0, annotations=0, archives=0, scanned=0
+- 审查提醒：
+  - Local dataset root not found; place files under data/raw/PID2Graph and rerun this audit.
 
 ### PID_dataset
 
@@ -86,6 +104,22 @@
 - 本地统计：images=0, annotations=0, archives=0, scanned=0
 - 审查提醒：
   - Local dataset root not found; place files under data/raw/Dataset-PID and rerun this audit.
+
+### RxnCaption / U-RxnDiagram-15k
+
+- 原始目录：`D:\competition\date\data\raw\U-RxnDiagram-15k`
+- 来源：https://huggingface.co/datasets/songjhPKU/U-RxnDiagram-15k
+- 下载：https://huggingface.co/datasets/songjhPKU/U-RxnDiagram-15k
+- 许可/访问：Verify Hugging Face dataset card and upstream paper terms before redistribution
+- 数据形态：chemical_reaction_diagram_parsing
+- 规模说明：15,400 reaction diagram images from scientific PDFs; train/test annotations report 48,255 reactions and about 165,468 annotation instances
+- 标注形态：Reaction diagram images with detailed annotations for parsing reaction entities, arrows, conditions and topology structure
+- 清洗规则：Keep samples with valid image paths and ground_truth annotations; map molecule/reagent/condition regions to nodes or parameters, reaction arrows to directed edges, and topology class to graph metadata.
+- 局限：Reaction-diagram focused rather than industrial PFD/P&ID; equipment nodes such as pump, valve, heat exchanger and vessel are not the main target.
+- 下一步：Download through Hugging Face when storage and license review are ready; validate train/test image counts, annotation JSON schema and topology labels before conversion.
+- 本地统计：images=0, annotations=0, archives=0, scanned=0
+- 审查提醒：
+  - Local dataset root not found; place files under data/raw/U-RxnDiagram-15k and rerun this audit.
 
 ### ReactionDataExtractor2
 

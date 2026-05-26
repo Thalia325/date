@@ -1,8 +1,23 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
+import { createRequire } from "node:module";
+import { pathToFileURL } from "node:url";
 
 const repoRoot = process.cwd();
+const require = createRequire(import.meta.url);
+const bundledNodeModules = path.join(
+  process.env.USERPROFILE ?? "",
+  ".cache",
+  "codex-runtimes",
+  "codex-primary-runtime",
+  "dependencies",
+  "node",
+  "node_modules",
+);
+const artifactToolPath = require.resolve("@oai/artifact-tool", {
+  paths: [repoRoot, bundledNodeModules],
+});
+const { SpreadsheetFile, Workbook } = await import(pathToFileURL(artifactToolPath).href);
 const csvPath = path.join(repoRoot, "data", "processed", "task5_dataset_review.csv");
 const schemaPath = path.join(repoRoot, "data", "processed", "task5_graph_schema.json");
 const outputDir = path.join(repoRoot, "outputs", "task5");
@@ -109,17 +124,18 @@ summary.getRange("D3:E3").format = { fill: "#2F6F73", font: { color: "#FFFFFF", 
 summary.getRange("A11:H11").merge();
 summary.getRange("A11").values = [["Recommended execution path"]];
 summary.getRange("A11").format = { fill: "#17324D", font: { color: "#FFFFFF", bold: true } };
-summary.getRange("A12:H16").values = [
+summary.getRange("A12:H17").values = [
   ["1", "RxnScribe", "Build reaction scheme graph baseline: reactants/products as nodes, arrows as edges, condition text as parameters.", "", "", "", "", ""],
-  ["2", "ReactionDataExtractor2", "Use as parser baseline and machine-readable graph output reference.", "", "", "", "", ""],
-  ["3", "AI2D", "Use only for generic diagram node-arrow-text transfer, with chemistry keyword filtering.", "", "", "", "", ""],
-  ["4", "PIDCon", "Use for graph recovery evaluation with box-line-connection-path annotations.", "", "", "", "", ""],
-  ["5", "PID_dataset / Digitize-PID", "Use later for P&ID/PFD extension after storage and license checks.", "", "", "", "", ""],
+  ["2", "RxnCaption / U-RxnDiagram-15k", "Add larger reaction-diagram topology, arrow and condition parsing coverage.", "", "", "", "", ""],
+  ["3", "ReactionDataExtractor2", "Use as parser baseline and machine-readable graph output reference.", "", "", "", "", ""],
+  ["4", "PID2Graph", "Use as the core P&ID graph-structure proxy for node-edge recovery.", "", "", "", "", ""],
+  ["5", "PIDCon / PID_dataset / Digitize-PID", "Use later for P&ID/PFD extension after access, storage and license checks.", "", "", "", "", ""],
+  ["6", "AI2D", "Use only for generic diagram node-arrow-text transfer, with chemistry keyword filtering.", "", "", "", "", ""],
 ];
-summary.getRange("A12:A16").format = { fill: "#F4C95D", font: { bold: true }, horizontalAlignment: "center" };
-summary.getRange("B12:B16").format = { font: { bold: true } };
-summary.getRange("C12:H16").merge(true);
-summary.getRange("A12:H16").format = { wrapText: true, verticalAlignment: "top" };
+summary.getRange("A12:A17").format = { fill: "#F4C95D", font: { bold: true }, horizontalAlignment: "center" };
+summary.getRange("B12:B17").format = { font: { bold: true } };
+summary.getRange("C12:H17").merge(true);
+summary.getRange("A12:H17").format = { wrapText: true, verticalAlignment: "top" };
 
 const scoreRows = records.map((record) => [
   record.name,
@@ -223,3 +239,4 @@ for (const sheetName of ["Summary", "Dataset Review", "Graph Schema", "Sources"]
 const output = await SpreadsheetFile.exportXlsx(workbook);
 await output.save(outputPath);
 console.log(`Wrote ${outputPath}`);
+process.exitCode = 0;

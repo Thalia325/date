@@ -3,6 +3,10 @@
 
 The manifest keeps likely chemical-equation/expression records and preserves the
 original LaTeX label for later LaTeX -> mhchem -> JSON normalization.
+
+It supports both PEaCE layouts:
+- full release: final_renders/, labels.jsonl, train.txt/dev.txt/test.txt
+- GitHub real-world set: real_world_test_set/labels.json and image folders
 """
 
 from __future__ import annotations
@@ -48,6 +52,16 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def load_real_world_labels(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    with path.open("r", encoding="utf-8", errors="replace") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        return {}
+    return {str(key): str(value) for key, value in data.items() if str(value).strip()}
+
+
 def first_string(item: dict[str, Any], keys: tuple[str, ...]) -> str:
     for key in keys:
         value = item.get(key)
@@ -90,8 +104,12 @@ def resolve_image(root: Path, filename: str) -> Path | None:
 
 
 def is_likely_chemical_expression(label: str) -> bool:
-    hits = sum(1 for pattern in CHEM_PATTERNS if pattern.search(label))
-    has_element_pair = bool(re.search(r"\b[A-Z][a-z]?\b.*\b[A-Z][a-z]?\b", label))
+    compact = re.sub(r"(?<=\w)\s+(?=\w)", "", label)
+    hits = sum(1 for pattern in CHEM_PATTERNS if pattern.search(label) or pattern.search(compact))
+    has_element_pair = bool(
+        re.search(r"\b[A-Z][a-z]?\b.*\b[A-Z][a-z]?\b", label)
+        or re.search(r"\b[A-Z][a-z]?\b.*\b[A-Z][a-z]?\b", compact)
+    )
     return hits >= 2 or (hits >= 1 and has_element_pair)
 
 
@@ -101,6 +119,63 @@ def read_split(root: Path, split: str) -> list[str]:
         return []
     with path.open("r", encoding="utf-8", errors="replace") as f:
         return [line.strip() for line in f if line.strip()]
+
+
+def build_full_release_rows(root: Path, include_all: bool) -> tuple[list[dict[str, str]], int, int]:
+    labels = load_jsonl(root / "labels.jsonl")
+    lookup = make_label_lookup(labels)
+    rows: list[dict[str, str]] = []
+    missing_label = 0
+    missing_image = 0
+
+    for split in ("train", "dev", "test"):
+        for filename in read_split(root, split):
+            key_candidates = [filename, Path(filename).name, Path(filename).stem]
+            label = next((lookup[key] for key in key_candidates if key in lookup), "")
+            if not label:
+                missing_label += 1
+                continue
+            image_path = resolve_image(root, filename)
+            if image_path is None:
+                missing_image += 1
+                continue
+            if not include_all and not is_likely_chemical_expression(label):
+                continue
+            rows.append(
+                {
+                    "image_path": str(image_path.resolve()),
+                    "source_dataset": "PEaCE",
+                    "split": split,
+                    "latex": label,
+                    "normalization_target": "mhchem_or_reaction_json",
+                }
+            )
+    return rows, missing_label, missing_image
+
+
+def build_real_world_rows(root: Path, include_all: bool) -> tuple[list[dict[str, str]], int, int]:
+    real_root = root / "real_world_test_set"
+    labels = load_real_world_labels(real_root / "labels.json")
+    rows: list[dict[str, str]] = []
+    missing_image = 0
+
+    for image_name, label in labels.items():
+        image_path = real_root / image_name
+        if not image_path.exists():
+            missing_image += 1
+            continue
+        if not include_all and not is_likely_chemical_expression(label):
+            continue
+        rows.append(
+            {
+                "image_path": str(image_path.resolve()),
+                "source_dataset": "PEaCE_real_world_test_set",
+                "split": "real_world_test",
+                "latex": label,
+                "normalization_target": "mhchem_or_reaction_json",
+            }
+        )
+    return rows, 0, missing_image
 
 
 def main() -> int:
@@ -118,34 +193,25 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    labels = load_jsonl(args.root / "labels.jsonl")
-    lookup = make_label_lookup(labels)
     rows: list[dict[str, str]] = []
     missing_label = 0
     missing_image = 0
 
-    for split in ("train", "dev", "test"):
-        for filename in read_split(args.root, split):
-            key_candidates = [filename, Path(filename).name, Path(filename).stem]
-            label = next((lookup[key] for key in key_candidates if key in lookup), "")
-            if not label:
-                missing_label += 1
-                continue
-            image_path = resolve_image(args.root, filename)
-            if image_path is None:
-                missing_image += 1
-                continue
-            if not args.include_all and not is_likely_chemical_expression(label):
-                continue
-            rows.append(
-                {
-                    "image_path": str(image_path.resolve()),
-                    "source_dataset": "PEaCE",
-                    "split": split,
-                    "latex": label,
-                    "normalization_target": "mhchem_or_reaction_json",
-                }
-            )
+    if (args.root / "labels.jsonl").exists():
+        full_rows, full_missing_label, full_missing_image = build_full_release_rows(
+            args.root, args.include_all
+        )
+        rows.extend(full_rows)
+        missing_label += full_missing_label
+        missing_image += full_missing_image
+
+    if (args.root / "real_world_test_set" / "labels.json").exists():
+        real_rows, real_missing_label, real_missing_image = build_real_world_rows(
+            args.root, args.include_all
+        )
+        rows.extend(real_rows)
+        missing_label += real_missing_label
+        missing_image += real_missing_image
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as f:

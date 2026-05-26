@@ -1,6 +1,6 @@
 {
   "schema_name": "task5_lightweight_chemical_process_graph",
-  "version": "0.1",
+  "version": "0.2",
   "graph_record": {
     "diagram_id": "string",
     "source_dataset": "string",
@@ -33,6 +33,7 @@
         "attributes": {
           "smiles": "optional string",
           "equipment_tag": "optional string",
+          "topology_class": "optional string",
           "confidence": "optional number"
         }
       }
@@ -60,7 +61,7 @@
             1
           ]
         ],
-        "arrowhead": "none|source|target|both",
+        "arrowhead": "none|source|target|both|unknown",
         "parameters": [
           {
             "type": [

@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""Audit local Task 2 datasets for chemical-expression OCR and normalization.
-
-The script only reads files. It does not delete or rewrite raw data. It checks
-whether PEaCE and auxiliary OCSR datasets are present, counts common image and
-annotation files, and writes a Markdown report with usability decisions for
-mhchem/JSON normalization work.
-"""
+"""Audit local Task 2 datasets for chemical-expression OCR and normalization."""
 
 from __future__ import annotations
 
@@ -73,13 +67,27 @@ def inspect_peace(audit: DatasetAudit, rules: dict[str, Any]) -> None:
     for split_name, filename in [("train", "train.txt"), ("dev", "dev.txt"), ("test", "test.txt")]:
         audit.split_counts[split_name] = count_lines(audit.root / filename)
 
+    real_world_labels = audit.root / "real_world_test_set" / "labels.json"
+    if real_world_labels.exists():
+        try:
+            labels = load_json(real_world_labels)
+        except json.JSONDecodeError:
+            audit.warnings.append("PEaCE real-world labels.json 无法解析，请检查文件完整性。")
+        else:
+            audit.split_counts["real_world_test"] = len(labels)
+            audit.warnings.append(
+                "已发现 PEaCE real-world test set，可用于记录级清洗/评估；full release 仍需单独下载。"
+            )
+
     missing = [item for item, exists in audit.expected_status.items() if not exists]
     if missing:
-        audit.warnings.append("PEaCE 目录不完整，缺少：" + ", ".join(missing))
+        audit.warnings.append("PEaCE full release 目录不完整，缺少：" + ", ".join(missing))
     if audit.image_count == 0:
         audit.warnings.append("未发现渲染图片，OCR 训练暂不可用。")
     if not (audit.root / "labels.jsonl").exists():
-        audit.warnings.append("未发现 labels.jsonl，无法建立图像到 LaTeX ground truth 的清洗清单。")
+        audit.warnings.append(
+            "未发现 full release 的 labels.jsonl；若只存在 real-world labels.json，只能生成测试子集 manifest。"
+        )
 
 
 def decide_generic(audit: DatasetAudit) -> None:
@@ -89,7 +97,7 @@ def decide_generic(audit: DatasetAudit) -> None:
     if audit.image_count == 0:
         audit.warnings.append("未发现常见图片文件；请确认数据是否已解压到约定目录。")
     if audit.annotation_count == 0:
-        audit.warnings.append("未发现常见标注文件；只能作为待推理图片，不能直接训练或评估。")
+        audit.warnings.append("未发现常见标注文件；可能只能作为待推理图片，不能直接训练或评估。")
 
 
 def audit_dataset(repo_root: Path, name: str, rules: dict[str, Any]) -> DatasetAudit:
@@ -170,10 +178,10 @@ def render_markdown(audits: list[DatasetAudit], config: dict[str, Any]) -> str:
                 f"{name}={'OK' if exists else '缺失'}"
                 for name, exists in audit.expected_status.items()
             )
-            lines.append("- PEaCE 必需文件：" + status)
+            lines.append("- PEaCE full release 必需文件：" + status)
         if audit.split_counts:
             split_status = ", ".join(f"{name}={count}" for name, count in audit.split_counts.items())
-            lines.append("- split 行数：" + split_status)
+            lines.append("- split/子集行数：" + split_status)
         lines.append("- 注意事项：")
         for warning in audit.warnings:
             lines.append(f"  - {warning}")
@@ -183,9 +191,10 @@ def render_markdown(audits: list[DatasetAudit], config: dict[str, Any]) -> str:
         [
             "## 清洗结论",
             "",
-            "- PEaCE 是任务 2 的核心数据源；只有当 `final_renders/`、`labels.jsonl` 和 split 文件齐全时，才可进入 OCR 训练/评估。",
-            "- DECIMER-Segmentation、MolScribe、PatCID 属于结构图 OCSR 辅助数据，适合输出 SMILES、molfile 或结构 JSON，不应直接当作 mhchem 方程式 OCR 标注。",
-            "- 当前公开数据链条缺少大规模 native mhchem ground truth；建议从 PEaCE 的 LaTeX 标签生成候选 mhchem，再做规则校验和人工抽样。",
+            "- PEaCE 是任务 2 的核心数据源；full release 到位后可进入大规模 OCR 训练/评估。",
+            "- 当前若只有 PEaCE real-world test set，也可以进入记录级清洗，产出测试/复核用的 LaTeX、mhchem 候选和 reaction JSON 候选。",
+            "- DECIMER-Segmentation、MolScribe、PatCID 属于结构图 OCSR 辅助数据，不应直接当作 mhchem 方程式 OCR 标注。",
+            "- PEaCE 标签是 LaTeX，不是 native mhchem ground truth；mhchem/JSON 输出必须作为候选并经过规则校验和人工抽样。",
             "",
             "## 目标输出",
             "",

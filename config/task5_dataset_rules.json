@@ -88,6 +88,24 @@
       "next_actions": "Install in isolated environment if needed; run on a small RxnScribe/own sample batch and normalize outputs to task5_graph_schema.json."
     },
     {
+      "dataset_id": "urxndiagram15k",
+      "name": "RxnCaption / U-RxnDiagram-15k",
+      "raw_root": "data/raw/U-RxnDiagram-15k",
+      "source_url": "https://huggingface.co/datasets/songjhPKU/U-RxnDiagram-15k",
+      "download_url": "https://huggingface.co/datasets/songjhPKU/U-RxnDiagram-15k",
+      "license": "Verify Hugging Face dataset card and upstream paper terms before redistribution",
+      "source_type": "chemical_reaction_diagram_parsing",
+      "scale_note": "15,400 reaction diagram images from scientific PDFs; train/test annotations report 48,255 reactions and about 165,468 annotation instances",
+      "annotation_shape": "Reaction diagram images with detailed annotations for parsing reaction entities, arrows, conditions and topology structure",
+      "chem_relevance_score": 5,
+      "process_graph_fit_score": 4,
+      "primary_role": "large_reaction_diagram_node_arrow_condition_training",
+      "decision": "keep_core",
+      "cleaning_rule": "Keep samples with valid image paths and ground_truth annotations; map molecule/reagent/condition regions to nodes or parameters, reaction arrows to directed edges, and topology class to graph metadata.",
+      "known_limitations": "Reaction-diagram focused rather than industrial PFD/P&ID; equipment nodes such as pump, valve, heat exchanger and vessel are not the main target.",
+      "next_actions": "Download through Hugging Face when storage and license review are ready; validate train/test image counts, annotation JSON schema and topology labels before conversion."
+    },
+    {
       "dataset_id": "ai2d",
       "name": "AI2D",
       "raw_root": "data/raw/AI2D",
@@ -140,6 +158,24 @@
       "cleaning_rule": "Keep synthetic P&ID images with symbol boxes; map symbols to task equipment nodes and infer line/edge data only if annotation is present.",
       "known_limitations": "Often symbol-only, so node-edge graph recovery may require added line/connectivity annotation.",
       "next_actions": "Prefer original Drive or a documented Hugging Face mirror; verify symbol class list and train/val split before ingestion."
+    },
+    {
+      "dataset_id": "pid2graph",
+      "name": "PID2Graph",
+      "raw_root": "data/raw/PID2Graph",
+      "source_url": "https://zenodo.org/records/14803338",
+      "download_url": "https://zenodo.org/records/14803338",
+      "license": "CC BY-SA 4.0 for referenced PID sources noted in Zenodo record; verify exact archive terms before redistribution",
+      "source_type": "pid_graph_structure_dataset",
+      "scale_note": "P&ID images paired with graph structures; includes complete plans and symbol/line relationship annotations",
+      "annotation_shape": "Symbols as graph nodes with bbox coordinates (xmin, ymin, xmax, ymax) and label; lines represent graph edges or symbol connections",
+      "chem_relevance_score": 5,
+      "process_graph_fit_score": 5,
+      "primary_role": "core_pid_graph_structure_extraction",
+      "decision": "keep_core_for_graph_eval",
+      "cleaning_rule": "Keep images with complete node bbox/label and edge graph annotations; convert symbols to equipment nodes, lines to edges, and preserve connection direction or undirected connectivity where direction is not annotated.",
+      "known_limitations": "P&ID is an engineering proxy for PFD/process flow diagrams and may not contain reaction-route chemistry conditions.",
+      "next_actions": "Download from Zenodo, checksum archives, inspect complete-plan graph files, then convert a 20-image sample into task5_graph_schema.json for validation."
     },
     {
       "dataset_id": "pidcon",

@@ -48,6 +48,18 @@ CHARGE_RE = re.compile(r"(\^(?:[0-9]*[+-]|[+-][0-9]*)|[0-9]+[+-]|[+-])$")
 COEFF_RE = re.compile(r"^(\d+(?:/\d+)?|\d*\.\d+)\s*([A-Z(].*)$")
 
 
+def untokenize_peace_latex(text: str) -> str:
+    """Collapse PEaCE's character-spaced labels for normalization candidates."""
+    text = re.sub(r"\s+", " ", text.strip())
+    text = re.sub(r"(?<=[A-Za-z0-9])\s+(?=[A-Za-z0-9])", "", text)
+    text = re.sub(r"\s*([_^{}=+\-/,()[\]])\s*", r"\1", text)
+    text = re.sub(r"\s+(?=\\(?:;|,|:|quad|times|pm|mu|Delta|alpha|beta|gamma|circ)\b)", "", text)
+    for command in (r"\;", r"\,", r"\:", r"\quad", r"\times", r"\pm", r"\mu", r"\Delta", r"\alpha", r"\beta", r"\gamma", r"\circ"):
+        text = text.replace(command, f"{command} ")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
 def read_manifest(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         return []
@@ -77,7 +89,7 @@ def replace_text_commands(text: str) -> str:
 
 
 def normalize_latex_expression(latex: str) -> str:
-    text = strip_outer_math(latex)
+    text = untokenize_peace_latex(strip_outer_math(latex))
 
     ce_match = re.search(r"\\ce\{(.+)\}", text)
     if ce_match:

@@ -190,7 +190,7 @@ def scan_jsonl(path: Path, keep_keywords: list[str], aliases: dict[str, list[str
 
 def scan_json(path: Path, keep_keywords: list[str], aliases: dict[str, list[str]]) -> tuple[int, int]:
     try:
-        if path.stat().st_size > 20_000_000:
+        if path.stat().st_size > 200_000_000:
             return 0, 0
         payload = load_json(path)
     except (OSError, json.JSONDecodeError, UnicodeDecodeError):
@@ -212,6 +212,13 @@ def scan_json(path: Path, keep_keywords: list[str], aliases: dict[str, list[str]
         if record_has_kie_signal(normalize_text(record), keep_keywords, aliases):
             candidates += 1
     return scanned, candidates
+
+
+def scan_text_record(path: Path, keep_keywords: list[str], aliases: dict[str, list[str]]) -> tuple[int, int]:
+    text = sample_text(path)
+    if not text.strip():
+        return 0, 0
+    return 1, int(record_has_kie_signal(text, keep_keywords, aliases))
 
 
 def inspect_dataset(
@@ -280,6 +287,8 @@ def inspect_dataset(
                 scanned, candidates = scan_json(path, keep_keywords, aliases)
             elif suffix in {".csv", ".tsv"}:
                 scanned, candidates = scan_csv_or_tsv(path, keep_keywords, aliases)
+            elif suffix in {".txt", ".ann", ".xml", ".html"}:
+                scanned, candidates = scan_text_record(path, keep_keywords, aliases)
             else:
                 scanned, candidates = 0, 0
             audit.scanned_records += scanned

@@ -62,11 +62,18 @@
         "reactions",
         "other"
       ],
+      "class_aliases": {
+        "other": [
+          "other",
+          "rest"
+        ]
+      },
       "label_mapping": {
         "one_molecule": "chemical_structure_single",
         "several_molecules": "chemical_structure_multiple",
         "reactions": "reaction_scheme",
-        "other": "non_chemical_image"
+        "other": "non_chemical_image",
+        "rest": "non_chemical_image"
       },
       "first_pass_decision": "use_as_second_stage_classifier"
     },

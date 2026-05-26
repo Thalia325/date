@@ -9,7 +9,7 @@ Place downloaded or requested datasets here:
 - `MolScribe`
 - `PatCID`
 - `ScienceQA`
-- `TQA`
+- `SceMQA`
 - `ChineseChemExam`
 - `ChineseChemLabHandout`
 

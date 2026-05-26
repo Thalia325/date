@@ -94,26 +94,26 @@
       ],
       "first_pass_decision": "keep_as_core_question_understanding_dataset"
     },
-    "TQA": {
-      "root": "data/raw/TQA",
-      "role": "textbook_context_multimodal_qa",
-      "source_type": "textbook_lessons_questions",
+    "SceMQA": {
+      "root": "data/raw/SceMQA",
+      "role": "multimodal_science_question_knowledge_understanding",
+      "source_type": "multimodal_science_questions",
       "keep": [
-        "chemistry-related lessons, diagrams, and questions",
-        "records where question can be linked to textbook text or image context",
-        "records with answer labels or machine-comprehension targets"
+        "questions tagged or inferred as Chemistry",
+        "high-school to college-entrance science questions with image context when available",
+        "records with choices, answers, knowledge points, and detailed explanations"
       ],
       "cleaning_actions": [
-        "keep lesson id, question id, context text, image references, question, answer, answer type, split",
-        "tag chemistry concepts from lesson title, topic metadata, and content keywords",
-        "build links between question, supporting paragraph, and supporting figure where available",
-        "drop orphan questions whose context files are missing"
+        "normalize question text, choices, answer, explanation, knowledge points, image references, and split",
+        "tag chemistry concepts from subject/topic metadata, knowledge-point fields, and content keywords",
+        "convert each valid record to question_choice_answer_explanation_json",
+        "drop records with missing choices, invalid answers, broken image references, or no chemistry relevance"
       ],
       "limitations": [
         "not a dedicated chemistry lab handout parsing dataset",
-        "needs topic filtering because it covers broader middle-school science"
+        "covers multiple science subjects and must be filtered before chemistry/chemical-engineering use"
       ],
-      "first_pass_decision": "keep_as_auxiliary_textbook_qa_dataset"
+      "first_pass_decision": "keep_as_core_multimodal_science_qa_dataset"
     },
     "ChineseChemExam": {
       "root": "data/raw/ChineseChemExam",

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build first-pass Task 4 manifests for chemistry education parsing.
+"""Build Task 4 manifests for chemistry education parsing.
 
-Outputs are intentionally schema-first and conservative. When raw datasets are
-missing, the script still creates empty output files with the right headers so
-the downstream workflow is stable.
+The script accepts the raw layouts described in the project config and handles
+the public ScienceQA plus SceMQA formats directly. Missing datasets still
+produce empty outputs so downstream steps remain stable.
 """
 
 from __future__ import annotations
@@ -39,6 +39,7 @@ CHEMISTRY_KEYWORDS = [
     "reaction",
     "precipitate",
     "gas",
+    "chem",
     "化学",
     "化工",
     "元素",
@@ -62,16 +63,39 @@ CHEMISTRY_KEYWORDS = [
 ]
 
 FORMULA_RE = re.compile(
-    r"\b(?:H2O|CO2|O2|H2|NaCl|HCl|NaOH|CaCO3|KMnO4|H2SO4)\b|"
-    r"\b[A-Z][a-z]?\d*(?:[A-Z][a-z]?\d*)+\b|"
+    r"\b(?:H2O|CO2|O2|H2|NaCl|HCl|NaOH|CaCO3|KMnO4|H2SO4|NH3|NO2|SO2)\b|"
+    r"\b(?:[A-Z][a-z]?\d+){1,}[A-Z][a-z]?\d*\b|"
     r"(?:->|<=>|\\rightarrow|\\ce\{)"
 )
 
-SCIENCEQA_CHOICE_KEYS = ("choices", "choice", "options", "answer_choices")
-QUESTION_KEYS = ("question", "question_stem", "stem", "prompt")
-EXPLANATION_KEYS = ("solution", "explanation", "rationale", "lecture")
+CHOICE_KEYS = ("choices", "choice", "options", "answer_choices")
+QUESTION_KEYS = ("question", "question_stem", "stem", "prompt", "Question")
+ANSWER_KEYS = ("answer", "correct_answer", "Answer", "Answer (final answer highlighted)")
+EXPLANATION_KEYS = (
+    "solution",
+    "explanation",
+    "rationale",
+    "lecture",
+    "Answer (final answer highlighted)",
+)
 CONTEXT_KEYS = ("hint", "lecture", "context", "text", "paragraph", "passage")
-IMAGE_KEYS = ("image", "image_path", "img", "figure", "diagram")
+IMAGE_KEYS = ("image", "image_path", "img", "figure", "diagram", "ImagePath")
+TOPIC_KEYS = (
+    "subject",
+    "topic",
+    "category",
+    "skill",
+    "task",
+    "grade",
+    "lessonName",
+    "lesson",
+    "chapter",
+    "knowledge",
+    "knowledge_point",
+    "knowledge_points",
+    "concept",
+    "concepts",
+)
 
 
 def load_json(path: Path) -> Any:
@@ -93,21 +117,40 @@ def load_jsonl(path: Path) -> list[Any]:
     return rows
 
 
-def iter_json_records(root: Path) -> Iterable[tuple[str, dict[str, Any]]]:
-    if not root.exists():
-        return
-    seen = 0
-    for path in sorted(root.rglob("*")):
-        if not path.is_file() or path.suffix.lower() not in ANNOTATION_EXTS:
-            continue
-        seen += 1
-        if seen > MAX_JSON_FILES:
-            break
-        try:
-            payload = load_json(path) if path.suffix.lower() == ".json" else load_jsonl(path)
-        except (OSError, json.JSONDecodeError):
-            continue
-        yield from flatten_records(payload, path.stem)
+def get_ci(item: dict[str, Any], key: str) -> Any:
+    if key in item:
+        return item[key]
+    wanted = key.lower()
+    for raw_key, value in item.items():
+        if raw_key.lower() == wanted:
+            return value
+    return None
+
+
+def text_from(item: dict[str, Any], keys: Iterable[str]) -> str:
+    parts: list[str] = []
+    for key in keys:
+        value = get_ci(item, key)
+        if isinstance(value, str) and value.strip():
+            parts.append(value.strip())
+        elif isinstance(value, list):
+            parts.extend(str(v).strip() for v in value if str(v).strip())
+    return "\n".join(parts)
+
+
+def first_value(item: dict[str, Any], keys: Iterable[str]) -> Any:
+    for key in keys:
+        value = get_ci(item, key)
+        if value not in (None, "", []):
+            return value
+    return None
+
+
+def looks_like_record(item: dict[str, Any]) -> bool:
+    return any(get_ci(item, key) is not None for key in QUESTION_KEYS) or {
+        "images",
+        "annotations",
+    }.issubset(item)
 
 
 def flatten_records(payload: Any, source_id: str) -> Iterable[tuple[str, dict[str, Any]]]:
@@ -128,57 +171,48 @@ def flatten_records(payload: Any, source_id: str) -> Iterable[tuple[str, dict[st
     elif isinstance(payload, list):
         for idx, item in enumerate(payload):
             if isinstance(item, dict):
-                yield from flatten_records(item, f"{source_id}_{idx}")
+                record_id = str(item.get("id") or f"{source_id}_{idx}")
+                yield from flatten_records(item, record_id)
 
 
-def looks_like_record(item: dict[str, Any]) -> bool:
-    keys = set(item)
-    return bool(keys.intersection(QUESTION_KEYS)) or {"images", "annotations"}.issubset(keys)
+def iter_json_records(root: Path) -> Iterable[tuple[str, dict[str, Any], Path]]:
+    if not root.exists():
+        return
+    seen = 0
+    for path in sorted(root.rglob("*")):
+        if not path.is_file() or path.suffix.lower() not in ANNOTATION_EXTS:
+            continue
+        seen += 1
+        if seen > MAX_JSON_FILES:
+            break
+        try:
+            payload = load_json(path) if path.suffix.lower() == ".json" else load_jsonl(path)
+        except (OSError, json.JSONDecodeError):
+            continue
+        for record_id, record in flatten_records(payload, path.stem):
+            yield record_id, record, path
 
 
-def text_from(item: dict[str, Any], keys: Iterable[str]) -> str:
-    parts: list[str] = []
-    for key in keys:
-        value = item.get(key)
-        if isinstance(value, str) and value.strip():
-            parts.append(value.strip())
-        elif isinstance(value, list):
-            parts.extend(str(v).strip() for v in value if str(v).strip())
-    return "\n".join(parts)
-
-
-def first_value(item: dict[str, Any], keys: Iterable[str]) -> Any:
-    for key in keys:
-        value = item.get(key)
-        if value not in (None, "", []):
-            return value
-    return None
+def normalize_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip().lower()
 
 
 def is_chemistry_record(item: dict[str, Any]) -> bool:
-    metadata_text = " ".join(
-        str(item.get(key, ""))
-        for key in (
-            "subject",
-            "topic",
-            "category",
-            "skill",
-            "task",
-            "grade",
-            "lessonName",
-            "lesson",
-            "chapter",
-        )
-    )
-    full_text = " ".join(
+    haystack = " ".join(
         [
-            metadata_text,
+            text_from(item, TOPIC_KEYS),
             text_from(item, QUESTION_KEYS),
             text_from(item, CONTEXT_KEYS),
             text_from(item, EXPLANATION_KEYS),
         ]
     ).lower()
-    return any(keyword.lower() in full_text for keyword in CHEMISTRY_KEYWORDS) or bool(FORMULA_RE.search(full_text))
+    chinese_keywords = [keyword for keyword in CHEMISTRY_KEYWORDS if re.search(r"[\u4e00-\u9fff]", keyword)]
+    english_keywords = [keyword for keyword in CHEMISTRY_KEYWORDS if keyword not in chinese_keywords]
+    if any(keyword in haystack for keyword in chinese_keywords):
+        return True
+    if any(re.search(rf"\b{re.escape(keyword.lower())}\b", haystack) for keyword in english_keywords):
+        return True
+    return bool(FORMULA_RE.search(haystack))
 
 
 def stable_split(identifier: str, seed: int, train: float, val: float) -> str:
@@ -189,12 +223,6 @@ def stable_split(identifier: str, seed: int, train: float, val: float) -> str:
     if bucket < train + val:
         return "val"
     return "test"
-
-
-def resolve_split(record_id: str, split_map: dict[str, str], seed: int) -> str:
-    if record_id in split_map:
-        return split_map[record_id]
-    return stable_split(record_id, seed, 0.8, 0.1)
 
 
 def load_scienceqa_splits(root: Path) -> dict[str, str]:
@@ -208,10 +236,30 @@ def load_scienceqa_splits(root: Path) -> dict[str, str]:
     split_map: dict[str, str] = {}
     if isinstance(payload, dict):
         for split, ids in payload.items():
+            if split not in {"train", "val", "dev", "test"}:
+                continue
             if isinstance(ids, list):
+                normalized_split = "val" if split == "dev" else str(split)
                 for record_id in ids:
-                    split_map[str(record_id)] = "val" if split == "dev" else str(split)
+                    split_map[str(record_id)] = normalized_split
     return split_map
+
+
+def load_scienceqa_captions(root: Path) -> dict[str, str]:
+    captions_file = root / "captions.json"
+    if not captions_file.exists():
+        return {}
+    try:
+        payload = load_json(captions_file)
+    except json.JSONDecodeError:
+        return {}
+    if not isinstance(payload, dict):
+        return {}
+    return {str(key): str(value) for key, value in payload.items() if value}
+
+
+def resolve_split(record_id: str, split_map: dict[str, str], seed: int) -> str:
+    return split_map.get(record_id, stable_split(record_id, seed, 0.8, 0.1))
 
 
 def normalize_choices(value: Any) -> list[dict[str, str]]:
@@ -231,6 +279,22 @@ def normalize_choices(value: Any) -> list[dict[str, str]]:
     return choices
 
 
+def parse_embedded_choices(question: str) -> tuple[str, list[dict[str, str]]]:
+    pattern = re.compile(
+        r"(?ms)(?<![A-Za-z])(?:\(([A-Z])\)|([A-Z]))[.)]\s*(.*?)(?=(?<![A-Za-z])(?:\([A-Z]\)|[A-Z])[.)]\s*|\Z)"
+    )
+    matches = list(pattern.finditer(question))
+    if len(matches) < 2:
+        return question.strip(), []
+    stem = question[: matches[0].start()].strip()
+    choices = [
+        {"label": match.group(1) or match.group(2), "text": re.sub(r"\s+", " ", match.group(3)).strip()}
+        for match in matches
+        if match.group(3).strip()
+    ]
+    return stem, choices
+
+
 def normalize_answer(answer: Any, choices: list[dict[str, str]]) -> dict[str, str]:
     if isinstance(answer, int) and 0 <= answer < len(choices):
         return choices[answer]
@@ -239,26 +303,84 @@ def normalize_answer(answer: Any, choices: list[dict[str, str]]) -> dict[str, st
         idx = int(answer_text)
         if 0 <= idx < len(choices):
             return choices[idx]
+    label_match = re.match(r"^\s*([A-Z])\b", answer_text)
+    if label_match:
+        answer_text = label_match.group(1)
     for choice in choices:
         if answer_text and answer_text in {choice["label"], choice["text"]}:
             return choice
     return {"label": answer_text, "text": ""}
 
 
-def image_paths(root: Path, item: dict[str, Any]) -> list[str]:
-    raw = first_value(item, IMAGE_KEYS)
-    if raw is None:
+def scemqa_explanation(answer_text: str) -> str:
+    return re.sub(r"^\s*[A-Z]\b\s*", "", answer_text).strip()
+
+
+def resolve_first_existing(candidates: Iterable[Path]) -> Path:
+    candidates = list(candidates)
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return candidates[0] if candidates else Path("")
+
+
+def scienceqa_image_paths(root: Path, record_id: str, record: dict[str, Any], split: str) -> list[str]:
+    raw = first_value(record, IMAGE_KEYS)
+    if raw in (None, "", "none", "None"):
         return []
     values = raw if isinstance(raw, list) else [raw]
     paths: list[str] = []
     for value in values:
-        path_text = str(value).strip()
-        if not path_text:
+        text = str(value).strip()
+        if not text:
             continue
-        path = Path(path_text)
-        candidate = path if path.is_absolute() else root / path
-        paths.append(str(candidate.resolve()))
+        path = Path(text)
+        candidates = [path] if path.is_absolute() else [
+            root / text,
+            root / "images" / split / record_id / text,
+            root / "images" / record_id / text,
+        ]
+        paths.append(str(resolve_first_existing(candidates).resolve()))
     return paths
+
+
+def scemqa_image_paths(root: Path, record: dict[str, Any]) -> list[str]:
+    raw = first_value(record, IMAGE_KEYS)
+    if raw in (None, "", "none", "None"):
+        return []
+    values = raw if isinstance(raw, list) else [raw]
+    paths: list[str] = []
+    for value in values:
+        text = str(value).strip().replace("\\", "/")
+        if not text:
+            continue
+        path = Path(text)
+        if path.is_absolute():
+            text = path.name
+        candidates: list[Path] = []
+        if "/" in text and not text.startswith(("Multiple_Choice/", "Free_Response/")):
+            candidates.extend(
+                [
+                    root / "Multiple_Choice" / f"{text}.png",
+                    root / "Multiple_Choice" / f"{text}.jpg",
+                    root / "Free_Response" / f"{text}.png",
+                    root / "Free_Response" / f"{text}.jpg",
+                ]
+            )
+        candidates.extend([root / text, root / f"{text}.png", root / f"{text}.jpg"])
+        paths.append(str(resolve_first_existing(candidates).resolve()))
+    return paths
+
+
+def topic_tags(record: dict[str, Any]) -> list[str]:
+    tags: list[str] = []
+    for key in TOPIC_KEYS:
+        value = get_ci(record, key)
+        if isinstance(value, list):
+            tags.extend(str(v) for v in value if v)
+        elif value:
+            tags.append(str(value))
+    return tags
 
 
 def question_payload(
@@ -268,71 +390,44 @@ def question_payload(
     record: dict[str, Any],
     root: Path,
     split: str,
+    captions: dict[str, str] | None = None,
 ) -> dict[str, Any] | None:
-    question = text_from(record, QUESTION_KEYS)
-    choices = normalize_choices(first_value(record, SCIENCEQA_CHOICE_KEYS))
+    question = str(first_value(record, QUESTION_KEYS) or "").strip()
+    choices = normalize_choices(first_value(record, CHOICE_KEYS))
+    if source_dataset == "SceMQA" and not choices:
+        question, choices = parse_embedded_choices(question)
     if not question or not choices:
         return None
-    answer = normalize_answer(record.get("answer", record.get("correct_answer")), choices)
-    context_text = text_from(record, CONTEXT_KEYS)
+
+    raw_answer = first_value(record, ANSWER_KEYS)
+    answer = normalize_answer(raw_answer, choices)
     explanation = text_from(record, EXPLANATION_KEYS)
-    topic_tags = [
-        str(record.get(key))
-        for key in ("subject", "topic", "category", "skill")
-        if record.get(key)
-    ]
+    if source_dataset == "SceMQA":
+        explanation = scemqa_explanation(str(raw_answer or "")) or explanation
+        images = scemqa_image_paths(root, record)
+        split = stable_split(record_id, 20260525, 0.8, 0.1)
+    else:
+        images = scienceqa_image_paths(root, record_id, record, split)
+
+    context_parts = [text_from(record, CONTEXT_KEYS)]
+    if captions and record_id in captions:
+        context_parts.append(f"image_caption: {captions[record_id]}")
+    context_text = "\n".join(part for part in context_parts if part)
+
     return {
         "question_id": record_id,
         "source_dataset": source_dataset,
         "language": "zh" if re.search(r"[\u4e00-\u9fff]", question) else "en",
         "subject": "chemistry",
-        "topic_tags": topic_tags,
+        "topic_tags": topic_tags(record),
         "question_stem": question,
         "choices": choices,
         "answer": answer,
         "explanation": explanation,
-        "context": {
-            "text": context_text,
-            "image_paths": image_paths(root, record),
-        },
+        "context": {"text": context_text, "image_paths": images},
         "page_regions": [],
         "split": split,
     }
-
-
-def build_scienceqa(root: Path, seed: int) -> list[dict[str, Any]]:
-    split_map = load_scienceqa_splits(root)
-    rows: list[dict[str, Any]] = []
-    for record_id, record in iter_json_records(root):
-        if not is_chemistry_record(record):
-            continue
-        payload = question_payload(
-            source_dataset="ScienceQA",
-            record_id=record_id,
-            record=record,
-            root=root,
-            split=resolve_split(record_id, split_map, seed),
-        )
-        if payload:
-            rows.append(payload)
-    return dedupe_questions(rows)
-
-
-def build_tqa(root: Path, seed: int) -> list[dict[str, Any]]:
-    rows: list[dict[str, Any]] = []
-    for record_id, record in iter_json_records(root):
-        if not is_chemistry_record(record):
-            continue
-        payload = question_payload(
-            source_dataset="TQA",
-            record_id=record_id,
-            record=record,
-            root=root,
-            split=stable_split(record_id, seed, 0.8, 0.1),
-        )
-        if payload:
-            rows.append(payload)
-    return dedupe_questions(rows)
 
 
 def dedupe_questions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -347,8 +442,50 @@ def dedupe_questions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return deduped
 
 
-def normalize_text(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip().lower()
+def build_scienceqa(root: Path, seed: int) -> list[dict[str, Any]]:
+    split_map = load_scienceqa_splits(root)
+    captions = load_scienceqa_captions(root)
+    rows: list[dict[str, Any]] = []
+    for record_id, record, _path in iter_json_records(root):
+        scienceqa_metadata = text_from(record, ("topic", "category", "skill")).lower()
+        if not (
+            "chemistry" in scienceqa_metadata
+            or "chemical" in scienceqa_metadata
+            or (not scienceqa_metadata and is_chemistry_record(record))
+        ):
+            continue
+        split = resolve_split(record_id, split_map, seed)
+        payload = question_payload(
+            source_dataset="ScienceQA",
+            record_id=record_id,
+            record=record,
+            root=root,
+            split=split,
+            captions=captions,
+        )
+        if payload:
+            rows.append(payload)
+    return dedupe_questions(rows)
+
+
+def build_scemqa(root: Path, seed: int) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for record_id, record, path in iter_json_records(root):
+        normalized_path = path.as_posix().lower()
+        if "free_response" in normalized_path:
+            continue
+        if "chem" not in normalized_path and not is_chemistry_record(record):
+            continue
+        payload = question_payload(
+            source_dataset="SceMQA",
+            record_id=f"{path.stem}_{record_id}",
+            record=record,
+            root=root,
+            split=stable_split(record_id, seed, 0.8, 0.1),
+        )
+        if payload:
+            rows.append(payload)
+    return dedupe_questions(rows)
 
 
 def bbox_from(annotation: dict[str, Any]) -> list[float]:
@@ -403,22 +540,17 @@ def map_region_label(raw_label: str, config: dict[str, Any]) -> str:
     return "paragraph" if raw in {"plain text", "body"} else target
 
 
-def build_m6doc(root: Path, config: dict[str, Any], seed: int) -> list[dict[str, Any]]:
-    rows: list[dict[str, Any]] = []
-    if not root.exists():
-        return rows
-    for path in sorted(root.rglob("*.json")):
-        try:
-            payload = load_json(path)
-        except (OSError, json.JSONDecodeError):
-            continue
-        if not isinstance(payload, dict):
-            continue
-        if "images" in payload and "annotations" in payload:
-            rows.extend(parse_coco_layout(payload, root, path, config, seed))
-        elif "pages" in payload:
-            rows.extend(parse_page_layout(payload.get("pages"), root, path, config, seed))
-    return rows
+def is_chemistry_layout_metadata(metadata: str) -> bool:
+    lower = metadata.lower()
+    return "chemistry" in lower or "化学" in metadata
+
+
+def resolve_existing_path(root: Path, text: str) -> str:
+    if not text:
+        return ""
+    path = Path(text)
+    candidate = path if path.is_absolute() else root / path
+    return str(candidate.resolve())
 
 
 def parse_coco_layout(
@@ -445,8 +577,6 @@ def parse_coco_layout(
         metadata = " ".join(str(image.get(k, "")) for k in ("subject", "document_type", "type", "doc_type"))
         if metadata and not is_chemistry_layout_metadata(metadata):
             continue
-        file_name = str(image.get("file_name") or image.get("path") or "")
-        image_path = resolve_existing_path(root, file_name)
         regions = []
         for annotation in annotations:
             raw_label = str(annotation.get("label") or categories.get(annotation.get("category_id"), ""))
@@ -468,7 +598,7 @@ def parse_coco_layout(
                     "page_id": record_id,
                     "document_id": str(image.get("document_id") or annotation_path.stem),
                     "source_dataset": "M6Doc",
-                    "image_path": image_path,
+                    "image_path": resolve_existing_path(root, str(image.get("file_name") or image.get("path") or "")),
                     "language": str(image.get("language") or ""),
                     "subject": str(image.get("subject") or "Chemistry"),
                     "document_type": str(image.get("document_type") or image.get("type") or ""),
@@ -529,24 +659,22 @@ def parse_page_layout(
     return rows
 
 
-def is_chemistry_layout_metadata(metadata: str) -> bool:
-    lower = metadata.lower()
-    has_chemistry = "chemistry" in lower or "化学" in metadata
-    if not has_chemistry:
-        return False
-    if any(doc_type in lower for doc_type in ("textbook", "test paper", "exam", "handout")):
-        return True
-    if any(doc_type in metadata for doc_type in ("教材", "试卷", "讲义", "实验")):
-        return True
-    return True
-
-
-def resolve_existing_path(root: Path, text: str) -> str:
-    if not text:
-        return ""
-    path = Path(text)
-    candidate = path if path.is_absolute() else root / path
-    return str(candidate.resolve())
+def build_m6doc(root: Path, config: dict[str, Any], seed: int) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    if not root.exists():
+        return rows
+    for path in sorted(root.rglob("*.json")):
+        try:
+            payload = load_json(path)
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(payload, dict):
+            continue
+        if "images" in payload and "annotations" in payload:
+            rows.extend(parse_coco_layout(payload, root, path, config, seed))
+        elif "pages" in payload:
+            rows.extend(parse_page_layout(payload.get("pages"), root, path, config, seed))
+    return rows
 
 
 def build_self_collected_manifest(root: Path, source_dataset: str, seed: int) -> list[dict[str, str]]:
@@ -590,11 +718,7 @@ def write_csv(path: Path, rows: list[dict[str, str]], fieldnames: list[str]) -> 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path.cwd())
-    parser.add_argument(
-        "--config",
-        type=Path,
-        default=Path("config/task4_education_parsing_rules.json"),
-    )
+    parser.add_argument("--config", type=Path, default=Path("config/task4_education_parsing_rules.json"))
     parser.add_argument(
         "--page-layout-output",
         type=Path,
@@ -618,23 +742,37 @@ def main() -> int:
     config = load_json(config_path)
     datasets = config.get("datasets", {})
 
-    m6doc_root = repo_root / datasets.get("M6Doc", {}).get("root", "data/raw/M6Doc")
-    scienceqa_root = repo_root / datasets.get("ScienceQA", {}).get("root", "data/raw/ScienceQA")
-    tqa_root = repo_root / datasets.get("TQA", {}).get("root", "data/raw/TQA")
-    exam_root = repo_root / datasets.get("ChineseChemExam", {}).get("root", "data/raw/ChineseChemExam")
-    handout_root = repo_root / datasets.get("ChineseChemLabHandout", {}).get("root", "data/raw/ChineseChemLabHandout")
-
-    page_rows = build_m6doc(m6doc_root, config, args.seed)
-    qa_rows = build_scienceqa(scienceqa_root, args.seed) + build_tqa(tqa_root, args.seed)
-    self_rows = build_self_collected_manifest(exam_root, "ChineseChemExam", args.seed)
-    self_rows.extend(build_self_collected_manifest(handout_root, "ChineseChemLabHandout", args.seed))
+    page_rows = build_m6doc(repo_root / datasets.get("M6Doc", {}).get("root", "data/raw/M6Doc"), config, args.seed)
+    qa_rows = build_scienceqa(
+        repo_root / datasets.get("ScienceQA", {}).get("root", "data/raw/ScienceQA"),
+        args.seed,
+    )
+    qa_rows.extend(
+        build_scemqa(repo_root / datasets.get("SceMQA", {}).get("root", "data/raw/SceMQA"), args.seed)
+    )
+    self_rows = build_self_collected_manifest(
+        repo_root / datasets.get("ChineseChemExam", {}).get("root", "data/raw/ChineseChemExam"),
+        "ChineseChemExam",
+        args.seed,
+    )
+    self_rows.extend(
+        build_self_collected_manifest(
+            repo_root / datasets.get("ChineseChemLabHandout", {}).get("root", "data/raw/ChineseChemLabHandout"),
+            "ChineseChemLabHandout",
+            args.seed,
+        )
+    )
 
     page_output = args.page_layout_output if args.page_layout_output.is_absolute() else repo_root / args.page_layout_output
     qa_output = args.qa_output if args.qa_output.is_absolute() else repo_root / args.qa_output
-    self_output = args.self_collected_output if args.self_collected_output.is_absolute() else repo_root / args.self_collected_output
+    self_output = (
+        args.self_collected_output
+        if args.self_collected_output.is_absolute()
+        else repo_root / args.self_collected_output
+    )
 
     write_jsonl(page_output, page_rows)
-    write_jsonl(qa_output, qa_rows)
+    write_jsonl(qa_output, dedupe_questions(qa_rows))
     write_csv(
         self_output,
         self_rows,
@@ -653,7 +791,7 @@ def main() -> int:
     print(f"Wrote page layout JSONL: {page_output}")
     print(f"Page layout rows: {len(page_rows)}")
     print(f"Wrote QA JSONL: {qa_output}")
-    print(f"QA rows: {len(qa_rows)}")
+    print(f"QA rows: {len(dedupe_questions(qa_rows))}")
     print(f"Wrote self-collected annotation manifest: {self_output}")
     print(f"Self-collected rows: {len(self_rows)}")
     return 0

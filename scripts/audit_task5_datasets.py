@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Audit and clean Task 5 dataset candidates.
+"""Audit Task 5 dataset candidates.
 
-The script performs a conservative source-level cleanup for lightweight
-chemical process diagram parsing. It does not download large archives. It
-checks whether expected local roots exist, counts common file types, and writes
-review artifacts that can be opened in spreadsheet tools.
+This script performs a conservative local audit for the optional task:
+lightweight chemical process / reaction diagram node-arrow-parameter parsing.
+It does not download large archives. It checks expected local roots, counts
+common image/annotation/archive files, and writes review artifacts that can be
+opened in spreadsheet tools.
 """
 
 from __future__ import annotations
@@ -137,7 +138,12 @@ def audit_dataset(repo_root: Path, rules: dict[str, Any]) -> DatasetAudit:
         audit.warnings.append(f"Scan stopped after {MAX_SCAN_FILES} files; counts are lower bounds.")
     if audit.image_count == 0 and audit.archive_count == 0:
         audit.warnings.append("No image files or archives found in the local root.")
-    if audit.annotation_count == 0 and audit.dataset_id in {"rxnscribe", "pidcon"}:
+    if audit.annotation_count == 0 and audit.dataset_id in {
+        "rxnscribe",
+        "urxndiagram15k",
+        "pid2graph",
+        "pidcon",
+    }:
         audit.warnings.append("Core graph dataset has no local annotation files yet.")
     if not audit.warnings:
         audit.warnings.append("Local file structure is ready for the next conversion step.")
@@ -206,7 +212,7 @@ def write_graph_schema(path: Path, config: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     schema = {
         "schema_name": "task5_lightweight_chemical_process_graph",
-        "version": "0.1",
+        "version": "0.2",
         "graph_record": {
             "diagram_id": "string",
             "source_dataset": "string",
@@ -221,8 +227,9 @@ def write_graph_schema(path: Path, config: dict[str, Any]) -> None:
                     "attributes": {
                         "smiles": "optional string",
                         "equipment_tag": "optional string",
-                        "confidence": "optional number"
-                    }
+                        "topology_class": "optional string",
+                        "confidence": "optional number",
+                    },
                 }
             ],
             "edges": [
@@ -232,16 +239,16 @@ def write_graph_schema(path: Path, config: dict[str, Any]) -> None:
                     "source_node_id": "string",
                     "target_node_id": "string",
                     "polyline": [[0, 0], [1, 1]],
-                    "arrowhead": "none|source|target|both",
+                    "arrowhead": "none|source|target|both|unknown",
                     "parameters": [
                         {
                             "type": config["target_schema"]["parameter_types"],
                             "text": "string",
                             "value": "optional string or number",
                             "unit": "optional string",
-                            "bbox": [0, 0, 0, 0]
+                            "bbox": [0, 0, 0, 0],
                         }
-                    ]
+                    ],
                 }
             ],
             "text_blocks": [
@@ -250,9 +257,9 @@ def write_graph_schema(path: Path, config: dict[str, Any]) -> None:
                     "text": "string",
                     "bbox": [0, 0, 0, 0],
                     "linked_node_id": "optional string",
-                    "linked_edge_id": "optional string"
+                    "linked_edge_id": "optional string",
                 }
-            ]
+            ],
         },
     }
     path.write_text(json.dumps(schema, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -262,13 +269,13 @@ def render_markdown(audits: list[DatasetAudit], config: dict[str, Any]) -> str:
     lines = [
         "# 任务 5 数据集清洗与审查报告",
         "",
-        "目标：清洗出与化学/化工有关、可支撑轻量化工流程图节点-箭头-参数解析的数据源。",
+        "目标：清洗出与化学、化工相关，并可支撑轻量化工流程图/反应路线图节点-箭头-参数解析的数据源。",
         "",
-        "说明：用户写的是“五个数据集”，但清单实际包含 6 个数据源；本报告全部纳入审查，并按核心、辅助、迁移、后续大规模四档清洗。",
+        f"说明：本次审查纳入 {len(audits)} 个候选源，覆盖反应图解析数据、P&ID/PFD 工程图代理数据，以及通用图表迁移数据；审查口径统一为是否能映射到 node-edge-parameter graph schema。",
         "",
         "## 总览",
         "",
-        "| 数据集 | 清洗档位 | 决策 | 化学相关 | 图结构适配 | 本地状态 | 关键用途 |",
+        "| 数据集 | 清洗档位 | 决策 | 化学/化工相关 | 图结构适配 | 本地状态 | 关键用途 |",
         "|---|---|---|---:|---:|---|---|",
     ]
     for audit in audits:
@@ -292,10 +299,10 @@ def render_markdown(audits: list[DatasetAudit], config: dict[str, Any]) -> str:
             "## 推荐路线",
             "",
             "1. 用 RxnScribe 建立反应 scheme graph 的节点、箭头、条件参数抽取基线。",
-            "2. 用 ReactionDataExtractor2 作为 baseline 和结构化输出参考。",
-            "3. 用 AI2D 做通用 diagram node-arrow-text 迁移，只保留化学或箭头密集样本。",
-            "4. 用 PIDCon 验证 node-edge graph recovery 指标，包括 GED 和 NCA。",
-            "5. PID_dataset 和 Dataset-P&ID/Digitize-PID 作为 P&ID/PFD 扩展，不建议一开始全量进入。",
+            "2. 用 RxnCaption / U-RxnDiagram-15k 扩大反应图拓扑、箭头和条件解析训练覆盖。",
+            "3. 用 ReactionDataExtractor2 作为 baseline parser 和结构化输出参考。",
+            "4. 用 PID2Graph 验证 P&ID/PFD 代理图的 node-edge graph recovery。",
+            "5. 将 PIDCon、PID_dataset、Dataset-P&ID/Digitize-PID 放入工程图扩展阶段；AI2D 仅用于通用 node-arrow-text 迁移预训练。",
             "",
             "## 数据集细审",
             "",

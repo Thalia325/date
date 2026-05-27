@@ -1,0 +1,348 @@
+[
+    {
+        "Question": "The above mass spectra is for the hypochlorite ion, ClO$^-$. Oxygen has only one stable isotope, which has a mass of 16 amu. How many neutrons does the most common isotope of chlorine have?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{18} The most common mass of a ClO- ion is 51 amu. 51 amu-16 amu = 35 amu, which must be the mass of the most common isotope of chlorine. As mass number is equal to protons + neutrons, and chlorine has 17 protons (its atomic number), 35 - 17 = 18 neutrons.",
+        "Comment": " ",
+        "category": "Atoms, Elements, and the Building Blocks",
+        "ImagePath": "Chemistry_Free_Response/1"
+    },
+    {
+        "Question": "The above mass spectra is for the hypochlorite ion, ClO$^-$. Oxygen has only one stable isotope, which has a mass of 16 amu. Using the spectra, calculate the average mass of a hypochlorite ion.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{51.5} 51(0.75) + 53(0.25) = 51.5",
+        "category": "Atoms, Elements, and the Building Blocks",
+        "ImagePath": "Chemistry_Free_Response/1"
+    },
+    {
+        "Question": "The above mass spectra is for the hypochlorite ion, ClO$^-$. Oxygen has only one stable isotope, which has a mass of 16 amu. Does the negative charge on the ion affect the spectra? (Yes or No)  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{No} The only subatomic particles that contribute to the mass of any atom are neutrons and protons. Changing the number of electrons does not change the mass significantly.",
+        "Comment": "Yes or No",
+        "category": "Atoms, Elements, and the Building Blocks",
+        "ImagePath": "Chemistry_Free_Response/1"
+    },
+    {
+        "Question": "The above PES belongs to a neutral chlorine atom. What wavelength of light would be required to eject a 3s electron from chlorine?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{4.9e-8} The 3s electron belongs to the peak located at 2.44 MJ/mol. First, you need to calculate the amount of energy needed to remove a single 3s electron (rather than a mole of them): \\[ \\frac{2.44 \\, \\text{MJ}}{1 \\, \\text{mol}} \\times \\frac{1 \\, \\text{mol}}{6.02 \\times 10^{23} \\, \\text{electrons}} = 4.05 \\times 10^{-24} \\, \\text{MJ} = 4.05 \\times 10^{-18} \\, \\text{J} \\] Then, you can use E = hc/\u03bb to calculate the wavelength of light that would have sufficient energy:  \\[ 4.05 \\times 10^{-18} \\, \\text{J} = \\frac{(6.63 \\times 10^{-34} \\, \\text{Js})(3.0 \\times 10^{8} \\, \\text{m/s})}{\\lambda} \\] \\[ \\lambda = 4.9 \\times 10^{-8} \\, \\text{m} \\]",
+        "Comment": " ",
+        "category": "Atoms, Elements, and the Building Blocks",
+        "ImagePath": "Chemistry_Free_Response/2"
+    },
+    {
+        "Question": "The photoelectron spectrum of an element is given below: Identify the element this spectra most likely belongs to and write out its full electron configuration. (Answer is a hybridization)",
+        "Answer (final answer highlighted)": "\\answer{$1s^22s^22p^63s^23p^4}",
+        "Comment": "Fill blank",
+        "category": "Atoms, Elements, and the Building Blocks",
+        "ImagePath": "Chemistry_Free_Response/3"
+    },
+    {
+        "Question": "The acetyl ion has a formula of C$_2$H$_3$O$^-$ and two possible Lewis electron-dot diagram representations: Using formal charge, determine which (left or right) structure is the most likely correct structure. (Answer is a single word)",
+        "Answer (final answer highlighted)": "\\answer{Left} For this formal charge calculation, the H atoms are left out as they are identically bonded/drawn in both structures. As oxygen is more electronegative than carbon, an oxygen atom is more likely to have the negative formal charge than a carbon atom. The left-hand structure is most likely correct.",
+        "Comment": "Fill blank",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/4"
+    },
+    {
+        "Question": "The acetyl ion has a formula of C$_2$H$_3$O$^-$ and two possible Lewis electron-dot diagram representations: What is the hybridization around the atom? (Answer is a hybridization)",
+        "Answer (final answer highlighted)": "\\answer{$sp^2$} There are three charge groups around the carbon atom",
+        "Comment": "Fill blank",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/4"
+    },
+    {
+        "Question": "The graph above shows the changes in pressure with changing temperature of gas samples of helium and argon confined in a closed 2-liter vessel. What is the total pressure of the two gases in the container at a temperature of 200 K?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{2.5} Read the graph, and add the two pressures. $P_{Total}$ = $P_{He}$ + $P_{Ar}$ $P_{Total}$ = (1 atm) + (1.5 atm) = 2.5 atm",
+        "Comment": " ",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/5"
+    },
+    {
+        "Question": "The graph above shows the changes in pressure with changing temperature of gas samples of helium and argon confined in a closed 2-liter vessel. How many moles of helium are contained in the vessel?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.12} \\[ n = \\frac{PV}{RT} = \\frac{(1.0 \\, \\text{atm})(2.0 \\, \\text{L})}{(0.082 \\, \\text{L} \\cdot \\text{atm/mol} \\cdot \\text{K})(200 \\, \\text{K})} = 0.12 \\, \\text{moles} \\]",
+        "Comment": " ",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/5"
+    },
+    {
+        "Question": "The graph above shows the changes in pressure with changing temperature of gas samples of helium and argon confined in a closed 2-liter vessel. How many molecules of helium are contained in the vessel?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{7.2e22} Use the definition of a mole. Molecules = (moles)(6.02 \u00d7 10$^23$) Molecules (atoms) of helium = (0.12)(6.02 \u00d7 1023) = 7.2 \u00d7 10$^22$",
+        "Comment": " ",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/5"
+    },
+    {
+        "Question": "The graph above shows the changes in pressure with changing temperature of gas samples of helium and argon confined in a closed 2-liter vessel. If the volume of the container were reduced to 1 liter at a constant temperature of 300 K, what would be the new pressure of the helium gas?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{3} Since T is a constant, the equation becomes: P1V1 = P2V2 (1.5 atm)(2.0 L) = P2(1.0 L) P2 = 3.0 atm",
+        "Comment": " ",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/5"
+    },
+    {
+        "Question": "A student performs an experiment in which a butane lighter is held underwater directly beneath a 100-mL graduated cylinder which has been filled with water as shown in the diagram below. The switch on the lighter is pressed, and butane gas is released into the graduated cylinder. The student's data table for this lab is as follows: Mass of lighter before gas release: 20.432 g Mass of lighter after gas release: 20.296 g Volume of gas collected: 68.40 mL Water Temperature: 19.0\u00b0C Atmospheric Pressure: 745 mmHg. Given that the vapor pressure of water at 19.0\u00b0C is 16.5 mmHg, determine the partial pressure of the butane gas collected in atmospheres.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.959} 745 mmHg - 16.5 mmHg = 729 mmHg, 729/760=0.959",
+        "Comment": " ",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/6"
+    },
+    {
+        "Question": "A student performs an experiment in which a butane lighter is held underwater directly beneath a 100-mL graduated cylinder which has been filled with water as shown in the diagram below. The switch on the lighter is pressed, and butane gas is released into the graduated cylinder. The student's data table for this lab is as follows: Mass of lighter before gas release: 20.432 g Mass of lighter after gas release: 20.296 g Volume of gas collected: 68.40 mL Water Temperature: 19.0\u00b0C Atmospheric Pressure: 745 mmHg. Calculate the molar mass of butane gas from the experimental data given.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{49.6} To determine the mass of the butane, subtract the mass of the lighter after the butane was released from the mass of the lighter before the butane was released. 20.432 g - 20.296 g = 0.136 g To determine the moles of butane, use the Ideal Gas Law, making any necessary conversions first. PV = nRT (0.959 atm)(0.06840 L) = n(0.0821 atm\u00b7L/mol\u00b7K)(292 K) n = 2.74 \u00d7 10$^{-3}$ mol Molar mass is defined as grams per mole, so 0.136 g/2.74 \u00d7 10$^{-3}$ mol = 49.6 g/mol",
+        "Comment": " ",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/6"
+    },
+    {
+        "Question": "A student performs an experiment in which a butane lighter is held underwater directly beneath a 100-mL graduated cylinder which has been filled with water as shown in the diagram below. The switch on the lighter is pressed, and butane gas is released into the graduated cylinder. The student's data table for this lab is as follows: Mass of lighter before gas release: 20.432 g Mass of lighter after gas release: 20.296 g Volume of gas collected: 68.40 mL Water Temperature: 19.0\u00b0C Atmospheric Pressure: 745 mmHg. If the formula of butane is C$_4$H$_{10}$, determine the percent error for the student's results.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{14.5} Actual molar mass of butane: \\[ (12.00 \\, \\text{g/mol} \\times 4) + (1.01 \\, \\text{g/mol} \\times 10) = 58.08 \\, \\text{g/mol} \\] Percent error is: \\[ \\frac{\\left| \\text{Actual value} - \\text{experimental value} \\right|}{\\text{Actual value}} \\times 100\\% \\] So: \\[ \\frac{\\left| 58.08 - 49.6 \\right|}{58.08} \\times 100\\% = 14.5\\% \\text{ error} \\]",
+        "Comment": " ",
+        "category": "Bonding and Phases",
+        "ImagePath": "Chemistry_Free_Response/6"
+    },
+    {
+        "Question": "A student performs an experiment in which a bar of unknown metal M is placed in a solution with the formula MNO$_3$. The metal is then hooked up to a copper bar in a solution of CuSO$_4$ as shown below. A salt bridge that contains aqueous KCl links the cell together. The cell potential is found to be +0.74 V. Separately, when a bar of metal M is placed in the copper sulfate solution, solid copper starts to form on the bar. When a bar of copper is placed in the MNO$_3$ solution, no visible reaction occurs. The following gives some reduction potentials for copper: Half-reactions and their standard electrode potentials (E): 1. For the reaction \\( \\text{Cu}^{2+} + 2\\text{e}^- \\rightarrow \\text{Cu(s)} \\), \\( E = 0.34 \\, \\text{V} \\) 2. For the reaction \\( \\text{Cu}^{2+} + \\text{e}^- \\rightarrow \\text{Cu}^+ \\), \\( E = 0.15 \\, \\text{V} \\) 3. For the reaction \\( \\text{Cu}^+ + \\text{e}^- \\rightarrow \\text{Cu(s)} \\), \\( E = 0.52 \\, \\text{V} \\). What is the standard reduction potential for metal M?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{-0.4} \\[ E_{\\text{red}} + E_{\\text{ox}} = +0.74 \\, \\text{V} \\] The reduction potential for \\( \\text{Cu}^{2+} + 2\\text{e}^- \\rightarrow \\text{Cu(s)} \\) is known: \\[ 0.34 \\, \\text{V} + E_{\\text{ox}} = +0.74 \\, \\text{V} \\] \\[ E_{\\text{ox}} = +0.40 \\, \\text{V} \\] The reduction potential for metal M is the opposite of its oxidation potential. \\[ E_{\\text{red}} = -0.40 \\, \\text{V} \\]",
+        "Comment": " ",
+        "category": "Chemical Reactions, Energy Changes, and Redox Reactions",
+        "ImagePath": "Chemistry_Free_Response/7"
+    },
+    {
+        "Question": "2NO(g) + Br$_2$(g) \u2192 2NOBr(g) The following results in the figure were obtained in experiments designed to study the rate of the reaction above: Calculate the value of the rate constant, k, for the reaction.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{6e3} Using the values from experiment 1, we first need to realize that the rate of reaction would be half of the rate of appearance of NOBr, because of the \"2\" coefficient in front of the NOBr. So, the rate of reaction for experiment 1 would be 0.0096/2 = 0.0048 M/s. Plugging that into the rate law yields: Rate = k[NO]$^2$[Br$_2$] 0.0048 M/s = (0.02 M)2(0.02 M) k = 6 \u00d7 10$^3$ M$^{-2}$s$^{-1}$",
+        "Comment": " ",
+        "category": "Chemical Reactions and Their Rates",
+        "ImagePath": "Chemistry_Free_Response/8"
+    },
+    {
+        "Question": "The decomposition of phosphine occurs via the pathway below: 4PH$_3$(g) \u2192 P$_4$(g) + 6H$_2$(g) A scientist observing this reaction at 250 K plots the following data: If the rate of disappearance of PH$)3$ is 2.5 \u00d7 10$^{-3}$ M/s at t = 20 s: What is the rate of appearance of P$_4$ at the same point in time?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{6.3e-4} Use the stoichiometric ratios to determine the rate of appearance of \\( P_4 \\): \\[ 2.5 \\times 10^{-3} \\, \\frac{\\text{M}}{\\text{s}} \\text{PH}_3 \\times \\frac{1 \\, \\text{mol} \\, P_4}{4 \\, \\text{mol} \\, \\text{PH}_3} = 6.3 \\times 10^{-4} \\, \\frac{\\text{M}}{\\text{s}} \\text{P}_4 \\]",
+        "Comment": " ",
+        "category": "Chemical Reactions and Their Rates",
+        "ImagePath": "Chemistry_Free_Response/9"
+    },
+    {
+        "Question": "The boiling points of three different compounds are listed below, along with their formulas. What is the hybridization around atom $C_2$ in the acetaldehyde molecule? (Answer is a hybridization)",
+        "Answer (final answer highlighted)": "\\answer{$sp^2$} Three charge clouds means the hybridization is $sp^2$ ",
+        "Comment": "Fill blank",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/10"
+    },
+    {
+        "Question": "A galvanic cell is set up according to the following diagram. Calculate $E^{\\circ}_{cell}$ (V).  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.94} +0.80 V - (-0.14 V) = +0.94 V",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/11"
+    },
+    {
+        "Question": "A galvanic cell is set up according to the following diagram. The beaker of Sn(NO$_3$)$_2$ is disconnected from the cell, and the tin electrode is then connected to an outside source of current. Over the course of 10.0 minutes, 1.65 g of tin plates out onto the electrode. What is the amperage of the current source?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{4.47} The beaker of Sn(NO$_3$)$_2$ is disconnected from the cell, and the tin electrode is then connected to an outside source of current. Over the course of 10.0 minutes, 1.65 g of tin plates out onto the electrode. What is the amperage of the current source? \\[ 1.65 \\, \\text{g Sn} \\times \\frac{1 \\, \\text{mol Sn}}{118.71 \\, \\text{g}} \\times \\frac{2 \\, \\text{mol e}^-}{1 \\, \\text{mol Sn}} \\times \\frac{96500 \\, \\text{C}}{1 \\, \\text{mol e}^-} \\times \\frac{1}{600 \\, \\text{s}} = 4.47 \\, \\text{A} \\]",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/11"
+    },
+    {
+        "Question": "0.10 mol of solid gallium initially at room temperature is heated at a constant rate, and its temperature is tracked, leading to the above graph. Calculate the specific heat capacity of solid gallium in J g$^{-1}$ \u00b0C$^{-1}$.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.344} From the graph, you can see that it takes approximately 12.0 J of heat to raise the temperature of the gallium by 5.0\u00b0C. Additionally, 0.10 mol Ga \u00d7 69.7 g/mol = 6.97 g of gallium. q = mc\u0394T 12.0 J = (6.97 g)(c)(5.0\u00b0C) c = 0.344 J g$^{-1}$ \u00b0C$^{-1}$",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/12"
+    },
+    {
+        "Question": "0.10 mol of solid gallium initially at room temperature is heated at a constant rate, and its temperature is tracked, leading to the above graph. The gallium continues to be heated until it fully boils. Assume ideal behavior for the gallium gas. The reaction described is the phase transition of gallium from liquid to gas: \\text{Ga(l)} \\rightarrow \\text{Ga(g)}. For the substances involved, the standard enthalpy change (\\( H^\\circ \\)) in \\(\\text{kJ mol}^{-1}\\) is given as: For $\\text{Ga(l)}\\), \\( H^\\circ \\) is \\(5.60 \\text{ kJ mol}^{-1}$ For \\text{Ga(g)}\\), \\( H^\\circ \\) is \\(277.1 \\text{ kJ mol}^{-1}\\). Calculate the enthalpy of vaporization for gallium in kJ mol$^{-1}$ given the above data.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{271.5} Calculate the enthalpy of vaporization for gallium given the above data. This is just products-reactants, so 277.1 - 5.60 = 271.5 kJ mol$^{-1}$",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/12"
+    },
+    {
+        "Question": "0.10 mol of solid gallium initially at room temperature is heated at a constant rate, and its temperature is tracked, leading to the above graph. The gallium continues to be heated until it fully boils. Assume ideal behavior for the gallium gas. The reaction described is the phase transition of gallium from liquid to gas: \\text{Ga(l)} \\rightarrow \\text{Ga(g)}. For the substances involved, the standard enthalpy change (\\( H^\\circ \\)) in \\(\\text{kJ mol}^{-1}\\) is given as: For $\\text{Ga(l)}\\), \\( H^\\circ \\) is \\(5.60 \\text{ kJ mol}^{-1}$ For \\text{Ga(g)}\\), \\( H^\\circ \\) is \\(277.1 \\text{ kJ mol}^{-1}\\). Given the enthalpy of vaporization for gallium as 271.5 kJ mol$^{-1}$, and that \u0394S\u00b0 = 113.4 J mol$^{-1}$ K$^{-1}$ for the boiling of gallium, what is the boiling point of the gallium in K?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{2394} During any phase change, \u0394G\u00b0 = 0. With that information, and converting the units to match: \u0394G\u00b0 = \u0394H\u00b0 - T\u0394S\u00b0, 0 = 271.5 kJ mol$^{-1}$ - T(0.1134 kJ mol$^{-1}$ K$^{-1}$), T = 2394 K",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/12"
+    },
+    {
+        "Question": "5.00 g of PbCl$_2$ is added to 300 mL of water in a 400 mL beaker, which is then heated for 10 minutes. At the end of the heating period, some solid PbCl$_2$ is still present at the bottom of the beaker, and the solution is cooled to room temperature before being left out overnight. The next day, 100 mL of the saturated solution is decanted into a separate 250 mL beaker, taking care not to transfer any remaining solid. 100 mL of 0.75 $M$ KI solution is added, causing the following precipitation reaction to go to completion. Pb$^{2+}$ + 2I$^-$ \u2192 PbI$_2$(s). The PbI$_2$ is filtered out, dried, and massed. The mass of the precipitate is found to be 0.747 g. How many moles of Pb$^{2+}$ are in the PbI$_2$ precipitate?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.00162} $$ 0.747 \\, \\text{g} \\, \\text{PbI}_2 \\times \\frac{1 \\, \\text{mol} \\, \\text{PbI}_2}{461 \\, \\text{g} \\, \\text{PbI}_2} \\times \\frac{1 \\, \\text{mol} \\, \\text{Pb}}{1 \\, \\text{mol} \\, \\text{PbI}_2} = 0.00162 \\, \\text{moles} $$",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/13"
+    },
+    {
+        "Question": "5.00 g of PbCl$_2$ is added to 300 mL of water in a 400 mL beaker, which is then heated for 10 minutes. At the end of the heating period, some solid PbCl$_2$ is still present at the bottom of the beaker, and the solution is cooled to room temperature before being left out overnight. The next day, 100 mL of the saturated solution is decanted into a separate 250 mL beaker, taking care not to transfer any remaining solid. 100 mL of 0.75 $M$ KI solution is added, causing the following precipitation reaction to go to completion. Pb$^{2+}$ + 2I$^-$ \u2192 PbI$_2$(s). The PbI$_2$ is filtered out, dried, and massed. The mass of the precipitate is found to be 0.747 g. What is the concentration of Pb$^{2+}$ in the saturated solution that was decanted from the beaker?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.016} $$ 0.335 \\, \\text{g} \\, \\text{Pb} \\times \\frac{1 \\, \\text{mol} \\, \\text{Pb}}{207 \\, \\text{g} \\, \\text{Pb}} = \\frac{1.62 \\times 10^{-3} \\, \\text{mol} \\, \\text{Pb}}{0.100 \\, \\text{L}} = 0.016 \\, M $$",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/13"
+    },
+    {
+        "Question": "5.00 g of PbCl$_2$ is added to 300 mL of water in a 400 mL beaker, which is then heated for 10 minutes. At the end of the heating period, some solid PbCl$_2$ is still present at the bottom of the beaker, and the solution is cooled to room temperature before being left out overnight. The next day, 100 mL of the saturated solution is decanted into a separate 250 mL beaker, taking care not to transfer any remaining solid. 100 mL of 0.75 $M$ KI solution is added, causing the following precipitation reaction to go to completion. Pb$^{2+}$ + 2I$^-$ \u2192 PbI$_2$(s). The PbI$_2$ is filtered out, dried, and massed. The mass of the precipitate is found to be 0.747 g. Calculate the solubility product constant, K$_{sp}$, for PbCl$_2$.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{1.63e-5} When the PbCl\\(_2\\) solution is saturated, the reaction is PbCl\\(_2\\) (s) \\(\\rightleftharpoons\\) Pb\\(^{2+}\\) + 2 Cl\\(^{-}\\). So, for every one Pb\\(^{2+}\\) ion, there will be two Cl\\(^{-}\\) ions. If [Pb\\(^{2+}\\)] = 0.016 M, then [Cl\\(^{-}\\)] = 0.032 M. K\\(_{sp}\\) = [Pb\\(^{2+}\\)][Cl\\(^{-}\\)]\\(^2\\), so K\\(_{sp}\\) = (0.016)(0.032)\\(^2\\) = 1.63 \\(\\times\\) 10\\(^{-5}\\)",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/13"
+    },
+    {
+        "Question": "A sample of liquid butane (C$_4$H$_{10}$) in a pressurized lighter is set up directly beneath an aluminum can, as show in the diagram above. The can contains 100.0 mL of water, and when the butane is ignited, the temperature of the water inside the can increases from 25.0\u00b0C to 82.3\u00b0C. The total mass of butane ignited is found to be 0.51 g, the specific heat of water is 4.18 J/g\u00b7\u00b0C, and the density of water is 1.00 g/mL. How much heat did the water gain in kJ?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{24} The formula needed is q = mc\u0394T. The mass in the equation is the mass of the water, which is equal to 100.0 g (as the density of water is 1.0 g/mL). \u0394T = 82.3\u00b0C - 25.0\u00b0C = 57.3\u00b0C and c is given as 4.18 J/g\u00b0C, so: q = (100.0 g)(4.18 J/g\u00b7\u00b0C)(57.3\u00b0C) = 24 kJ",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/14"
+    },
+    {
+        "Question": "A sample of liquid butane (C$_4$H$_{10}$) in a pressurized lighter is set up directly beneath an aluminum can, as show in the diagram above. The can contains 100.0 mL of water, and when the butane is ignited, the temperature of the water inside the can increases from 25.0\u00b0C to 82.3\u00b0C. The total mass of butane ignited is found to be 0.51 g, the specific heat of water is 4.18 J/g\u00b7\u00b0C, and the density of water is 1.00 g/mL. What is the experimentally determined heat of combustion for butane based on this experiment? Your answer should be in kJ/mol.   (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{-2700} 0.51 g C$_4$H$_{10}$ \u00d7 1 mol C$_4$H$_{10}$/58.14 g C$_4$H$_{10}$ = 0.0088 mol C$_4$H$_{10}$ The sign on the heat calculated in (b)(i) needs to be flipped, as the combustion reaction will generate as much heat as the water gained. -24 kJ/0.0088 mol C$_4$H$_{10}$ = -2,700 kJ/mol",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/14"
+    },
+    {
+        "Question": "A sample of liquid butane (C$_4$H$_{10}$) in a pressurized lighter is set up directly beneath an aluminum can, as show in the diagram above. The can contains 100.0 mL of water, and when the butane is ignited, the temperature of the water inside the can increases from 25.0\u00b0C to 82.3\u00b0C. The total mass of butane ignited is found to be 0.51 g, the specific heat of water is 4.18 J/g\u00b7\u00b0C, and the density of water is 1.00 g/mL. Given butane's density of 0.573 g/mL at 25\u00b0C, calculate how much heat (in kJ) would be emitted if 5.00 mL of it were combusted at that temperature.   (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{130} 0.573 g/mL = m/5.00 mL m = 2.87 g butane 2.87 g C$_4$H$_{10}$ \u00d7 1 mol C$_4$H$_{10}$/58.14 g C$_4$H$_{10}$ = 0.049 mol C$_4$H$_{10}$ 0.049 mol C$_4$H$_{10}$ \u00d7 2700 kJ/mol = 130 kJ of heat emitted.",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/14"
+    },
+    {
+        "Question": "Current is run through an aqueous solution of nickel (II) fluoride, and a gas is evolved at the right-hand electrode, as indicated by the diagram below. The standard reduction potential for several reactions is given as follows: For the half-cell reaction of fluorine gas, where fluorine is reduced to fluoride ions, the standard reduction potential is \\( +2.87 \\) volts: $$ \\text{F}_2(g) + 2 \\text{e}^- \\rightarrow 2 \\text{F}^- $$ For the reduction of oxygen gas in the presence of protons to form water, the standard reduction potential is \\( +1.23 \\) volts: $$ \\text{O}_2(g) + 4 \\text{H}^+ + 4 \\text{e}^- \\rightarrow 2 \\text{H}_2\\text{O}(l) $$ For the reduction of nickel ions to solid nickel, the standard reduction potential is \\( -0.25 \\) volts: $$ \\text{Ni}^{2+} + 2 \\text{e}^- \\rightarrow \\text{Ni}(s) $$ Finally, for the reduction of water to hydrogen gas and hydroxide ions, the standard reduction potential is \\( -0.83 \\) volts: $$ 2 \\text{H}_2\\text{O}(l) + 2 \\text{e}^- \\rightarrow \\text{H}_2(g) + 2 \\text{OH}^- $$. Calculate the standard cell potential of the cell.   (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{-1.48} E\u00b0$_{cell}$ = E\u00b0$_{ox}$ + E\u00b0$_{red}$ = -1.23 V + (-0.25 V) = -1.48 V",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/15"
+    },
+    {
+        "Question": "Current is run through an aqueous solution of nickel (II) fluoride, and a gas is evolved at the right-hand electrode, as indicated by the diagram below. The standard reduction potential for several reactions is given as follows: For the half-cell reaction of fluorine gas, where fluorine is reduced to fluoride ions, the standard reduction potential is \\( +2.87 \\) volts: $$ \\text{F}_2(g) + 2 \\text{e}^- \\rightarrow 2 \\text{F}^- $$ For the reduction of oxygen gas in the presence of protons to form water, the standard reduction potential is \\( +1.23 \\) volts: $$ \\text{O}_2(g) + 4 \\text{H}^+ + 4 \\text{e}^- \\rightarrow 2 \\text{H}_2\\text{O}(l) $$ For the reduction of nickel ions to solid nickel, the standard reduction potential is \\( -0.25 \\) volts: $$ \\text{Ni}^{2+} + 2 \\text{e}^- \\rightarrow \\text{Ni}(s) $$ Finally, for the reduction of water to hydrogen gas and hydroxide ions, the standard reduction potential is \\( -0.83 \\) volts: $$ 2 \\text{H}_2\\text{O}(l) + 2 \\text{e}^- \\rightarrow \\text{H}_2(g) + 2 \\text{OH}^- $$. Calculate the Gibbs free energy value (in kJ) for the cell at standard conditions.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{380} \u0394G = -nFE n is equal to 4 moles of electrons (from the oxidation reaction). Even though n = 2 in the unbalanced reduction reaction, to balance the reaction, the reduction half-reaction would need to be multiplied by 2 so that the electrons balance. Additionally, a volt is equal to a Joule/Coulomb, which is what you should use to get the units to make sense. So \u0394G = -(4 mol e$^-$)(96,500 C/mol e$^-$)(-0.98 J/C) \u0394G = 380,000 J or 380 kJ",
+        "Comment": " ",
+        "category": "Long Free-Response Question",
+        "ImagePath": "Chemistry_Free_Response/15"
+    },
+    {
+        "Question": "The standard free energy change, \u0394G\u00b0, for the reaction above is \u2013801 kJ/mol$_{rxn}$ at 298 K. Use the figure of bond dissociation energies to find \u0394H\u00b0 for the reaction in the figure.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{-800} Use the relationship below. \u0394H\u00b0 = \u03a3 Energies of the bonds broken \u2013 \u03a3 Energies of the bonds formed, \u0394H\u00b0 = [(4)(415) + (2)(495)] \u2013 [(2)(799) + (4)(463)] kJ/mol, \u0394H\u00b0 = \u2013800 kJ/mol",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/16"
+    },
+    {
+        "Question": "The standard free energy change, \u0394G\u00b0, for the reaction above is \u2013801 kJ/mol$_{rxn}$ at 298 K. How many grams of methane must react with excess oxygen in order to release 1500 kJ of heat?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{30} $$ 1,500 \\, \\text{kJ} \\times \\frac{1 \\, \\text{mol CH}_4}{800 \\, \\text{kJ}} = 1.9 \\, \\text{mol CH}_4 \\times \\frac{16.04 \\, \\text{g CH}_4}{1 \\, \\text{mol CH}_4} = 30 \\, \\text{g CH}_4 $$",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/16"
+    },
+    {
+        "Question": "The standard free energy change, \u0394G\u00b0, for the reaction above is \u2013801 kJ/mol$_{rxn}$ at 298 K. What is the value of \u0394S\u00b0 (in J/K) for the reaction at 298 K?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{3} Use \\(\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ\\) Remember that enthalpy values are given in kJ and entropy values are given in J. $$ \\Delta S^\\circ = \\frac{\\Delta H^\\circ - \\Delta G^\\circ}{T} = \\frac{(-800 \\, \\text{kJ/mol}) - (-801 \\, \\text{kJ/mol})}{(298 \\, \\text{K})} $$ $$ \\Delta S^\\circ = 0.003 \\, \\text{kJ/K} = 3 \\, \\text{J/K} $$",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/16"
+    },
+    {
+        "Question": "For the boiling of methanol, CH$_3$OH, \u2206H\u00b0 = +37.6 kJ/mol and \u2206S\u00b0 = +111 J/mol \u2022 K. What is the boiling point of methanol in degrees Celsius?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{65.9} When a phase change is occurring, the value for \u2206G is always zero, as no real chemical reaction is occurring. Using that knowledge and making sure the units are matching (by converting the entropy to kJ/mol \u00d7 K), you get: \u2206G = \u2206H\u00b0 \u2013 T\u2206S\u00b0, 0 = 37.6 kJ/mol - T(0.111 kJ/mol \u00d7 K), T = 339 K Converting to Celsius: 339 K \u2013 273.15 = 65.9\u00b0C.",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/17"
+    },
+    {
+        "Question": "For the boiling of methanol, CH$_3$OH, \u2206H\u00b0 = +37.6 kJ/mol and \u2206S\u00b0 = +111 J/mol \u2022 K. How much heat is required to boil 50.0 mL of ethanol if the density of ethanol is 0.789 g/mL?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{46.2} First, figure out how many moles of ethanol are present. $$ D = \\frac{m}{V} \\quad \\Rightarrow \\quad 0.789 \\frac{\\text{g}}{\\text{mL}} = \\frac{m}{50.0 \\text{mL}} \\quad \\Rightarrow \\quad m = 39.5 \\text{g CH}_3\\text{OH} $$ $$ 39.5 \\text{g} \\times \\frac{1 \\text{mol CH}_3\\text{OH}}{32.05 \\text{g}} = 1.23 \\text{mol CH}_3\\text{OH} $$ Then, use the \\(\\Delta H^\\circ\\) value to calculate the amount of heat needed. $$ 1.23 \\text{mol} \\times \\frac{37.6 \\text{kJ}}{\\text{mol}} = 46.2 \\text{kJ} $$",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/17"
+    },
+    {
+        "Question": "Ammonia gas reacts with dinitrogen monoxide via the following reaction: 2NH$_3$ (g) + 3N$_2$O(g) \u2192 4N$_2$ (g) + 3H$_2$O(g) The absolute entropy values for the varying substances are listed in the figure. Calculate the entropy value for the overall reaction. Several bond enthalpies are listed in below: The enthalpies of various bonds are given as: The N-H bond has an enthalpy of \\( 388 \\text{ kJ/mol} \\). The N-O bond has an enthalpy of \\( 210 \\text{ kJ/mol} \\). The N=O bond has an enthalpy of \\( 630 \\text{ kJ/mol} \\). The N=N bond has an enthalpy of \\( 409 \\text{ kJ/mol} \\). The N\\(\\equiv\\)N bond has an enthalpy of \\( 941 \\text{ kJ/mol} \\). The O-H bond has an enthalpy of \\( 463 \\text{ kJ/mol} \\). Calculate the enthalpy value for the overall reaction (in J/mol\u00d7K).  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{289} Calculate the entropy value for the overall reaction. \u0394S = \u0394S$_{products}$ \u2013 \u0394S$_{reactants}$, \u0394S = [3(H2O) + 4(N2 )] \u2013 [2(NH3 ) + 3(N2O)], \u0394S = [3(189) + 4(192)] \u2013 [2(193) + 3(220)], \u0394S = 1335 \u2013 1046 \u0394S = 289 J/mol\u00d7K",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/18"
+    },
+    {
+        "Question": "Ammonia gas reacts with dinitrogen monoxide via the following reaction: 2NH$_3$ (g) + 3N$_2$O(g) \u2192 4N$_2$ (g) + 3H$_2$O(g) The absolute entropy values for the varying substances are listed in the figure. Calculate the entropy value for the overall reaction. Several bond enthalpies are listed in below: The enthalpies of various bonds are given as: The N-H bond has an enthalpy of \\( 388 \\text{ kJ/mol} \\). The N-O bond has an enthalpy of \\( 210 \\text{ kJ/mol} \\). The N=O bond has an enthalpy of \\( 630 \\text{ kJ/mol} \\). The N=N bond has an enthalpy of \\( 409 \\text{ kJ/mol} \\). The N\\(\\equiv\\)N bond has an enthalpy of \\( 941 \\text{ kJ/mol} \\). The O-H bond has an enthalpy of \\( 463 \\text{ kJ/mol} \\). Calculate the enthalpy value for the overall reaction.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{-434} Calculate the enthalpy value for the overall reaction. To determine the amount of enthalpy change, Lewis structures of all of the species should be drawn. You have to account for not only how many bonds are within each molecule, but also how many of those molecules there are. For instance, there are three N\u2013H bonds in NH3 , so with two NH3 molecules there will be six total N\u2013H bonds broken. The bond energy for the other three molecules must be calculated the same way. \u2206H = Bonds broken (reactants) - bonds formed (products), \u2206H = [6(N\u2013H) + 6(N=O)] - [4(N\u2261N) + 6(O\u2013H)], \u2206H = [6(388) + 6(630)] \u2013 [4(941) + 6(463)], \u2206H = 6108 \u2013 6542 \u2206H = \u2013434 kJ/mol",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/18"
+    },
+    {
+        "Question": "Ammonia gas reacts with dinitrogen monoxide via the following reaction: 2NH$_3$ (g) + 3N$_2$O(g) \u2192 4N$_2$ (g) + 3H$_2$O(g) The absolute entropy values for the varying substances are listed in the figure. Calculate the entropy value for the overall reaction. Several bond enthalpies are listed in below: The enthalpies of various bonds are given as: The N-H bond has an enthalpy of \\( 388 \\text{ kJ/mol} \\). The N-O bond has an enthalpy of \\( 210 \\text{ kJ/mol} \\). The N=O bond has an enthalpy of \\( 630 \\text{ kJ/mol} \\). The N=N bond has an enthalpy of \\( 409 \\text{ kJ/mol} \\). The N\\(\\equiv\\)N bond has an enthalpy of \\( 941 \\text{ kJ/mol} \\). The O-H bond has an enthalpy of \\( 463 \\text{ kJ/mol} \\). If 25.00 g of NH$_3$ reacts with 25.00 g of N$_2$O: What is the magnitude of the energy change? \n (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{-82.16} What is the magnitude of the energy change? To determine how much energy is released, the limiting reagent must be determined. For \\( \\text{NH}_3 \\): $$ 25.00 \\, \\text{g NH}_3 \\times \\frac{1 \\, \\text{mol NH}_3}{17.04 \\, \\text{g NH}_3} \\times \\frac{1 \\, \\text{mol}_{\\text{rxn}}}{2 \\, \\text{mol NH}_3} \\times \\frac{-434 \\, \\text{kJ}}{1 \\, \\text{mol}_{\\text{rxn}}} = -318.4 \\, \\text{kJ} $$ For \\( \\text{N}_2\\text{O} \\): $$ 25.00 \\, \\text{g N}_2\\text{O} \\times \\frac{1 \\, \\text{mol N}_2\\text{O}}{44.02 \\, \\text{g N}_2\\text{O}} \\times \\frac{1 \\, \\text{mol}_{\\text{rxn}}}{3 \\, \\text{mol N}_2\\text{O}} \\times \\frac{-434 \\, \\text{kJ}}{1 \\, \\text{mol}_{\\text{rxn}}} = -82.16 \\, \\text{kJ} $$. As the N$_2$O would produce less energy, it would run out first and is thus limiting. The answer is thus \u201382.16 kJ.",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/18"
+    },
+    {
+        "Question": "A student designs an experiment to determine the specific heat of aluminum. The student heats a piece of aluminum with a mass of 5.86 g to various temperatures, then drops it into a calorimeter containing 25.0 mL of water. The following data in the figure is gathered during one of the trials. Given that the specific heat of water is 4.18 J/g\u00b7\u00b0C and assuming its density is exactly 1.00 g/mL, calculate the heat (in J) gained by the water.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{376} q = mc\u2206T, q = (25.0 g)(4.18 J/g\u00b7\u00b0C)(3.6\u00b0C), q = 376 J",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/19"
+    },
+    {
+        "Question": "A student designs an experiment to determine the specific heat of aluminum. The student heats a piece of aluminum with a mass of 5.86 g to various temperatures, then drops it into a calorimeter containing 25.0 mL of water. The following data in the figure is gathered during one of the trials. Calculate the specific heat (J/g\u00b7\u00b0C) of aluminum from the experimental data given.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.780} The heat gained by the water is the same as the heat lost by the aluminum. q = mc\u2206T \u2013376 J = (5.86 g)(c)(\u201382.3\u00b0C) c = 0.780 J/g\u00b7\u00b0C",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/19"
+    },
+    {
+        "Question": "A student designs an experiment to determine the specific heat of aluminum. The student heats a piece of aluminum with a mass of 5.86 g to various temperatures, then drops it into a calorimeter containing 25.0 mL of water. The following data in the figure is gathered during one of the trials. Calculate the enthalpy change for the cooling of aluminum in water in kJ/mol.   (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{1.73} $$ 5.86 \\, \\text{g Al} \\times \\frac{1 \\, \\text{mol Al}}{26.98 \\, \\text{g Al}} = 0.217 \\, \\text{mol Al} $$ $$ 376 \\, \\frac{\\text{J}}{0.217 \\, \\text{mol}} = 1730 \\, \\frac{\\text{J}}{\\text{mol}} = 1.73 \\, \\frac{\\text{kJ}}{\\text{mol}} $$",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/19"
+    },
+    {
+        "Question": "A student designs an experiment to determine the specific heat of aluminum. The student heats a piece of aluminum with a mass of 5.86 g to various temperatures, then drops it into a calorimeter containing 25.0 mL of water. The following data in the figure is gathered during one of the trials. If the accepted specific heat of aluminum is 0.900 J/g\u00b7\u00b0C, calculate the percent error.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{13.3} The percentage error is calculated as: $$ \\% \\text{ error} = \\left| \\frac{\\text{experimental} - \\text{accepted}}{\\text{accepted}} \\right| \\times 100\\% $$ For the given values, the percentage error is: $$ \\left| \\frac{0.780 - 0.900}{0.900} \\right| \\times 100\\% = 13.3\\% \\text{ error} $$",
+        "Comment": " ",
+        "category": "Laws of Thermodynamics and Changes in Matter",
+        "ImagePath": "Chemistry_Free_Response/19"
+    },
+    {
+        "Question": "A student tests the conductivity of three different acid samples, each with a concentration of 0.10 M and a volume of 20.0 mL. The conductivity was recorded in microsiemens per centimeter in the figure. The HCl solution is then titrated with a 0.150 M solution of the weak base methylamine, CH$_3$NH$_2$ . (K$_b$ = 4.38 \u00d7 10$^{\u20134}$). Determine the pH of the solution after 20.0 mL of methylamine has been added.  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{10.34} First, the number of moles of hydrogen ions and methylamine need to be determined. $$ \\text{H}^+: 0.010 \\, \\text{M} = \\frac{n}{0.020 \\, \\text{L}} \\quad \\Rightarrow \\quad n = 0.0020 \\, \\text{mol} $$ $$ \\text{CH}_3\\text{NH}_2: 0.150 \\, \\text{M} = \\frac{n}{0.020 \\, \\text{L}} \\quad \\Rightarrow \\quad n = 0.0030 \\, \\text{mol} $$ For the reaction: \\begin{align*} \\text{H}^+ + \\text{CH}_3\\text{NH}_2 & \\rightleftharpoons \\text{CH}_3\\text{NH}_3^+ \\\\ I & \\quad 0.0020 \\quad 0.0030 \\quad 0 \\\\ C & -0.0020 \\quad +0.0020 \\\\ E & \\quad 0 \\quad 0.0010 \\quad 0.0020 \\\\ \\end{align*} The new volume of the solution is \\(40.0 \\, \\text{mL}\\), which was used to calculate the concentrations of the ions in solution at equilibrium: $$ [\\text{CH}_3\\text{NH}_2] = \\frac{0.0010 \\, \\text{mol}}{0.040 \\, \\text{L}} = 0.025 \\, \\text{M} $$ $$ [\\text{CH}_3\\text{NH}_3^+] = \\frac{0.0020 \\, \\text{mol}}{0.040 \\, \\text{L}} = 0.050 \\, \\text{M} $$ Finally, use the Henderson-Hasselbalch equation: $$ \\text{pOH} = \\text{pK}_b + \\log{\\frac{[\\text{CH}_3\\text{NH}_2]}{[\\text{CH}_3\\text{NH}_3^+]}} $$ $$ \\text{pOH} = \\log{(4.38 \\times 10^{-4})} + \\log{\\frac{0.025}{0.050}} $$ $$ \\text{pOH} = 3.36 + 0.30 = 3.66 $$ $$ \\text{pH} + \\text{pOH} = 14 $$ $$ \\text{pH} = 14 - 3.66 = 10.34 $$",
+        "Comment": " ",
+        "category": "Equilibrium, Acids and Bases, Titrations, and Solubility",
+        "ImagePath": "Chemistry_Free_Response/20"
+    },
+    {
+        "Question": "Two electrodes are inserted into a solution of nickel (II) fluoride and a current of 2.20 A is run through them. A list of standard reduction potentials is in the figure. How long (in seconds) would it take to create 1.2 g of Ni(s) at the cathode?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{1790} $$ 1.20 \\, \\text{g Ni} \\times \\frac{1 \\, \\text{mol Ni}}{58.69 \\, \\text{g Ni}} \\times \\frac{2 \\, \\text{mol e}^-}{1 \\, \\text{mol Ni}} \\times \\frac{96,500 \\, \\text{C}}{1 \\, \\text{mol e}^-} \\times \\frac{1.0 \\, \\text{sec}}{2.20 \\, \\text{C}} = 1790 \\, \\text{seconds} $$",
+        "Comment": " ",
+        "category": "Chemical Reactions, Energy Changes, and Redox Reactions",
+        "ImagePath": "Chemistry_Free_Response/21"
+    },
+    {
+        "Question": "A + 2B \u2192 2C. The following results in the figure were obtained in experiments designed to study the rate of the reaction above. Calculate the value of the rate constant, k, for the reaction (in the unit of M$^{\u22121}$sec$^{\u22121}).   (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{1.2} Use the values from experiment 3, just because they look the simplest. $$ k = \\frac{\\text{Rate}}{[\\text{A}][\\text{B}]} = \\frac{1.2 \\times 10^{-2} \\, \\text{M/sec}}{(0.10 \\, \\text{M})(0.10 \\, \\text{M})} = 1.2 \\, \\text{M}^{-1}\\text{sec}^{-1} $$",
+        "Comment": " ",
+        "category": "Chemical Reactions and Their Rates",
+        "ImagePath": "Chemistry_Free_Response/22"
+    },
+    {
+        "Question": "A + 2B \u2192 2C. The following results in the figure were obtained in experiments designed to study the rate of the reaction above. If another experiment is attempted with [A] and [B], both 0.02-molar, what would be the initial rate (in M/sec) of disappearance of A?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{4.8e-4} Use the rate law. $$ \\text{Rate} = k[\\text{A}][\\text{B}] $$ $$ \\text{Rate} = (1.2 \\, \\text{M}^{-1}\\text{sec}^{-1})(0.02 \\, \\text{M})(0.02 \\, \\text{M}) = 4.8 \\times 10^{-4} \\, \\text{M/sec} $$",
+        "Comment": " ",
+        "category": "Chemical Reactions and Their Rates",
+        "ImagePath": "Chemistry_Free_Response/22"
+    },
+    {
+        "Question": "2N$_2$O$_5$ (g) \u2192 4NO$_2$ (g) + O$_2$ (g) The data in the figure below was gathered for the decomposition of N$_2$O$_5$ at 310 K via the equation above. What is the rate of appearance of NO$_2$ compare to the rate of disappearance of N$_2$O$_5$ ?   (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.5} Due to the stoichiometric ratios, 4 moles of NO$_2$ are created for every 2 moles of N$_2$O$_5$ that decompose. Therefore, the rate of appearance of NO$_2$ will be twice the rate of disappearance for N$_2$O$_5$ . As that rate is constantly changing over the course of the reaction, it is impossible to get exact values, but the ratio of 2:1 will stay constant.",
+        "Comment": " ",
+        "category": "Practice Test 2",
+        "ImagePath": "Chemistry_Free_Response/23"
+    },
+    {
+        "Question": "2N$_2$O$_5$ (g) \u2192 4NO$_2$ (g) + O$_2$ (g) The data in the figure below was gathered for the decomposition of N$_2$O$_5$ at 310 K via the equation above. What is the rate constant for this reaction in the unit of $s^{-1}$?   (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{5.4e-4} Interpreting the graph using slope-intercept form, you get \\(\\ln{[\\text{N}_2\\text{O}_5]_t} = -kt + \\ln{[\\text{N}_2\\text{O}_5]_0}\\). Any (non-intercept) values on the graph can be plugged in to determine the rate constant. Using at \\([\\text{N}_2\\text{O}_5] = 0.190 \\, \\text{M}\\) at \\(t = 500\\text{s}\\): $$ \\ln{(0.190)} = -k(500) + \\ln{(0.250)} $$ $$ -1.66 = -k(500) + 1.39 $$ $$ -0.27 = -k(500) $$ $$ k = 5.40 \\times 10^{-4} $$ In terms of units, if rate \\(= k[\\text{N}_2\\text{O}_5]\\), then via analyzing the units: \\(\\text{M/s} = k(\\text{M})\\) hence \\(k = \\text{s}^{-1}\\) So \\(k = 5.40 \\times 10^{-4} \\text{s}^{-1}\\). Any point along the line will give the same value (as it is equal to the negative slope of the line).",
+        "category": "Practice Test 2",
+        "ImagePath": "Chemistry_Free_Response/23"
+    },
+    {
+        "Question": "2N$_2$O$_5$ (g) \u2192 4NO$_2$ (g) + O$_2$ (g) The data in the figure below was gathered for the decomposition of N$_2$O$_5$ at 310 K via the equation above. What would the concentration of N$_2$O$_5$ in the unit of M be at t = 1500 s?  (Final Answer is a value)",
+        "Answer (final answer highlighted)": "\\answer{0.111} Using the equation  \\(\\ln{[\\text{N}_2\\text{O}_5]_t} = -kt + \\ln{[\\text{N}_2\\text{O}_5]_0}\\): $$ \\ln{[\\text{N}_2\\text{O}_5]_{1500}} = -5.40 \\times 10^{-4} \\text{s}^{-1} \\times (1500 \\text{ s}) + \\ln{(0.250)} $$ $$ \\ln{[\\text{N}_2\\text{O}_5]_{1500}} = -2.20 $$ $$ [\\text{N}_2\\text{O}_5]_{1500} = 0.111 \\text{ M} $$",
+        "category": "Practice Test 2",
+        "ImagePath": "Chemistry_Free_Response/23"
+    }
+]

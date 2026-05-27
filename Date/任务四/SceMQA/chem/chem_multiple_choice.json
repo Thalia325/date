@@ -1,0 +1,1012 @@
+[
+    {
+        "Question": "Based on the strength of the intermolecular forces in each substance, estimate from greatest to smallest the vapor pressures of each substance in liquid state at the same temperature.\n\nA. propane > ethanal > ethene > methanol\nB. ethene > propane > ethanal > methanol\nC. ethanal > methanol > ethene > propane\nD. methanol > ethanal > propane > ethene",
+        "Answer (final answer highlighted)": "B Vapor pressure is dependent on intermolecular forces. The weaker the IMFs are, the easier it is for molecules to escape from the surface of the liquid. To begin, polar molecules have stronger IMFs than nonpolar molecules. Methanol and ethanal are both polar, but methanol has hydrogen bonding meaning it has stronger IMFs (and thus a lower vapor pressure) than ethanal. Ethene and propane are both nonpolar, but propane is larger meaning it is more polarizable than ethene and thus has stronger IMFs and lower vapor pressure.",
+        "ImagePath": "Chemistry/1"
+    },
+    {
+        "Question": "When in liquid state, which two substances are most likely to be miscible with water?\n\nA. propane and ethene\nB. methanol and propane\nC. ethene and ethanal\nD. methanol and ethanal",
+        "Answer (final answer highlighted)": "D Water is polar, and using \"like dissolves like,\" we know that only polar solvents will be able to fully mix with it to create a homogenous solution.",
+        "ImagePath": "Chemistry/2"
+    },
+    {
+        "Question": "Between propane and ethene, which will likely have the higher boiling point and why?\n\nA. propane, because it has a greater molar mass\nB. propane, because it has a more polarizable electron cloud\nC. ethene, because of the double bond\nD. ethene, because it is smaller in size",
+        "Answer (final answer highlighted)": "B Both are nonpolar, but propane has a lot more electrons and thus is more polarizable than ethene.",
+        "ImagePath": "Chemistry/3"
+    },
+    {
+        "Question": "The graph below shows the amount of potential energy between two hydrogen atoms as the distance between them changes. At which point in the graph would a molecule of $H_2$ be the most stable?\n\nA. Point A\nB. Point B\nC. Point C\nD. Point D",
+        "Answer (final answer highlighted)": "C The molecule would be the most stable when it has the largest attractive potential energy, which is represented by a negative sign. While the magnitude of the potential energy may be larger at (A), it is repulsive at that point because the nuclei are too close together.",
+        "ImagePath": "Chemistry/4"
+    },
+    {
+        "Question": "Two alloys are shown in the diagrams below\u2014bronze, and steel. Which of the following correctly describes the malleability of both alloys compared to their primary metals?\n\nA. Bronze's malleability would be comparable to that of copper, but steel's malleability would be significantly lower than that of iron.\nB. Bronze's malleability would be significantly higher than that of copper, but steel's malleability would be comparable to that of iron.\nC. Both bronze and steel would have malleability values similar to those of their primary metals.\nD. Both bronze and steel would have malleability values greater than those of their primary metals.",
+        "Answer (final answer highlighted)": "C Alloys of any type generally have malleability that is very similar to the metals from which they are created.",
+        "ImagePath": "Chemistry/5"
+    },
+    {
+        "Question": "The following diagram shows the relative atomic sizes of three different elements from the same period. Which of the following statements must be true?\n\nA. The effective nuclear charge would be the greatest in element X.\nB. The first ionization energy will be greatest in element X.\nC. The electron shielding effect will be greatest in element Z.\nD. The electronegativity value will be greatest in element Z.",
+        "Answer (final answer highlighted)": "D Moving across a period, atomic size decreases. Therefore, atom Z will be farthest to the right (have the most protons), and thus will have the highest electronegativity value.",
+        "ImagePath": "Chemistry/6"
+    },
+    {
+        "Question": "Two half-cells are set up as follows:\n\nHalf-Cell A: Strip of Cu(s) in $CuNO_3(aq)$\n\nHalf-Cell B: Strip of Zn(s) in $Zn(NO_3)_2(aq)$\n\nWhen the cells are connected according to the following diagram, the following reaction occurs. Correctly identify the anode and cathode in this reaction as well as where oxidation and reduction are taking place. \n A. Cu is the anode where oxidation occurs, and Zn is the cathode where reduction occurs. \n B. Cu is the anode where reduction occurs, and Zn is the cathode where oxidation occurs. \b C. Zn is the anode where oxidation occurs, and Cu is the cathode where reduction occurs. \n D. Zn is the anode where reduction occurs, and Cu is the cathode where oxidation occurs.",
+        "Answer (final answer highlighted)": "C The oxidation state of copper changes from +1 to 0, meaning it has gained electrons and is being reduced, and reduction occurs at the cathode. Zinc's oxidation state changes from 0 to +2, meaning it has lost electrons and is being oxidized, which occurs at the anode.",
+        "ImagePath": "Chemistry/7"
+    },
+    {
+        "Question": "Two half-cells are set up as follows:\n\nHalf-Cell A: Strip of Cu(s) in $CuNO_3(aq)$\n\nHalf-Cell B: Strip of Zn(s) in $Zn(NO_3)_2(aq)$\n\nWhen the cells are connected according to the following diagram, the following reaction occurs. How many moles of electrons must be transferred to create 127 g of copper?\n\nA. 1 mole of electrons\nB. 2 moles of electrons\nC. 3 moles of electrons\nD. 4 moles of electrons",
+        "Answer (final answer highlighted)": "B 127 g is equal to 2 moles of copper, which is what appears on the balanced equation. To change one mole of copper from +1 to 0, 1 mole of electrons is required. Twice as many moles being created means twice as many electrons are needed.",
+        "ImagePath": "Chemistry/8"
+    },
+    {
+        "Question": "Two half-cells are set up as follows:\n\nHalf-Cell A: Strip of Cu(s) in $CuNO_3(aq)$\n\nHalf-Cell B: Strip of Zn(s) in $Zn(NO_3)_2(aq)$\n\nWhen the cells are connected according to the following diagram, the following reaction occurs. If the $Cu^+ + e^- \u2192 Cu(s)$ half reaction has a standard reduction potential of +0.52 V, what is the standard reduction potential for the $Zn^{2+} + 2e^- \u2192 Zn(s)$ half reaction?\n\nA. +0.76 V\nB. -0.76 V\nC. +0.24 V\nD. -0.24 V",
+        "Answer (final answer highlighted)": "B $ E_{\\text{cell}} = E_{\\text{red}} + E_{\\text{ox}} $\n$ 1.28 \\, V = 0.52 \\, V + E_{\\text{ox}} $\n$ E_{\\text{ox}} = 0.76 \\, V $\n$ -E_{\\text{ox}} = E_{\\text{red}} $\n$ E_{\\text{red}} = -0.76 \\, V $",
+        "ImagePath": "Chemistry/9"
+    },
+    {
+        "Question": "Two half-cells are set up as follows:\n\nHalf-Cell A: Strip of Cu(s) in $CuNO_3(aq)$\n\nHalf-Cell B: Strip of Zn(s) in $Zn(NO_3)_2(aq)$\n\nWhen the cells are connected according to the following diagram, the following reaction occurs. As the reaction progresses, what will happen to the overall voltage of the cell?\n\nA. It will increase as [$Zn^{2+}$] increases.\nB. It will increase as [$Cu^{+}$] increases.\nC. It will decrease as [$Zn^{2+}$] increases.\nD. The voltage will remain constant.",
+        "Answer (final answer highlighted)": "C As the reaction progresses, [Cu+] will decrease and [Zn2+] will increase. With a lower concentration on the reactants side and a higher concentration on the products side, the reaction will shift left, decreasing the overall potential of the reaction.",
+        "ImagePath": "Chemistry/10"
+    },
+    {
+        "Question": "Two half-cells are set up as follows:\n\nHalf-Cell A: Strip of Cu(s) in $CuNO_3(aq)$\n\nHalf-Cell B: Strip of Zn(s) in $Zn(NO_3)_2(aq)$\n\nWhen the cells are connected according to the following diagram, the following reaction occurs. What will happen in the salt bridge as the reaction progresses?\n\nA. The Na+ ions will flow to the Cu/Cu+ half-cell.\nB. The Br- ions will flow to the Cu/Cu+ half-cell.\nC. Electrons will transfer from the Cu/Cu+ half-cell to the Zn/Zn2+ half-cell.\nD. Electrons will transfer from the Zn/Zn2+ half-cell to the Cu/Cu+ half-cell.",
+        "Answer (final answer highlighted)": "A The electron transfer does not happen across the salt bridge, eliminating options (C) and (D). As the reaction progresses and [Cu+] decreases in the copper half-cell, positively charged sodium ions are transferred in to keep the charge balanced within the half-cell.",
+        "ImagePath": "Chemistry/11"
+    },
+    {
+        "Question": "A solution of carbonic acid, $H_2CO_3$, is titrated with sodium hydroxide, NaOH. The following graph is produced. In addition to $OH^-$, what species are present in the solution during section III of the graph?\n\nA. $H_2CO_3$, $HCO_3^-$, and $CO_3^{2-}$\nB. $H_2CO_3$ and $HCO_3^-$\nC. $HCO_3^-$ and $CO_3^{2-}$\nD. $H_2CO_3$ and $CO_3^{2-}$",
+        "Answer (final answer highlighted)": "C During sections I and II, the following reaction occurs: $H_2CO_3(aq) + OH^-(aq) \\leftrightarrow HCO_3^-(aq) + H_2O(l)$. The endpoint of that is reached when all $H_2CO_3$ has reacted, meaning that in sections III and IV the following occurs: $HCO_3^-(aq) + OH^-(aq) \\leftrightarrow CO_3^{2-}(aq) + H_2O(l)$.",
+        "ImagePath": "Chemistry/12"
+    },
+    {
+        "Question": "A solution of carbonic acid, H2CO3, is titrated with sodium hydroxide, NaOH. The following graph is produced. What is the magnitude of the first dissociation constant?\n\nA. 10e-2\nB. 10e-4\nC. 10e-6\nD. 10e-8",
+        "Answer (final answer highlighted)": "C During sections I and II, the following reaction occurs: $H_2CO_3(aq) + OH^-(aq) \\leftrightarrow HCO_3^-(aq) + H_2O(l)$. The endpoint of that is reached when all $H_2CO_3$ has reacted, meaning that in sections III and IV the following occurs: $HCO_3^-(aq) + OH^-(aq) \\leftrightarrow CO_3^{2-}(aq) + H_2O(l)$.",
+        "ImagePath": "Chemistry/13"
+    },
+    {
+        "Question": "A solution of carbonic acid, H2CO3, is titrated with sodium hydroxide, NaOH. The following graph is produced. If the concentration of the sodium hydroxide is increased prior to repeating the titration, what effect, if any, would that have on the graph?\n\nA. The graph would not change at all.\nB. The pH values at the equivalence points would increase.\nC. The equivalence points would be reached with less volume of NaOH added.\nD. The slope of the equivalence points would decrease.",
+        "Answer (final answer highlighted)": "C A more concentrated NaOH solution means more moles of NaOH are added per drop, so a lower volume of NaOH would be needed to add enough moles to reach the equivalence point.",
+        "ImagePath": "Chemistry/14"
+    },
+    {
+        "Question": "Two solutions of potassium carbonate and sodium chloride are mixed together, and the particulate representation below shows what is present after the reaction has gone to completion. Which of the two original solutions is the limiting reagent and why?\n\nA. The potassium carbonate, because of the polyatomic anion\nB. The potassium carbonate, because there is no carbonate left after the reaction\nC. The calcium chloride, because there is an excess of calcium ions post-reaction\nD. The calcium chloride, because the component ions are smaller than those in potassium carbonate",
+        "Answer (final answer highlighted)": "B If extra $Ca^{2+}$ ions are in solution, that means there were not enough $CO3^{2-}$ ions present for the $Ca^{2+}$ ions to fully react.",
+        "ImagePath": "Chemistry/15"
+    },
+    {
+        "Question": " The structure of two oxoacids is shown below. Which would be a stronger acid, and why?\n\nA. HOCl, because the H\u2013O bond is weaker than in HOF as chlorine is larger than fluorine\nB. HOCl, because the H\u2013O bond is stronger than in HOF as chlorine has a higher electronegativity than fluorine\nC. HOF, because the H\u2013O bond is stronger than in HOCl as fluorine has a higher electronegativity than chlorine\nD. HOF, because the H\u2013O bond is weaker than in HOCl as fluorine is smaller than chlorine",
+        "Answer (final answer highlighted)": "D The weaker the O-H bond is in an oxoacid, the stronger the acid will be because the H+ ions are more likely to dissociate. The O-F bond in HOF is stronger than the O-Cl bond in HOCl because fluorine is smaller (and thus more electronegative) than chlorine. If the O-F bond is stronger, the O-H bond is correspondingly weaker, making HOF the stronger acid.",
+        "ImagePath": "Chemistry/16"
+    },
+    {
+        "Question": "The following diagrams show the Lewis structures of four different molecules. Which molecule would travel the farthest in a paper chromatography experiment using a polar solvent?\n\nA. Methanol\nB. Pentane\nC. Acetone\nD. Ether",
+        "Answer (final answer highlighted)": "A In a polar solvent, polar molecules will be the most soluble (like dissolves like). Of the four options, methanol and acetone would both have dipoles, but those of methanol would be significantly stronger due to the H-bonding.",
+        "ImagePath": "Chemistry/17"
+    },
+    {
+        "Question": "Four different acids are added to beakers of water, and the following diagrams represent the species present in each solution at equilibrium. Which acid has the highest pH?\n\nA. Acid 1\nB. Acid 2\nC. Acid 3\nD. Acid 4",
+        "Answer (final answer highlighted)": "C The strength of an acid is dependent on the amount it dissociates in solution. A low dissociation is signified by a low presence of hydrogen ions. The weakest acid is choice (C).",
+        "ImagePath": "Chemistry/18"
+    },
+    {
+        "Question": "Lewis diagrams for the nitrate and nitrite ions are shown below. Choose the statement that correctly describes the relationship between the two ions in terms of bond length and bond energy.\n\nA. Nitrite has longer and stronger bonds than nitrate.\nB. Nitrite has longer and weaker bonds than nitrate.\nC. Nitrite has shorter and stronger bonds than nitrate.\nD. Nitrite has shorter and weaker bonds than nitrate.",
+        "Answer (final answer highlighted)": "C Nitrate has a bond order of 1.33. Nitite has a bond order of 1.5. A higher bond order means shorter and stronger bonds.",
+        "ImagePath": "Chemistry/19"
+    },
+    {
+        "Question": "$NO_2$ gas is placed in a sealed, evacuated container and allowed to decompose via the following equation:\n\n$2NO_2(g) \u2194 2NO(g) + O_2(g)$\n\nThe graph below indicates the change in concentration for each species over time. What is happening to the rate of the forward reaction at t = 60 s?\n\nA. It is increasing.\nB. It is decreasing.\nC. It is remaining constant.\nD. It is zero.",
+        "Answer (final answer highlighted)": "C At equilibrium, the concentrations of all species in the reaction are remaining constant, which shows up as a flat line on the graph. The rate of both the forward and reverse reactions are constant at equilibrium.",
+        "ImagePath": "Chemistry/20"
+    },
+    {
+        "Question": "$NO_2$ gas is placed in a sealed, evacuated container and allowed to decompose via the following equation:\n\n$2NO_2(g) \u2194 2NO(g) + O_2(g)$\n\nThe graph below indicates the change in concentration for each species over time. As the reaction progresses, what happens to the value of the equilibrium constant Kp if the temperature remains constant?\n\nA. It stays constant.\nB. It increases exponentially.\nC. It increases linearly.\nD. It decreases exponentially.",
+        "Answer (final answer highlighted)": "A The only factor that can affect the value of the equilibrium constant is temperature. If the temperature does not change, neither does the equilibrium constant.",
+        "ImagePath": "Chemistry/21"
+    },
+    {
+        "Question": "$NO_2$ gas is placed in a sealed, evacuated container and allowed to decompose via the following equation:\n\n$2NO_2(g) \u2194 2NO(g) + O_2(g)$\n\nThe graph below indicates the change in concentration for each species over time. What would happen to the slope of the $NO_2$ line if additional $O_2$ were injected into the container?\n\nA. It would increase, then level off.\nB. It would decrease, then level off.\nC. It would remain constant.\nD. It would increase, then decrease.",
+        "Answer (final answer highlighted)": "A If additional $O_2$ were injected into the container, the reaction would shift left, increasing the amount of $NO_2$ present. Eventually, the reaction would reach equilibrium again, meaning the lines would level out.",
+        "ImagePath": "Chemistry/22"
+    },
+    {
+        "Question": "$NO_2$ gas is placed in a sealed, evacuated container and allowed to decompose via the following equation:\n\n$2NO_2(g) \u2194 2NO(g) + O_2(g)$\n\nThe graph below indicates the change in concentration for each species over time. Using the graph, how could you determine the instantaneous rate of disappearance of $NO_2$ at t = 30 s?\n\nA. By determining the area under the graph at t = 30 s\nB. By taking the slope of a line tangent to the $NO_2$curve at t = 30 s\nC. By using the values at t = 30 s and plugging them into the Kp expression\nD. By measuring the overall gas pressure in the container at t = 30 s.",
+        "Answer (final answer highlighted)": "B To determine the change in concentration at a specific time, we would need the slope of the line at that point. As the line is curved, the only way to do that (without calculus) is to draw a line tangent to the curve at that point and measure its slope.",
+        "ImagePath": "Chemistry/23"
+    },
+    {
+        "Question": "The reaction shown in the following diagram is accompanied by a large increase in temperature. If all molecules shown are in their gaseous state, which statement accurately describes the reaction?\n\nA. It is an exothermic reaction in which entropy increases.\nB. It is an exothermic reaction in which entropy decreases.\nC. It is an endothermic reaction in which entropy increases.\nD. It is an endothermic reaction in which entropy decreases.",
+        "Answer (final answer highlighted)": "A The temperature increase is indicative of energy being released, meaning the reaction is exothermic. The entropy (disorder) of the system is increasing as it moves from three gas molecules to five.",
+        "ImagePath": "Chemistry/24"
+    },
+    {
+        "Question": "The contents in the three containers on the left in the diagram above are transferred to the container on the right. The volumes of the original containers are exactly the values indicated. The pressure in the first three containers is 1.0 atm. What is the pressure in the container on the right?\n\nA. 3.0 atm\nB. 4.0 atm\nC. 1.1 atm\nD. 0.50 atm\n",
+        "Answer (final answer highlighted)": "C: There are several ways of solving this problem. One way is to determine the moles present in the original containers, which must be the same as in the final container. In each case, moles = n = PV/RT. Numbering the containers from left to right as 1, 2, 3, and 4 gives: https://img.crackap.com/ap/chemistry/a5/Image00498.jpg",
+        "ImagePath": "Chemistry/25"
+    },
+    {
+        "Question": "The diagram above shows the structure of molecules of CS2 and COS. The boiling point of COS is 223 K, and the boiling point of CS2 is 319 K. Which of the following is the best explanation of why the boiling point of CS2 is higher?\n\nA. The molar mass of CS2 is greater.\nB. COS has weaker covalent bonds than CS2.\nC. Only CS2 can form intermolecular dipole-dipole forces.\nD. COS has stronger intermolecular forces because it is polar and CS2 is not.",
+        "Answer (final answer highlighted)": "A: Stronger intermolecular forces lead to higher boiling points. Even though COS has dipole-dipole forces, which are usually stronger than the London dispersion forces present in CS2, the greater molar mass of CS2 leads to a London dispersion force contribution that is sufficient to compensate for the general trend of dipole-dipole forces being stronger than London dispersion forces. This is why comparisons should only be made between molecules of similar molecular masses.",
+        "ImagePath": "Chemistry/26"
+    },
+    {
+        "Question": "Which of the following best explains why the boiling point of 2-propanol is lower than the other two compounds in the diagram and table above?\n\nA. Larger molecules get tangled and cannot escape each other.\nB. It has weaker hydrogen bonds.\nC. It is the lightest of the three.\nD. It is a more symmetrical molecule.",
+        "Answer (final answer highlighted)": "C: All three compounds are capable of hydrogen bonding; therefore, this cannot be the cause of difference. In general, all other things being equal, it takes less energy to move a lighter molecule from the liquid state to the gaseous state.w",
+        "ImagePath": "Chemistry/27"
+    },
+    {
+        "Question": "The Dumas method is a procedure for determining the molar mass of a gas. In this procedure the mass of a gas is divided by the moles of gas determined from the ideal gas equation (n = PV/RT). The molar masses of some compounds, such as acetic acid, illustrated above, show significant deviations from the \u201ccorrect\u201d values. Why does the presence of dimers as illustrated make it unlikely to obtain an accurate molar mass of acids, such as acetic acid?\n\nA. Acetic acid, like all acids, will lose a hydrogen ion, so the molar mass is that of the acetate ion, which is less than that of acetic acid.\nB. Acetic acid is a liquid at room temperature, and its boiling point is too high to get accurate results.\nC. Acids are too reactive to give accurate results.\nD. The presence of strong intermolecular forces (hydrogen bonding) makes the gas nonideal; therefore the ideal gas law is not applicable.",
+        "Answer (final answer highlighted)": "D: Strong hydrogen bonds hold two molecules of acetic acid together. Ideal gases have no intermolecular forces. Therefore, the ideal gas law used in experiment is invalid.",
+        "ImagePath": "Chemistry/27"
+    },
+    {
+        "Question": "Which of the labeled arrows in the diagram above represents the strongest intermolecular force?\n\nA. A\nB. B\nC. C\nD. D",
+        "Answer (final answer highlighted)": "B-This is a dipole-dipole force, which is stronger than a dipole-induced dipole (A and C) or a London dispersion force (D).",
+        "ImagePath": "Chemistry/28"
+    },
+    {
+        "Question": "pH versus volume of titrant added\nThe diagram above represents the idealized titration curve for the reaction of pure sodium carbonate, Na2CO3, with a strong acid such as hydrochloric acid, HCl. E and F represent the pH at the endpoints corresponding to the formation of HCO3- and H2CO3, respectively. G and H correspond to the quantity of acid required to reach the endpoints.\nA trial run used a sample of pure sodium carbonate. How does the volume of acid necessary to reach G from 0 compare to the volume of acid necessary to get from G to H?\n\nA. They are the same.\nB. It takes more to reach point G.\nC. It takes more to get from G to H.\nD. It is impossible to determine",
+        "Answer (final answer highlighted)": "A: At point G, all the $CO3^{2-}$ has been converted to $HCO^{3-}$ and the moles of $ HCO^{3-}$  will equal the moles of $CO3^{2-}$ originally present plus the quantity of $HCO^{3-}$ originally present. It will require a greater volume of acid to titrate a greater number of moles of $HCO^{3-}$ as required for the $CO3^{2-}$.",
+        "ImagePath": "Chemistry/29"
+    },
+    {
+        "Question": "pH versus volume of titrant added\nThe diagram above represents the idealized titration curve for the reaction of pure sodium carbonate, Na2CO3, with a strong acid such as hydrochloric acid, HCl. E and F represent the pH at the endpoints corresponding to the formation of HCO3- and H2CO3, respectively. G and H correspond to the quantity of acid required to reach the endpoints.\nThe analysis of a sample contaminated with NaHCO3 gave slightly different results. How does the volume of acid necessary to reach G from 0 compare to the volume of acid necessary to get from G to H for the second sample?\n\nA. It takes more to get from G to H.\nB. It takes more to reach point G.\nC. They are the same.\nD. It is impossible to determine.",
+        "Answer (final answer highlighted)": "C: It would be necessary to titrate the strong base and the $CO3^{2-}$ to reach G. However, it is only necessary to titrate the $HCO_{3-}$ to reach H, which means less acid is necessary.\n\n",
+        "ImagePath": "Chemistry/30"
+    },
+    {
+        "Question": "pH versus volume of titrant added\nThe diagram above represents the idealized titration curve for the reaction of pure sodium carbonate, Na2CO3, with a strong acid such as hydrochloric acid, HCl. E and F represent the pH at the endpoints corresponding to the formation of HCO3- and H2CO3, respectively. G and H correspond to the quantity of acid required to reach the endpoints.\nHow could a student determine if there was a strong acid or a strong base contaminant in the original sample?\n\nA. The presence of an acid contaminant would require less acid to reach H from G than to reach G from 0.\nB. The presence of a base contaminant would require less acid to reach G from 0 than to reach F from G.\nC. The presence of a base contaminant would require more acid to reach G from 0 than to reach F from G.\nD. It is impossible to determine.",
+        "Answer (final answer highlighted)": "C-It would be necessary to titrate the strong base and the $CO3^{2-}$ to reach G. However, it is only necessary to titrate the $HCO3^{-}$ to reach H, which means less acid is necessary.",
+        "ImagePath": "Chemistry/31"
+    },
+    {
+        "Question": "pH versus volume of titrant added\nThe diagram above represents the idealized titration curve for the reaction of pure sodium carbonate, Na2CO3, with a strong acid such as hydrochloric acid, HCl. E and F represent the pH at the endpoints corresponding to the formation of HCO3- and H2CO3, respectively. G and H correspond to the quantity of acid required to reach the endpoints.\nIn addition to water, what are the predominant species in solution at F?\n\nA. $\\ch{Na2CO3}$ and $\\ch{HCl}$\nB. $\\ch{Na+}$, $\\ch{Cl-}$, and $\\ch{H2CO3}$\nC. $\\ch{HCO3-}$ and $\\ch{H+}$\nD.$ \\ch{Na+}$, $\\ch{Cl-}$, $\\ch{H+}$, and $\\ch{CO3^{2-}}$",
+        "Answer (final answer highlighted)": "B: At G the $\\ch{CO3^{2-}}$ is now $\\ch{HCO3-},$ so no $\\ch{CO3^{2-}}$ remains. The $\\ch{Na+}$ did not react, so it is still present as ions. The $\\ch{Cl-}$ is from the HCl and remains as separate ions in solution. After G, the $\\ch{H+}$ from the acid begins to convert $\\ch{HCO3-}$ to form $\\ch{H2CO3}$, which is complete at point F leaving no $\\ch{HCO3-}$ in the solution. Other than water, all species are strong electrolytes and exist as ions in solution. The $\\ch{H2CO3}$ will be decomposing to $\\ch{H2O}$ and $\\ch{CO2(g)}$.",
+        "ImagePath": "Chemistry/32"
+    },
+    {
+        "Question": "pH versus volume of titrant added\nThe diagram above represents the idealized titration curve for the reaction of pure sodium carbonate, Na2CO3, with a strong acid such as hydrochloric acid, HCl. E and F represent the pH at the endpoints corresponding to the formation of HCO3- and H2CO3, respectively. G and H correspond to the quantity of acid required to reach the endpoints.\nIn addition to water, what are the predominant species in solution at F?\n\nAt what point on the graph for the titration of pure sodium carbonate is the pH =\\ch{ pK_{a2}} for carbonic acid?\n\nA. At point G\nB. Halfway between the start and point G\nC. At point H\nD. Halfway between points G and H",
+        "Answer (final answer highlighted)": "D: The pH will equal the pKa2 when the concentration of $HCO_{3-}$ equals the concentration of H2CO3. This occurs when one-half of the $HCO_{3-}$ has been converted to H2CO3.",
+        "ImagePath": "Chemistry/33"
+    },
+    {
+        "Question": "What is the reason that the lightest member of Group 15 does not follow the trend of the other members, which show that the boiling point decreases with decreasing atomic mass of the Group 15 element?\nThe graph shows the variation of boiling point with Group number for the hydrogen compounds of the four lightest members of Group 15 on the periodic table (NH3, PH3, AsH3 and SbH3).\n\nA. Ionic bonds\nB. Hybrid orbitals\nC. Resonance structures\nD. Hydrogen bonding",
+        "Answer (final answer highlighted)": "\nD: Hydrogen bonding may occur when hydrogen is attached directly to N, O, or F.",
+        "ImagePath": "Chemistry/34"
+    },
+    {
+        "Question": "A dimer consists of two closely associated molecules. In the gas phase, acetic acid tends to form dimers as illustrated on the left in the above diagram. Acetyl chloride, on the right in the above diagram, is not very efficient in forming dimers. Why is acetic acid better able to form dimers than acetyl chloride?\n\nA. The molecular mass of acetyl chloride is higher than that of acetic acid making it harder for the acetyl chloride to form dimers.\nB. It is easier to form a covalent bond between acetic acid molecules than between acetyl chloride molecules.\nC. Acetic acid can form strong hydrogen bonds but acetyl chloride can only form weaker dipole-dipole attractions.\nD. Acetic acid is an acidic compound but acetyl chloride is a neutral compound.",
+        "Answer (final answer highlighted)": "C: The two molecules are hydrogen bonded together. Hydrogen bonding is a relatively strong intermolecular force. Acetyl chloride cannot exhibit anything stronger than dipole-dipole forces, which are, in general, weaker than hydrogen bonds.",
+        "ImagePath": "Chemistry/35"
+    },
+    {
+        "Question": "Two compounds with the formula C2H2Cl2 appear in the above diagram. These two compounds are isomers. The molecules are planar and have the approximate structures shown in the diagram. The boiling point of trans-1, 2-dichloroethene is 47.5\u00b0C and the boiling point of cis-1,2-dichloroethene is 60.3\u00b0C. Which of the following best explains why cis-1,2-dichloroethene has a higher boiling point than its isomer, trans-1, 2-dichloroethene?\n\nA. The higher boiling isomer is more polar than the other isomer.\nB. The higher boiling isomer is better able to form hydrogen bonds than the other isomer.\nC. The higher boiling isomer has a greater molar mass.\nD. The higher boiling isomer has greater London dispersion forces than the other isomer.",
+        "Answer (final answer highlighted)": "A: The higher boiling isomer is more polar than the other isomer because the two very electronegative chlorine atoms are on one side, which leads to their polar bonds working together. When the chlorine atoms are on opposite sides, their polar bonds work against each other.",
+        "ImagePath": "Chemistry/36"
+    },
+    {
+        "Question": "Use the following information on the bases in the following diagram to answer questions.\nhttps://img.crackap.com/ap/chemistry/a5/Image00543.jpg\n\nAmmonia is only present as a reference. Questions only refer to the other three bases.\nhttps://img.crackap.com/ap/chemistry/a5/Image00544.jpg\n\nAll the bases in the diagram behave as Br\u00f8nsted-Lowry bases in the same way; in each case, they accept a hydrogen ion to the same atom. How is this acceptance of a hydrogen ion accomplished?\n\nA. A hydrogen ion attaches to the lone pair on the nitrogen atom.\nB. The hydroxide ion reacts with the hydrogen ion to form water.\nC. The hydrogen ion forms a hydrogen bond to the base.\nD. The hydrogen ion combines with a hydrogen atom from the base to form H2 gas",
+        "Answer (final answer highlighted)": "A: As in ammonia, all these compounds behave as Br\u00f8nsted-Lowry bases by accepting a hydrogen ion. The reaction involves the hydrogen ion attaching to the lone pair on the nitrogen atoms.",
+        "ImagePath": "Chemistry/37"
+    },
+    {
+        "Question": "Use the following information on the bases in the following diagram to answer questions.\nhttps://img.crackap.com/ap/chemistry/a5/Image00543.jpg\n\nAmmonia is only present as a reference. Questions only refer to the other three bases.\nhttps://img.crackap.com/ap/chemistry/a5/Image00544.jpg\n\nWhich of the following explains why the pH of a hydroxylamine solution is lower than any of the other solutions?\n\nA. The $-OH$ is capable of donating a hydrogen ion, which will lower the pH.\nB. The presence of carbon makes the bases less stable.\nC. The presence of the very electronegative oxygen inhibits the nitrogen atom from donating its electron pair.\nD. There is insufficient information to explain this observation.",
+        "Answer (final answer highlighted)": "C: These are all bases because the nitrogen atom is capable of reacting with a hydrogen ion by donating its lone pair to the hydrogen ion. The oxygen atom pulls electron density away from the nitrogen atom causing the nitrogen atom to attract the lone pair more strongly making it less able to donate the pair to a hydrogen ion.",
+        "ImagePath": "Chemistry/37"
+    },
+    {
+        "Question": "Which of the compounds in the above diagram is capable of participating in hydrogen bonding?\n\nA. $C_3H_9N$\nB. $CH_3F$\nC. $C_2H_6O$\nD. $C_4H_11$",
+        "Answer (final answer highlighted)": "D: Hydrogen bonding is possible when hydrogen is attached to N, O, and F. D is the only compound in the diagram where this is true. The simple presence of hydrogen and N, O, or F is insufficient.",
+        "ImagePath": "Chemistry/37"
+    },
+    {
+        "Question": "Ammonia is the best-known nitrogen-hydrogen compound; however, there are a number of other nitrogen-hydrogen compounds, three of which are in the above diagram. Which of these has the longest average N-N bond length?\n\nA. $N_2H_2$\nB. $N_3H_3$\nC. $N_4H_4$\nD. They are all the same.",
+        "Answer (final answer highlighted)": "C: The higher the average number of bonds between the nitrogen atoms, the shorter the bond is. For diazene there are two bonds, for triazene the average is 1.5 bonds, and for tetrazene the average is 1.33 bonds. The length of the average bond length increases in the order 2 < 1.5 < 1.33.",
+        "ImagePath": "Chemistry/38"
+    },
+    {
+        "Question": "Use the information on the acids in the following diagram to answer questions.\n\nSample solutions of each of the three acids were titrated with 0.10 M sodium hydroxide, NaOH. Each of the acid solutions had a concentration of 0.10 M. Which of the acid titrations had the highest pH at the endpoint?\n\nA. Formic acid\nB. Benzoic acid\nC. Chloroacetic acid\nD. They all had a pH of 7 at the endpoint.",
+        "Answer (final answer highlighted)": "B: The weakest acid (smallest Ka) will have the highest pH at the endpoint.\n\n",
+        "ImagePath": "Chemistry/39"
+    },
+    {
+        "Question": "Use the information on the acids in the following diagram to answer questions.\n\nA student prepares three buffer solutions. Each solution is 1.0 M in one of the acids in the table and 1.0 M in its corresponding sodium salt. Which of the solutions has the greatest buffer capacity with respect to added NaOH and why?\n\nA. The benzoic acid buffer because it is the strongest acid.\nB. The chloroacetic acid buffer because it is the strongest acid.\nC. The formic acid buffer because it donate both of its hydrogen atoms.\nD. All are the same.",
+        "Answer (final answer highlighted)": "D: The buffer capacity only depends on the number of moles present. All three solutions have the same number of moles.",
+        "ImagePath": "Chemistry/40"
+    },
+    {
+        "Question": "Cyclopropane, pictured above, is a relatively unstable compound. As seen in the diagram, the carbon atoms form the corners of an equilateral triangle and each carbon atom has two hydrogen atoms attached to complete an octet of electrons around the carbon atoms. Based upon this structure, why is cyclopropane a relatively unstable compound?\n\nA. Hydrocarbon compounds are relatively unstable in general.\nB. Compounds that have identical atoms bonded to each other are relatively unstable.\nC. The bonds do not match the angles.\nD. There is no resonance to stabilize the compound.",
+        "Answer (final answer highlighted)": "C: A carbon atom with four single bonds should be tetrahedral. Tetrahedral atoms have an ideal bond angle of 109.5\u00b0C. However, the carbon atoms in cyclopropane are at the corners of an equilateral triangle, where the ideal angle is 60\u00b0C. The discrepancy between the two ideal bond angles leads to the relative instability of cyclopropane.",
+        "ImagePath": "Chemistry/41"
+    },
+    {
+        "Question": "Refer to the following information.\n\n$N_2O_4(g)\\rightleftarrows 2NO_2(g)$\n\n$N_2O_4(g)$ decomposes into $NO_2(g)$ according to the equation above. A pure sample of $N_2O_4(g)$ is placed into a rigid, evacuated, 0.500 L container. The initial pressure of the $N_2O_4(g)$ is 760 atm. The temperature is held constant until the $N_2O_4(g)$ reaches equilibrium with its decomposition products. The figure below shows how the pressure of the system changes while reaching equilibrium. Why does the pressure rise in this experiment?\n\nA. The intermolecular attractions inside the container decrease, so the molecules strike the walls more frequently.\nB. The intermolecular attractions inside the container increase, which increases the force as molecules collide with the walls of the container.\nC. The average kinetic energy increases as the reaction continues.\nD. The number of particles striking the container walls per unit time increases.",
+        "Answer (final answer highlighted)": "D: As $N_2O_4(g)$ reacts, we get twice as many molecules, thus increasing the pressure.",
+        "ImagePath": "Chemistry/42"
+    },
+    {
+        "Question": "Refer to the following information.\n\n$N_2O_4(g)\\rightleftarrows 2NO_2(g)$\n\n$N_2O_4(g)$ decomposes into $NO_2(g)$ according to the equation above. A pure sample of $N_2O_4(g)$ is placed into a rigid, evacuated, 0.500 L container. The initial pressure of the $N_2O_4(g)$ is 760 atm. The temperature is held constant until the $N_2O_4(g)$ reaches equilibrium with its decomposition products. The figure below shows how the pressure of the system changes while reaching equilibrium. The figure above gives us information about all the following except\n\nA. the activation energy\nB. the reaction rate\nC. the position of equilibrium\nD. the order of reaction",
+        "Answer (final answer highlighted)": "A: The only way we know of to determine the activation energy is to measure reaction rates at different temperatures. However, no temperatures are mentioned.",
+        "ImagePath": "Chemistry/43"
+    },
+    {
+        "Question": "Refer to the following information.\n\n$N_2O_4(g)\\rightleftarrows 2NO_2(g)$\n\n$N_2O_4(g)$ decomposes into $NO_2(g)$ according to the equation above. A pure sample of $N_2O_4(g)$ is placed into a rigid, evacuated, 0.500 L container. The initial pressure of the $N_2O_4(g)$ is 760 atm. The temperature is held constant until the $N_2O_4(g)$ reaches equilibrium with its decomposition products. The figure below shows how the pressure of the system changes while reaching equilibrium. By how much will the equilibrium pressure increase if this reaction goes to completion?\r\n\r\nA. 760 torr\r\nB. 900 torr\r\nC. 634 torr\r\nD. 886 torr",
+        "Answer (final answer highlighted)": "C: The pressure will increase to 1520 torr, which is 634 torr greater than 886 torr.",
+        "ImagePath": "Chemistry/44"
+    },
+    {
+        "Question": "Refer to the following information.\n\n$N_2O_4(g)\\rightleftarrows 2NO_2(g)$\n\n$N_2O_4(g)$ decomposes into $NO_2(g)$ according to the equation above. A pure sample of $N_2O_4(g)$ is placed into a rigid, evacuated, 0.500 L container. The initial pressure of the $N_2O_4(g)$ is 760 atm. The temperature is held constant until the $N_2O_4(g)$ reaches equilibrium with its decomposition products. The figure below shows how the pressure of the system changes while reaching equilibrium. What can be said about the equilibrium constant, Kp, for this reaction?\r\n\r\nA. $K_p$ > 1\r\nB. $K_p$< 1\r\nC. $K_p$= 1\r\nD. The data do not allow us to estimate the value of $K_p$.",
+        "Answer (final answer highlighted)": "B: If the pressure rises to 886 torr, which means that 126 \u00d7 2 torr of $NO_2$ is produced and 634 torr of $N_2O_4$ remain. Dividing both by 760 torr gives 0.332 atm $NO_2$ and 0.834 atm $N_2O_4$. Since $K_P = (0.332)^2/(0.834)$, we can see that the result must be less than 1.",
+        "ImagePath": "Chemistry/45"
+    },
+    {
+        "Question": "Refer to the following information.\n\nThis formation equation for the reaction synthesizing RbBr(s) can be separated into a series of steps. Which of the steps in the table above are endothermic?\r\n\r\nA. \u0394H\u00b0(1) and \u0394H\u00b0(2) only\r\nB. \u0394H\u00b0(1), \u0394H\u00b0(2), and \u0394H\u00b0(3) only\r\nC. \u0394H\u00b0(3) only\r\nD. \u0394H\u00b0(3) and \u0394H\u00b0(4) only",
+        "Answer (final answer highlighted)": "B: All processes that separate molecules or break bonds are endothermic.",
+        "ImagePath": "Chemistry/46"
+    },
+    {
+        "Question": "Refer to the following information.\n\nThis formation equation for the reaction synthesizing RbBr(s) can be separated into a series of steps. If this reaction goes to completion, producing RbBr from the reactants, and if you use the overall chemical equation to estimate the entropy change for this process, which of the following statements is correct?\r\n\r\nA. The reaction is favorable and driven by the enthalpy change since the entropy decreases in this process.\r\nB. The reaction is unfavorable since the entropy change is a large negative value.\r\nC. The reaction is favorable and driven by both enthalpy and entropy changes.\r\nD. The reaction is unfavorable because of the enthalpy and entropy changes.",
+        "Answer (final answer highlighted)": "A: Using general rules, we have a solid and a liquid combining to make one formula unit of solid. A small change in entropy is expected. The enthalpy is very large compared with the entropy values, especially for binary compounds. So this answer is reasonable.",
+        "ImagePath": "Chemistry/47"
+    },
+    {
+        "Question": "n-pentane ($C_5H_{12}$ or $CH_3CH_2CH_2CH_2CH_3$) and 2,2-dimethylpropane ($C_5H_{12}$ or $(CH_3)_4C$), shown above as space-filling models, each have the same number of carbon and hydrogen atoms but the atoms are arranged differently. n-pentane boils at 36.1 \u00b0C, and 2,2-dimethylpropane boils at 9.5 \u00b0C. Which statement best explains these data?\r\n\r\nA. The long chains of n-pentane make it more difficult for them to reach the liquid surface and vaporize.\r\nB. The long chains of n-pentane provide more sites for London attractive forces for neighboring molecules to have an effect on each other.\r\nC. The compact structure of the 2,2-dimethylpropane directs the attractive forces internally in the molecule.\r\nD. The bonds in the n-pentane are weaker, allowing small parts of the molecule to vaporize easily.",
+        "Answer (final answer highlighted)": "B: Although London forces tend to be small, molecules that allow many sites for interaction experience stronger attractions",
+        "ImagePath": "Chemistry/48"
+    },
+    {
+        "Question": "Refer to the following information.\n\nFour different acid solutions of 0.0100 M are prepared, and their pH values are recorded on a laptop computer. One of the solutions contains more than just an acid. At the point designated as \"add,\" all four solutions are diluted with an equal volume of water. The bottom line represents solution 1, and the top line represents solution 4. Which of the four acids is best described as a strong acid?\r\n\r\nA. Solution 1\r\nB. Solution 2\r\nC. Solution 3\r\nD. Solution 4",
+        "Answer (final answer highlighted)": "A: A 0.010 M solution of a strong acid should have a pH = 2.00.",
+        "ImagePath": "Chemistry/49"
+    },
+    {
+        "Question": "Refer to the following information.\n\nFour different acid solutions of 0.0100 M are prepared, and their pH values are recorded on a laptop computer. One of the solutions contains more than just an acid. At the point designated as \"add,\" all four solutions are diluted with an equal volume of water. The bottom line represents solution 1, and the top line represents solution 4. Which acid(s) will require the most 0.0050 M NaOH to neutralize 25.0 mL of a 0.010 M solution of the acid?\r\n\r\nA. Solution 1\r\nB. Solution 2\r\nC. Solution 3\r\nD. They will all require the same volume of NaOH.",
+        "Answer (final answer highlighted)": "D: All of the acid solutions, 1, 2, and 3, will require the same amount of base to reach the end point.",
+        "ImagePath": "Chemistry/50"
+    },
+    {
+        "Question": "Refer to the following information.\n\nFour different acid solutions are prepared, and their pH values are determined and tabulated below. Using the data in the table above, which is the weakest acid?\r\n\r\nA. Acid 1\r\nB. Acid 2\r\nC. Acid 3\r\nD. Acid 4",
+        "Answer (final answer highlighted)": "D: The weakest acid has the lowest $[H^+]$ and the highest pH.",
+        "ImagePath": "Chemistry/51"
+    },
+    {
+        "Question": "Refer to the following information.\n\nFour different acid solutions are prepared, and their pH values are determined and tabulated below. Which of the four acids is best described as a strong acid?\r\n\r\nA. Acid 1\r\nB. Acid 2\r\nC. Acid 3\r\nD. Acid 4",
+        "Answer (final answer highlighted)": "B: A strong acid is completely ionized and the molar concentration is equal to the $[H^+]$.",
+        "ImagePath": "Chemistry/52"
+    },
+    {
+        "Question": "Refer to the following information.\n\nFour different acid solutions are prepared, and their pH values are determined and tabulated below. Which of the following operations will produce an effective buffer solution?\r\n\r\nA. 50.0 mL of 0.010 M acid 3 mixed with 50.0 mL of 0.010 M acid 2\r\nB. 50.0 mL of 0.010 M acid 2 mixed with 25.0 mL of 0.010 M NaOH\r\nC. 50.0 mL of 0.0050 M acid 4 mixed with 0.25 mL of 0.0050 M NaOH\r\nD. 50.0 mL of 0.0010 M acid 2 mixed with 55.0 mL of 0.0010 M NaOH",
+        "Answer (final answer highlighted)": "B: This is the only way to have a significant concentration of both the conjugate acid and conjugate base.",
+        "ImagePath": "Chemistry/53"
+    },
+    {
+        "Question": "Refer to the following information.\n\nFour different acid solutions are prepared, and their pH values are determined and tabulated below. Each of the acids were titrated with NaOH to the end point. The end point pH values are shown on the last line of the table. The end point pH values\r\n\r\nA. suggest that acid 3 is strong and all the rest are weak\r\nB. suggest that all the acids are weak\r\nC. suggest that acid 1 is most likely polyprotic\r\nD. suggest serious problems with the pH meter",
+        "Answer (final answer highlighted)": "C: An end point lower than pH 7 is indicative of a polyprotic acid.",
+        "ImagePath": "Chemistry/54"
+    },
+    {
+        "Question": "The graph above shows the distribution of kinetic energies of a system containing a large number of SO2 molecules at 300 K. Which letter shows the average kinetic energy of this system?\r\n\r\nA. A\r\nB. B\r\nC. C\r\nD. D",
+        "Answer (final answer highlighted)": "C: The average kinetic energy is a little above the maximum for this type of distribution curve.",
+        "ImagePath": "Chemistry/55"
+    },
+    {
+        "Question": "Three 1-liter flasks are connected to a 3-liter flask by valves. The 3-liter flask is evacuated to start and the entire system is at 585 K. The first flask contains oxygen, the second hydrogen, and the third nitrogen. The pressure of hydrogen is 1.65 atm. The amounts of gas molecules are proportional to their representations in the flasks. If valve 2 is opened first and then the rest of the valves are opened, what will the pressure be after the first valve is opened and after they all are opened? Assume the connections have negligible volume.\n\nValve 2 Opened   All Valves Opened\n\nA. 1.0 atm   0.5 atm\nB. 0.41 atm   0.82 atm\nC. 0.81 atm   1.65 atm\nD. 2.0 atm   1.0 atm",
+        "Answer (final answer highlighted)": "B: Opening valve 2 will increase the volume by 4 times, so the pressure will be 1/4 of the starting pressure. The amount of particles is doubled by opening the second two valves, so the pressure doubles.",
+        "ImagePath": "Chemistry/56"
+    },
+    {
+        "Question": "A mass spectrum of a naturally occurring sample of an element is shown above. What is the element?\r\n\r\nA. Ca\r\nB. Ne\r\nC. K\r\nD. Not enough information is provided.",
+        "Answer (final answer highlighted)": "B: This element is 90 percent of an isotope with a mass of almost 20 and 10 percent of an isotope with a mass close to 22. We calculate 0.90 \u00d7 20 + 0.10 \u00d7 22 = 20.2, which is closest to the average mass of Ne.",
+        "ImagePath": "Chemistry/57"
+    },
+    {
+        "Question": "Refer to the titration curve below, which is of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.125 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the above graph. Which of the following describes the base that is being titrated?\r\n\r\nA. The base is dibasic since two end points are observed.\r\nB. The concentration of the base is exactly 0.125 M.\r\nC. The concentration of the base is slightly more than 0.125 M.\r\nD. The concentration of the base is slightly less than 0.125 M.",
+        "Answer (final answer highlighted)": "D: The end point is at about 22.5 mL, so (25.0 mL)($M_b$) = (22.5 mL)(0.125 M). Inspection of this equation reveals that the concentration is less than 0.125 M.",
+        "ImagePath": "Chemistry/58"
+    },
+    {
+        "Question": "Refer to the titration curve below, which is of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.125 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the above graph. Between which two points on the titration curve can the solution be described as a buffer?\n\nA. None, it is impossible for a titration solution to also be a buffer solution.\nB. A to F\nC. A to D\nD. D to F",
+        "Answer (final answer highlighted)": "C: Between these two points, there is a significant amount of both the conjugate acid and the conjugate base.",
+        "ImagePath": "Chemistry/59"
+    },
+    {
+        "Question": "Refer to the titration curve below, which is of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.125 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the above graph. For the best results with a visual indicator (one that changes color), what will optimize the results?\r\n\r\nA. Add the indicator two drops before the end point.\r\nB. Choose an indicator that has a pK that is close to the end point pH.\r\nC. Choose an indicator that has complementary colors.\r\nD. Choose a polyprotic indicator.",
+        "Answer (final answer highlighted)": "B: Choosing an indicator with the same $pK_a$ as the end point pH assures the sharpest color change and closest agreement of the end point (experimental) with the equivalence point (theoretical or calculated point).",
+        "ImagePath": "Chemistry/60"
+    },
+    {
+        "Question": "Refer to the titration curve below, which is of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.125 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the above graph. If the student uses a pH indicator that changes color from pH 6 to 8, which statement best characterizes the expected observations?\r\n\r\nA. The observed color change will be distinct, and the calculated molarity of the base will be accurate.\r\nB. The color will change slowly, and the end point volume will be low.\r\nC. The color will change slowly, and the calculated molarity of the base will be low.\r\nD. The observed color change will be distinct, but the calculated molarity of the base will be high.",
+        "Answer (final answer highlighted)": "B: Most of the indicator color change is outside the inflection part of the curve.",
+        "ImagePath": "Chemistry/61"
+    },
+    {
+        "Question": "Refer to the titration curve below, which is of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.125 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the above graph. Which arrow points to the place on the curve where pH = pKaof the conjugate acid of the base?\r\n\r\nA. A\r\nB. E\r\nC. C\r\nD. F",
+        "Answer (final answer highlighted)": "C: The $pH = pK_a$ when the concentration of the conjugate acid and of the conjugate base are equal. This occurs at point C on the curve. The conjugate acid of the base we are titrating in this case is $HB^+$ in the weak base equilibrium $B + H_2O \u2192 HB^+ + OH^-$.",
+        "ImagePath": "Chemistry/62"
+    },
+    {
+        "Question": "In the diagram above, which labeled arrow is pointing toward a covalent bond and which is pointing toward a hydrogen bond?\r\n\r\nCovalent Bond   Hydrogen Bond\r\n\r\nA. 1   2\r\nB. 2   1\r\nC. 3   4\r\nD. 4   3",
+        "Answer (final answer highlighted)": "D: Covalent bonds are shown as solid lines and hydrogen bonds are shown as dashed lines when aligned with the correct atoms.",
+        "ImagePath": "Chemistry/63"
+    },
+    {
+        "Question": "Morphine, $C_{17}H_{19}NO_3$ (shown above), has a $K_b = 8.0 \u00d7 10^{-7}$. If a 0.00100 M solution of morphine is prepared, the expected pH will be in which one of the following pH ranges?\r\n\r\nA. 2 to 4\r\nB. 4 to 6\r\nC. 8 to 10\r\nD. 10 to 12",
+        "Answer (final answer highlighted)": "C: The $[OH^-]$ will be the square root of the $K_b$ \u00d7 concentration. We can calculate $(8.0 \u00d7 10^{-7})(0.0010) = 8.0 \u00d7 10^{-10}$, and the square root is approximately $3 \u00d7 10^{-5}$. Our answer is between $10^{-5}$ and $10^{-4}, so the pOH is between 4 and 5. The pH will be between 9 and 10.",
+        "ImagePath": "Chemistry/64"
+    },
+    {
+        "Question": "The volume of a gas is charted over time, giving the above results. Which of the following options provides a possibel explinatin of what was happening to the gas during each phase of the graph?\n\nA. During phase I, the temperature decreased while the pressure increased. During phase II, the temperature was held constant as the pressure decreased.\nB. During phase I, the temperature increased while the pressure was held constant. During phase II, the temperature and pressure both decreased.\nC. During phase I, the temperature was held constant while the pressure increased. During phase II, the temperature and pressure both decreased.\nD. During phase I, the temperature and pressure both increased. During phase II, the temperature was held constant while the pressure decreased.",
+        "Answer (final answer highlighted)": "B In phase I, an increased temperature means the molecules are moving faster and will spread out more, leading to an increased volume. For the volume to remain constant in phase II, either both pressure and volume have to remain constant, or they both have to increase or decrease together, as they are inversely proportional.",
+        "ImagePath": "Chemistry/65"
+    },
+    {
+        "Question": "The above experiment was performed several times, and the data was gathered as shown in the figure. What is the rate law for this reaction?\n\nA. rate = k[NO][Br$_2$]$^2$\nB. rate = k[NO]$^2$[Br$_2$]$^2$\nC. rate = k[NO][Br$_2$]\nD. rate = k[NO]$^2$[Br$_2$]",
+        "Answer (final answer highlighted)": "D Between trial 1 and 3, the concentration of NO doubled while the concentration of Br$_2$ held constant, and the rate went up by a factor of four. So, the reaction is second order with respect to NO. Between trial 1 and 2, the concentration of NO was held constant while the concentration of Br2 doubled, and the rate went up by a factor of two. Thus, the reaction is first order with respect to Br$_2$.",
+        "ImagePath": "Chemistry/66"
+    },
+    {
+        "Question": "Regarding reaction II, to achieve the products present in the above diagram how many moles of each reactant must be present prior to the reaction?\n\nA. 1.0 mol of CH$_4$ and 2.0 mol of H$_2$O\nB. 2.0 mol of CH$_4$ and 2.0 mol of H$_2$O\nC. 2.0 mol of CH$_4$ and 3.0 mol of H$_2$O\nD. 3.0 mol of CH$_4$ and 2.0 mol of H$_2$O",
+        "Answer (final answer highlighted)": "C 2.0 moles of CH$_4$ would react with 2.0 moles of H$_2$O, leaving 1.0 mole left. It would also create 6.0 moles of H$_2$ and 2.0 moles of CO.",
+        "ImagePath": "Chemistry/67"
+    },
+    {
+        "Question": "Identify the three gases represented on the Maxwell-Boltzmann diagram above. Assume all gases are at the same temperature.\n\nA. I \\( \\mathrm{H_2} \\) II \\( \\mathrm{N_2} \\) III \\( \\mathrm{F_2} \\)\nB. I \\( \\mathrm{H_2} \\) II \\( \\mathrm{F_2} \\) III \\( \\mathrm{N_2} \\)\nC. I \\( \\mathrm{F_2} \\) II \\( \\mathrm{N_2} \\) III \\( \\mathrm{H_2} \\)\nD. I \\( \\mathrm{N_2} \\) II \\( \\mathrm{F_2} \\) III \\( \\mathrm{H_2} \\)",
+        "Answer (final answer highlighted)": "C At identical temperatures, the gases would all have identical amounts of kinetic energy. In order for that to happen, the gas with the lowest mass (H$_2$) would have to have the highest average velocity, and the gas with the highest mass (F$_2$) would have to have the lowest average velocity",
+        "ImagePath": "Chemistry/68"
+    },
+    {
+        "Question": "The above diagrams shows the decomposition of hydrogen peroxide in a sealed container in the presence of a catalyst. What is the overall order for the reaction? \n\nA. Zero order \nB. First order \nC. Second order \nD. Third order",
+        "Answer (final answer highlighted)": "B In 200 seconds, half of the original sample decayed. In another 200 seconds, half of the remaining sample decayed. This demonstrates a first order reaction",
+        "ImagePath": "Chemistry/69"
+    },
+    {
+        "Question": "One of the resonance structures for the nitrite ion is shown above. What is the formal charge on each atom? \n\nA. O$_x$ -1; N +2; O$_y$ -1 \nB. O$_x$ +1; N -1; O$_y$ 0 \nC. O$_x$ 0; N 0 ; O$_y$ -1 \nD.O$_x$ -1; N 0 ; O$_y$ 0",
+        "Answer (final answer highlighted)": "D O$_x$ has 6 valence electrons and 7 assigned electrons: 6 - 7 = -1. Both O$_y$ and the N atoms have the same number of valence and assigned electrons, making their formal charges zero.",
+        "ImagePath": "Chemistry/70"
+    },
+    {
+        "Question": "The following diagram supports which of the following conclusions about the reaction shown below? \n\nA. There is an increase in entropy. \nB. Mass is conserved in all chemical reactions. \nC. The pressure increases after the reaction goes to completion. \nD. The enthalpy value is positive. ",
+        "Answer (final answer highlighted)": "B The amount of matter is equal on both sides of the reaction. None of the other options are supported by the diagram.   --------------------- Source Url:https:// /ap/chemistry/question-118-answer-and-explanation.html",
+        "ImagePath": "Chemistry/71"
+    },
+    {
+        "Question": "The concentrations of the reactants and products in the reaction represented by the above graph are found to be changing very slowly. Which of the following statements best describes the reaction given that the reaction is exergonic? (\u0394G < 0) \n\nA. The reaction is under kinetic control. \nB. The reaction has reached a state of equilibrium. \nC. The reaction is highly exothermic in nature. \nD. The addition of heat will increase the rate of reaction significantly.",
+        "Answer (final answer highlighted)": "A Reactions with high activation energies that do not proceed at a measurable rate are considered to be under kinetic control-that is, their rate of progress is based on kinetics instead of thermodynamics.",
+        "ImagePath": "Chemistry/72"
+    },
+    {
+        "Question": "What is the equilibrium expression for the reaction \n\nA. \\( K = \\frac{[CO_2]^3}{[O_2]^5} \\) \nB. \\( K = \\frac{[C_3H_8][O_2]^5}{[CO_2]^3[H_2O]^4} \\) \nC. \\( K = \\frac{[C_3H_8]}{[H_2O]^4} \\) \nD. \\( K = \\frac{[O_2]^5}{[CO_2]^3} \\)",
+        "Answer (final answer highlighted)": "A By convention, liquids are not written as part of the equilibrium law. Liquids always have the same number of molecules per liter, which is a constant, combined into the value of the K. The only nonsolid substances in this reaction are O$_2$(g) and CO$_2$(g). In this reaction, CO$_2$ to the third power appears in the numerator because it is a product, and O$_2$ to the fifth power is in the denominator. ",
+        "ImagePath": "Chemistry/73"
+    },
+    {
+        "Question": "Given the two standard reduction equations and their potentials below, write the thermodynamically favored chemical reaction and its standard cell potential.\n\nA. $\\text{Ag}^+ (\\text{aq}) + \\text{Mg}^{2+} (\\text{aq}) \\rightarrow \\text{Ag}(\\text{s}) + \\text{Mg}(\\text{s}) & -1.57\\ V $\nB. $\\text{Ag}^+ (\\text{aq}) + \\text{Mg}(\\text{s}) \\rightarrow \\text{Ag}(\\text{s}) + \\text{Mg}^{2+} (\\text{aq}) & +3.17\\ V$\nC. $2\\text{Ag}^+ (\\text{aq}) + \\text{Mg}(\\text{s}) \\rightarrow 2\\text{Ag}(\\text{s}) + \\text{Mg}^{2+} (\\text{aq}) & +3.17\\ V$\nD. $2\\text{Ag}^+ (\\text{aq}) + \\text{Mg}(\\text{s}) \\rightarrow 2\\text{Ag}(\\text{s}) + \\text{Mg}^{2+} (\\text{aq}) & +3.97\\ V$",
+        "Answer (final answer highlighted)": "C Only reactions (C) and (D) are balanced. Only reaction (C) simply subtracts -2.37 from +0.80 to get the correct +3.17 V. ",
+        "ImagePath": "Chemistry/74"
+    },
+    {
+        "Question": "In the diagram above, which labeled arrow is pointing toward a hydrogen bond? \n\nA. 1 \nB. 2 \nC. 3 \nD. 4",
+        "Answer (final answer highlighted)": "C Dashed lines traditionally represent attractions that are NOT covalent bonds. In this case, they represent hydrogen bonds.",
+        "ImagePath": "Chemistry/75"
+    },
+    {
+        "Question": "The graph above shows the distribution of kinetic energies of a large number of Ne atoms at 500 K. Which letter shows the average kinetic energy of this system? \nA. A \nB. B \nC. C \nD. D",
+        "Answer (final answer highlighted)": "C Slightly to the right of the maximum of the distribution curve is the average kinetic energy. ",
+        "ImagePath": "Chemistry/76"
+    },
+    {
+        "Question": "Consider the following possible mechanism for the reaction above: \\[ \\text{2SO}_2(g) + \\text{O}_2(g) \\rightarrow \\text{2SO}_3(g) \\] Consider the possible mechanism in the figure for the reaction above. Which of the following statements is true? \n\nA. This mechanism has no free radicals. \nB. \\(\\text{O}_2(g)\\) is an intermediate. \nC. \\(\\text{SO}(g)\\) is a catalyst for this reaction. \nD. The mechanism does not add up to the overall reaction.",
+        "Answer (final answer highlighted)": "A None of the structures has an odd number of electrons, which is necessary for a free radical. ",
+        "ImagePath": "Chemistry/77"
+    },
+    {
+        "Question": "Three 1-liter flasks are connected to a 3-liter flask by valves. The 3-liter flask is evacuated to start and the entire system is at 298K. The first flask contains helium, the second argon, and the third krypton. The pressure of the argon is 633 torr. The amounts of gas are proportional to their representations in the flasks. If all the valves to the center flask are opened, what will the pressure of the system be? Assume the connections have negligible volume. \n\nA. 633 torr \nB. 316 torr \nC. 1266 torr \nD. 211 torr",
+        "Answer (final answer highlighted)": "B The number of particles adds up to 18, and they are distributed in 6 liters of volume, giving 3 particles per liter. Since 6 particles per liter represents 633 torr, the pressure should be half of that, or 316 torr. ",
+        "ImagePath": "Chemistry/78"
+    },
+    {
+        "Question": "A portion of a mass spectrum of neon is presented above. Estimate the average mass of naturally occurring atoms of neon, assuming that the height of each line represents the relative amount of each mass. \n\nA. 20.3 \nB. 20.0 \nC. 21.0 \nD. Not enough information is provided",
+        "Answer (final answer highlighted)": "A In this mass spectrum, we see about 90 percent of the atoms with a mass of 20, about 1 percent with a mass of 21, and 10 percent with a mass of 22. Calculate: (0.9)(20) + (0.01)(21) + (0.1)(22) = 18 + 0.2 + 2.2 = 20.4 for the average mass Since each mass was a little less than an integer value, 20.3 is reasonable.",
+        "ImagePath": "Chemistry/79"
+    },
+    {
+        "Question": "The above graph shows a titration curve of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.075 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the graph. Which arrow points to the end point of this titration? \n\nA. A \nB. E \nC. C \nD. F",
+        "Answer (final answer highlighted)": "B Point E is the inflection point that represents the end point.",
+        "ImagePath": "Chemistry/80"
+    },
+    {
+        "Question": "The above graph shows a titration curve of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.075 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the graph. Which arrow points to the place on the curve where the pH is equal to 14 - pK$_b$? \n\nA. A \nB. E \nC. C \nD. F",
+        "Answer (final answer highlighted)": "C Point C is the midpoint of the titration. At this point, the pOH = pK$_b$. The pOH = 14 - pH. So 14 - pH = pK$_b$, and this rearranges to the equation shown in the question.",
+        "ImagePath": "Chemistry/81"
+    },
+    {
+        "Question": "The above graph shows a titration curve of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.075 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the graph. Find the two points on the curve that indicate the region where the solution can be described as a buffer. What is the change in pH from the first point to the second? \n\nA. 0.5 pH unit \nB. 1 pH unit \nC. 2 pH units \nD. 3 pH units.",
+        "Answer (final answer highlighted)": "C Points A and D represent the buffer region. Their pH difference is approximately 2 pH units. ",
+        "ImagePath": "Chemistry/82"
+    },
+    {
+        "Question": "The above graph shows a titration curve of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.075 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the graph. Which of the following describes the base that is being titrated? \n\nA. The base is dibasic since two end points are observed. \nB. The concentration of the base is 0.075 $M$. \nC. The concentration of the base is slightly more than 0.075 $M$. \nD. The concentration of the base is slightly less than 0.075 $M$.",
+        "Answer (final answer highlighted)": "D The equation is M$_b$(25.0 mL) = (0.075 $M$)(22.5 mL). When solving for M$_b$, we see that 22.5/25.0 is less than 1. So the molarity of the base must be less than 0.075. ",
+        "ImagePath": "Chemistry/83"
+    },
+    {
+        "Question": "Refer to the figure.  The Lewis electron-dot structures for sulfur trioxide and for the sulfite ion are given above. Which statement best describes the geometry of these two substances? \n\nA. The sulfite ion has a triangular pyramid shape, and the sulfur trioxide is a planar triangle. \nB. Both substances are flat, triangular, planar shapes. \nC. Both substances are triangular pyramids. \nD. SO$_3$ is a triangular pyramid, and SO$_3^{2-}$ is a planar triangle. ",
+        "Answer (final answer highlighted)": "A Use the VSEPR theory and the fact that SO$_3$ has three domains (triangular planar) and that SO$_3^{2-}$ has four domains (tetrahedral domain structure and triangular pyramid molecular shape).",
+        "ImagePath": "Chemistry/84"
+    },
+    {
+        "Question": "Refer to the figure. Which statement below describes the charge, polarity, and resonance characteristics of the sulfite ion and of the sulfur trioxide species shown above? \n\nA. The sulfite ion has two negative charges along with a shape that makes it a dipole. Sulfur trioxide is symmetrical and nonpolar. In addition, as written, both have three resonance structures. \nB. The sulfite ion and sulfur trioxide are both polar with the only difference being that one is an ion and the other is not. \nC. Sulfur trioxide has three resonance structures, and the sulfite ion has no resonance structures. \nD. Sulfite ions have a nonbonding electron pair domain, while sulfur trioxide has all electron domains as bonding domains.",
+        "Answer (final answer highlighted)": "B Both of the statements are true.",
+        "ImagePath": "Chemistry/85"
+    },
+    {
+        "Question": "Use the arrangement of atoms suggested in the skeleton structure above to construct the Lewis structure for the SO$_3$ molecule. Which of the following statements about this molecule is incorrect?\n\nA. Sulfur trioxide has three resonance structures.\nB. Sulfur trioxide has a planar triangle shape.\nC. Sulfur trioxide is nonpolar.\nD. The S\u2013O bond order is 5/3.\n",
+        "Answer (final answer highlighted)": "D Since the Lewis structure shows three bonding domains and four bonds, three sigma and one pi, the bond order is 4/3, not 5/3.",
+        "ImagePath": "Chemistry/86"
+    },
+    {
+        "Question": "Use the arrangement of atoms suggested in the skeleton structure above to construct the Lewis structure for the sulfite ion. Be sure to minimize the formal charges. Which of the following statements is incorrect?\n\nA. The sulfite ion has a double bond.\nB. The sulfite ion has a triangular pyramid shape.\nC. The sulfite ion is nonpolar.\nD. The S\u2013O bond order is 4/3.\n",
+        "Answer (final answer highlighted)": "C The sulfite ion has an unsymmetrical triangular pyramid structure and must be polar.",
+        "ImagePath": "Chemistry/87"
+    },
+    {
+        "Question": "Ethanoic acid (\\ce{HC2H3O2} \\quad \\text{or} \\quad \\ce{CH3CO2H} \\quad \\text{or} \\quad \\ce{CH3COOH}\n) has a much lower vapor pressure than ethanol (\\ce{CH3CH2OH}). What is the most reasonable explanation?\n\nA. The polarizability of two oxygen atoms increases the London forces of attraction in ethanoic acid compared with ethanol.\nB. Hydrogen bonding in ethanoic acid is the strongest attractive force and is mainly responsible for the observed data.\nC. Ethanol has an \u2013OH group and can hydrogen bond; therefore, the London forces must cause the effect.\nD. Both ethanol and ethanoic acid have an \u2013OH, so the difference is the dipole of the second oxygen that increases the attractive forces.\n",
+        "Answer (final answer highlighted)": "B Ethanoic acid molecules strongly hydrogen bond so that most molecules are part of dimers.\n",
+        "ImagePath": "Chemistry/88"
+    },
+    {
+        "Question": "Vitamin C is oxidized slowly to dehydroascorbic acid by the oxygen in air. It is catalyzed by ions such as \\ce{Cu^2+} and \\ce{Fe^3+}\n. The reaction can be followed by measuring the ultraviolet absorbance at 243 nm.\n\nWhich of the following is the best interpretation of the data given above?\n\nA. The data support a first-order reaction.\nB. The data support a second-order reaction.\nC. The data support a zero-order reaction.\nD. The overall order is 14.\n",
+        "Answer (final answer highlighted)": "A The data show a linear trend for ln A vs. time. This is characteristic of a first-order reaction.",
+        "ImagePath": "Chemistry/89"
+    },
+    {
+        "Question": "Choose the description of the point on the distribution curve that is the most plausible.\n\nA. Point A represents absolute zero where all motions stops.\nB. Point C is proportional to temperature\nC. Point B is where the transition state occurs.\nD. At point D, the products of the reaction are found. \n",
+        "Answer (final answer highlighted)": "B At point C, which is a little beyond the maximum, the average kinetic energy is directly proportional to temperature.\n",
+        "ImagePath": "Chemistry/89"
+    },
+    {
+        "Question": "Three 1-liter flasks are connected to a 3-liter flask by valves as shown in the diagram above. The 3-liter flask has the relative number of helium atoms as indicated. At the start, the entire system is at 585K. The first flask contains oxygen; the second contains hydrogen, and the third contains nitrogen. The pressure of hydrogen is 3.00 atm. The number of gas molecules is proportional to their representations in the flasks. If the valves are all opened, what will be the pressure in the system? Assume the connections have negligible volume.\n\nA. 1.0 atm\nB. 2.0 atm\nC. 3.0 atm\nD. 4.0 atm\n",
+        "Answer (final answer highlighted)": "B 6 particles is equivalent to 3 atmospheres. We have 24 particles and 6 liters, or 4 particles per liter. That is 4/6 or 2/3 of the original pressure, or 2.0 atm. \n\n",
+        "ImagePath": "Chemistry/90"
+    },
+    {
+        "Question": "A mass spectrum of a naturally occurring sample of an element is shown above. What is the element?\n\nA. Cl\nB. S\nC. Ar\nD. There are two peaks, so there must be two compounds.",
+        "Answer (final answer highlighted)": "A Mass 35 is about 75 percent and mass 37 is about 25 percent. Calculate\n\n\\(0.75 \\times 35 + 0.25 \\times 37 = 26.25 + 9.25 = 35.5\\)\n\nThis mass is very close to that of chlorine.",
+        "ImagePath": "Chemistry/91"
+    },
+    {
+        "Question": "In the diagram above, which labeled arrow is pointing toward a covalent bond and which is pointing toward a hydrogen bond?\n\n\nA. 1     2\nB. 2     1\nC. 3     4\nD. 4     3",
+        "Answer (final answer highlighted)": "D Traditionally, solid lines indicate covalent bonds and dashed lines indicate attractive or repulsive interactions.\n",
+        "ImagePath": "Chemistry/92"
+    },
+    {
+        "Question": "Space-filling representations of carbon tetrachloride and carbon tetrabromide are shown above. The carbon can be seen in the carbon tetrachloride and is hidden by the bromine in carbon tetrabromide. Which of the following is the most reasonable statement? (Assume that the temperatures of CCl$_4$ and CBr$_4$ are the same in these comparisons.)\n\nA. CCl$_4$ has a higher surface tension compared with CBr$_4$\nB. CCl$_4$has a higher vapor pressure compared with CBr$_4$.\nC. CCl$_4$ has a higher boiling point compared with CBr$_4$.\nD. CCl$_4$ has a higher viscosity compared with CB$_4$.\n",
+        "Answer (final answer highlighted)": "B We can deduce that the attractive forces in CBr$_4$ are stronger than those in CCl$_4$ because the bromine electron cloud is much more polarizable than the chlorine atom's electron cloud. Response (B) is the only one that agrees with the attractive forces.\n",
+        "ImagePath": "Chemistry/93"
+    },
+    {
+        "Question": "Which of the labeled arrows in the diagram above represents the strongest intermolecular force of the four indicated?\n\nA. Arrow A\nB. Arrow B\nC. Arrow C\nD. Arrow D\n",
+        "Answer (final answer highlighted)": "A This represents an ion-dipole force, which is stronger than a hydrogen bond (B), a dipole-dipole force (C), or a London dispersion force (D).",
+        "ImagePath": "Chemistry/94"
+    },
+    {
+        "Question": "According to the data in the table above, which of the compounds has the strongest intermolecular forces?\n\nA. Propylamine\nB. Ethyl methyl ether\nC. Trimethyl amine\nD. Ethyl methyl amine",
+        "Answer (final answer highlighted)": "A The compound with the highest boiling point has the strongest intermolecular forces. This is only valid if the molar masses are similar.",
+        "ImagePath": "Chemistry/95"
+    },
+    {
+        "Question": "Each of the ions in the table form stable oxides (Na$_4$O, CdO, and La$_4$O$_3$). Lanthanum oxide,  La$_4$O$_3$, has a melting point significantly higher than that of the other oxides. Which of the following is the best explanation of why this is true?\n\nA. Lanthanum is a lanthanide element and the melting points of these elements are always high.\nB. There is more oxygen in the formula  La$_4$O$_3$ than in the other formulas. \nC. Lanthanum had the highest charge; therefore, it has the highest lattice energy.\nD. Alkali metals like sodium and transition metals like cadmium tend to have low melting points.\n",
+        "Answer (final answer highlighted)": "C The melting points of ionic materials depend upon the lattice energy. The higher the lattice energy, the higher the melting point is. Lattice energies depend upon the sizes of the ions and the magnitude of the charge. All three metal ions are approximately the same size; therefore, the size factor is minimal. This leaves the magnitude of the charge, and lanthanum, with the largest charge, should have the highest lattice energy.com/ap/chemistry/question-479-answer-and-explanation.html",
+        "ImagePath": "Chemistry/96"
+    },
+    {
+        "Question": "The diagram above shows the structure of molecules of CS$_2$ and COS. The boiling point of COS is 223 K, and the boiling point of CS2 is 319 K. Which of the following is the best explanation of why the boiling point of CS$_2$ is higher?\n\nA. The molar mass of CS$_2$ is greater.\nB. COS has weaker covalent bonds than CS$_2$.\nC. Only CS$_2$ can form intermolecular dipole-dipole forces.\nD. COS has stronger intermolecular forces because it is polar and CS$_2$ is not.",
+        "Answer (final answer highlighted)": "A-Stronger intermolecular forces lead to higher boiling points. Even though COS has dipole-dipole forces, which are usually stronger than the London dispersion forces present in CS$_2$, the greater molar mass of CS$_2$ leads to a London dispersion force contribution that is sufficient to compensate for the general trend of dipole-dipole forces being stronger than London dispersion forces. This is why comparisons should only be made between molecules of similar molecular masses.",
+        "ImagePath": "Chemistry/97"
+    },
+    {
+        "Question": "Which of the labeled arrows in the diagram above represents the strongest intermolecular force?\n\nA. A\nB. B\nC. C\nD. D",
+        "Answer (final answer highlighted)": "B This is a dipole-dipole force, which is stronger than a dipole-induced dipole (A and C) or a London dispersion force (D).",
+        "ImagePath": "Chemistry/98"
+    },
+    {
+        "Question": "A dimer consists of two closely associated molecules. In the gas phase, acetic acid tends to form dimers as illustrated on the left in the above diagram. Acetyl chloride, on the right in the above diagram, is not very efficient in forming dimers. Why is acetic acid better able to form dimers than acetyl chloride?\n\nA. The molecular mass of acetyl chloride is higher than that of acetic acid making it harder for the acetyl chloride to form dimers.\nB. It is easier to form a covalent bond between acetic acid molecules than between acetyl chloride molecules.\nC. Acetic acid can form strong hydrogen bonds but acetyl chloride can only form weaker dipole-dipole attractions.\nD. Acetic acid is an acidic compound but acetyl chloride is a neutral compound.\n",
+        "Answer (final answer highlighted)": "C The two molecules are hydrogen bonded together. Hydrogen bonding is a relatively strong intermolecular force. Acetyl chloride cannot exhibit anything stronger than dipole-dipole forces, which are, in general, weaker than hydrogen bonds.",
+        "ImagePath": "Chemistry/99"
+    },
+    {
+        "Question": "Which of the compounds in the above diagram is capable of participating in hydrogen bonding?\n\nA. C$_3$H$_9$ N\nB. CH$_3$F\nC. C$_2$H$_6$O\nD. C$_4$H$_11$",
+        "Answer (final answer highlighted)": "D-Hydrogen bonding is possible when hydrogen is attached to N, O, and F. D is the only compound in the diagram where this is true. The simple presence of hydrogen and N, O, or F is insufficient.",
+        "ImagePath": "Chemistry/100"
+    },
+    {
+        "Question": "In the diagram above, which labeled arrow is pointing toward a hydrogen bond? \n\nA. 1 \nB. 2 \nC. 3 \nD. 4",
+        "Answer (final answer highlighted)": "C Dashed lines traditionally represent attractions that are NOT covalent bonds. In this case, they represent hydrogen bonds.",
+        "ImagePath": "Chemistry/101"
+    },
+    {
+        "Question": "The graph above shows the distribution of kinetic energies of a large number of Ne atoms at 500 K. Which letter shows the average kinetic energy of this system? \nA. A \nB. B \nC. C \nD. D",
+        "Answer (final answer highlighted)": "C Slightly to the right of the maximum of the distribution curve is the average kinetic energy. ",
+        "ImagePath": "Chemistry/102"
+    },
+    {
+        "Question": "The above graph shows a titration curve of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.075 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the graph. Which arrow points to the end point of this titration? \n\nA. A \nB. E \nC. C \nD. F",
+        "Answer (final answer highlighted)": "B Point E is the inflection point that represents the end point.",
+        "ImagePath": "Chemistry/103"
+    },
+    {
+        "Question": "The above graph shows a titration curve of a weak base titrated with a strong acid. The pH was measured with a pH meter after small volumes of 0.075 M HCl were added to 25.0 mL of a weak base. Data from that experiment are shown in the graph. Which arrow points to the place on the curve where the pH is equal to 14 - pK$_b$? \n\nA. A \nB. E \nC. C \nD. F",
+        "Answer (final answer highlighted)": "C Point C is the midpoint of the titration. At this point, the pOH = pK$_b$. The pOH = 14 - pH. So 14 - pH = pK$_b$, and this rearranges to the equation shown in the question.",
+        "ImagePath": "Chemistry/104"
+    },
+    {
+        "Question": "The Lewis diagram for nitric acid, $HNO_3$, is above. Which of the following statements is true regarding nitric acid?\nA. $HNO_3$ molecules are planar.\nB. The nitrogen atom carries a negative formal charge.\nC. All N-O bonds are of identical length.\nD. There is a third equivalence resonance structure that is not shown.",
+        "Answer (final answer highlighted)": "A The resonance shown here is for the $N-O$ bonds that do not have hydrogen attached on the other end of the oxygen. This means that two of the $N-O$ bonds are identical (bond order = 1.5), but the third one (from $N-O-H$) is a true single bond. The geometry around the $N$ is trigonal planar, and the geometry around the $O$ in the $N-O-H$ is bent, both of which are planar geometries.",
+        "ImagePath": "Chemistry/105"
+    },
+    {
+        "Question": "The photoelectron below spectrum is for a neutral fluorine atom. Compared to that spectrum, the spectrum for a fluoride ion would have\nA. one more peak\nB. one less peak\nC. the same number of peaks, but the rightmost peak would be taller\nD. the same number of peaks, but the leftmost peak would be taller",
+        "Answer (final answer highlighted)": "C A fluoride atom is $[He]2s^22p^5$. A fluorine ion would be $[He]2s^22p^6$. The $2p$ peak is the rightmost peak, and in the ion it would contain one more electron and thus be higher than the $2p$ peak from the neutral atom.",
+        "ImagePath": "Chemistry/106"
+    },
+    {
+        "Question": "A student is attempting to use a distillation apparatus, shown below, to separate a mixture of propanol (boiling point: 97\u00b0C) and propionic acid (boiling point: 141\u00b0C). Which temperature should the apparatus be set at to obtain as pure a distillate of propanol as possible?\nA. 85\u00b0C\nB. 105\u00b0C\nC. 125\u00b0C\nD. 145\u00b0C",
+        "Answer (final answer highlighted)": "B In order to separate out the propanol, it must be boiled, so the temperature must be above the boiling point of propanol. However, the temperature should also be below the boiling point of propionic acid, because if both substances boil, they will not separate effectively. There are two options in the temperature range, and the lower one is better because the propionic acid will have a lower vapor pressure at 105\u00b0C, meaning less of it will evaporate and contaminate the distillate.",
+        "ImagePath": "Chemistry/107"
+    },
+    {
+        "Question": "Given the half-reactions below, what would the coefficient on the $NO(g)$ be when the full reaction below is balanced?\nA. 1\nB. 2\nC. 3\nD. 4",
+        "Answer (final answer highlighted)": "B To fully balance the reaction, the charge must be balanced. This required multiplying the zinc oxidation half-reaction by two, and the nitrate reduction half-reaction by three. Doing that and combining the reactions yields: $3Zn (s) + 8H^+ (aq) + 2NO_3^- (aq) \\rightarrow 2NO (g) + 4H_2O (l) + 3Zn^{2+} (aq)$",
+        "ImagePath": "Chemistry/108"
+    },
+    {
+        "Question": "A Lewis diagram of the hydrogen phosphate ion is shown below. Based on this diagram, which of the atoms would have a negative formal charge?  \nA. P\nB. Ox\nC. Oy\nD. Oz",
+        "Answer (final answer highlighted)": "D Formal charge is calculated by subtracting the number of assigned electrons on an atom in a Lewis diagram from the number of its valence electrons. When looking at an atom, lone pairs are considered to be two assigned electrons, and any type of bond is considered to be one (so a single bond is one, a double bond would be two, etc). Constructing a formal charge chart for the identified atoms shows that of the identified atoms only $Oz$ would have a negative formal charge.  https://img.apstudy.net/ap/chemistry/cr20/0445_Image_0002.jpg",
+        "ImagePath": "Chemistry/109"
+    },
+    {
+        "Question": "The $K_a$ values for three different weak acids are given below. If the acid is polyprotic, all of the $K_a$ values for that acid are given. If each acid were to be titrated with 0.10 M NaOH, which solution would have the highest pH at the endpoint of the titration when each acid has fully reacted?\nA. Formic\nB. Sulfurous\nC. Citric\nD. All titrations would have identical pHs at the endpoint.",
+        "Answer (final answer highlighted)": "B After all of an acid has reacted during a titration, all that is present in the solutions is the conjugate base of that acid. In a polyprotic titration, the endpoint occurs after all of the protons have been neutralized. In each case, the lower the $K_a$ is for the final dissociation of the weak acid, the higher the $K_b$ will be of its conjugate base (because for any conjugate pair, $K_a \\times K_b = 1.0 \\times 10^{-14}$). A higher $K_b$ means a stronger conjugate base, leading to a higher pH at the endpoint.",
+        "ImagePath": "Chemistry/110"
+    },
+    {
+        "Question": "A piece of potassium metal is added to a solution of hydrochloric acid, and the metal starts to react. Which of the following is the correct net ionic equation for the reaction that is occurring?\nA. $2H^+(aq) + K^+(aq) + 3e^- \\rightarrow H_2(g) + K(s)$\nB. $2H^+(aq) + 2K^+(aq) + 4e^- \\rightarrow 2K(s) + H_2(g)$\nC. $2H^+(aq) + K(s) \\rightarrow K^+(aq) + H_2(g)$\nD. $2H^+(aq) + 2K(s) \\rightarrow 2K^+(aq) + H_2(g)$",
+        "Answer (final answer highlighted)": "D The $H^+$ ions are being reduced, but the $K (s)$ is being oxidized, so the potassium half-reaction has to be flipped. It also has to be multiplied by two so the electrons will cancel out when the two half reactions are combined.",
+        "ImagePath": "Chemistry/111"
+    },
+    {
+        "Question": "The Lewis diagram of the bisulfite ion, $HSO^{3-}$, is drawn below. Which of the following descriptions correctly compares the bond lengths of the three sulfur-oxygen bonds found in bisulfite?  \nA. All bonds are the same length.\nB. Of the three bonds, there is one longer one and two shorter ones of identical length.\nC. Of the three bonds, there are two longer ones of identical length and one shorter one.\nD. All three bonds are different lengths.",
+        "Answer (final answer highlighted)": "B There is resonance between the two $S-O$ bonds where the $H$ is not attached to the other side of the oxygen atom. These bonds are identical in length, but would be shorter than the true single $S-O$ bond with the oxygen that does have the hydrogen bonded to it.",
+        "ImagePath": "Chemistry/112"
+    },
+    {
+        "Question": "A sample of hydrogen peroxide, $H_2O_2$, will decompose over time. The graph below charts the concentration of an $H_2O_2$ sample over time. What is the rate law for the overall reaction?\nA. Rate = k\nB. Rate = k[$H_2O_2$]\nC. Rate = k[$H_2O_2$]2\nD. Rate = k[$H_2O$][$O_2$]",
+        "Answer (final answer highlighted)": "B The graph indicates the decomposition reaction has a constant half-life. This means the reaction must be first order.",
+        "ImagePath": "Chemistry/113"
+    },
+    {
+        "Question": "A semiconductor with a silicon lattice is doped by the addition of another element, symbolized by the letter X in the diagram below. Which of the following statements best describes the possible identity of the element as well as the type of doping that is occurring?  \nA. Boron, which has less valence electrons than silicon and creates positive \"holes\" in the lattice\nB. Phosphorus, which has extra valence electrons and creates a mobile negative charge in the lattice\nC. Aluminum, which has metalloid properties that lend to increased conductivity when added to a semiconductor\nD. Carbon, which has an equal number of valence electrons as silicon and strengthens the conducting lattice",
+        "Answer (final answer highlighted)": "A Element X only forms three bonds with the surrounding silicon atoms, meaning it only has three available valence electrons to form bonds. That is consistent with boron, and adding boron into a silicon lattice is called p-doping, which involves creating positive areas for any mobile electrons to be attracted to.",
+        "ImagePath": "Chemistry/114"
+    },
+    {
+        "Question": "Given the bond enthalpy values in the data table below, determine the enthalpy change for the reaction above it.\nA. -1220 kJ/mol\nB. -400 kJ/mol\nC. 400 kJ/mol\nD. 1220 kJ/mol",
+        "Answer (final answer highlighted)": "A When determining the enthalpy of reaction using bond enthalpies, bonds broken in the reactants are assigned a positive value and bonds formed in the products are assigned a positive value prior to summing them all up. Remember to account for both the number of bonds inside a molecule as well as how many of that molecule there is in the balanced equation when calculating (for instance, there are 4 $H-O$ bonds in 2 $H_2O$ molecules). 4($C-H$) + ($C=C$) + 3($O=O$) - 4($C=O$) - 4($H-O$) = $\\Delta H_{rxn}^{\\circ}$ 4(410) + 720 + 3(500) - 4(800) - 4(470) = -1220 kJ/mol",
+        "ImagePath": "Chemistry/115"
+    },
+    {
+        "Question": "$[NO]$ (M)  \u00a0\u00a0\u00a0\u00a0 $[O_2]$ (M)\nThe reaction below is run with the concentration of both reactants at 0.10 M. Which of the following values for the initial concentration of both reactants would lead to an initial reaction rate which is double that of the first trial?\nA. \u00a0\u00a0\u00a0\u00a0 0.15  \u00a0\u00a0\u00a0\u00a0 0.15\nB. \u00a0\u00a0\u00a0\u00a0 0.20  \u00a0\u00a0\u00a0\u00a0 0.20\nC. \u00a0\u00a0\u00a0\u00a0 0.20  \u00a0\u00a0\u00a0\u00a0 0.050\nD. \u00a0\u00a0\u00a0\u00a0 0.050  \u00a0\u00a0\u00a0\u00a0 0.20",
+        "Answer (final answer highlighted)": "C The reaction is second order with respect to NO. This means doubling the concentration of NO will make the reaction go four times faster. At the same time, given that the reaction is first order with respect to O2, cutting the concentration of O2 in half will halve the speed of the reaction. Combining both factors yield $4 \\times 0.50 = 2$.",
+        "ImagePath": "Chemistry/116"
+    },
+    {
+        "Question": "Two batteries are constructed via the diagram below. The concentration of the solutions and the mass of the electrodes are identified in the data below the diagram. How would the voltage and the battery life for the two batteries compare?Voltage  \u00a0\u00a0\u00a0\u00a0 Battery Life\nA. X <Y  \u00a0\u00a0\u00a0\u00a0 X <Y\nB. X <Y  \u00a0\u00a0\u00a0\u00a0 X =Y\nC. X =Y  \u00a0\u00a0\u00a0\u00a0 X = Y\nD. X =Y  \u00a0\u00a0\u00a0\u00a0 X < Y",
+        "Answer (final answer highlighted)": "D Voltage is a function of the reaction quotient for the battery. Given that $Q = [Zn^{2+}]/[Cu^{2+}]$, in both batteries the value for Q would be the same, making their voltages the same. However, battery Y has more metal ions both in solution and in the electrodes, meaning the battery could operate for longer.",
+        "ImagePath": "Chemistry/117"
+    },
+    {
+        "Question": "$Cu^{2+}$ ions appear blue in solution, and the $NO_3^-$ ion is colorless. The absorbance of a $Cu(NO_3)_2$ solution is measured at various wavelengths using a spectrophotometer. To determine the concentration of a $Cu(NO_3)_2$ solution of unknown concentration, what wavelength of light would produce the best results?\nA. 350 nm\nB. 500 nm\nC. 640 nm\nD. 800 nm",
+        "Answer (final answer highlighted)": "C The maximum absorbance of the copper ion occurs at approximately 640 nm. When studying a copper solution of unknown concentration, comparing it to a Beer's Law plot constructed at an absorbance of 640 nm would create the greatest possible absorbance range and give the best results.",
+        "ImagePath": "Chemistry/118"
+    },
+    {
+        "Question": "The diagram below supports which of the following conclusions about the reaction shown below?\nA. There is an increase in entropy.\nB. Mass is conserved in all chemical reactions.\nC. The pressure increases after the reaction goes to completion.\nD. The enthalpy value is positive.",
+        "Answer (final answer highlighted)": "B The amount of matter is equal on both sides of the reaction. None of the other options are supported by the diagram.",
+        "ImagePath": "Chemistry/119"
+    },
+    {
+        "Question": "Ox  \u00a0\u00a0\u00a0\u00a0 N  \u00a0\u00a0\u00a0\u00a0 Oy\nOne of the resonance structures for the nitrite ion is shown below. What is the formal charge on each atom?\nA. \u00a0\u00a0\u00a0\u00a0 -1  \u00a0\u00a0\u00a0\u00a0 +1  \u00a0\u00a0\u00a0\u00a0 -1\nB. \u00a0\u00a0\u00a0\u00a0 +1  \u00a0\u00a0\u00a0\u00a0 -1  \u00a0\u00a0\u00a0\u00a0 0\nC. \u00a0\u00a0\u00a0\u00a0 0  \u00a0\u00a0\u00a0\u00a0 0  \u00a0\u00a0\u00a0\u00a0 -1\nD. \u00a0\u00a0\u00a0\u00a0 -1  \u00a0\u00a0\u00a0\u00a0 0  \u00a0\u00a0\u00a0\u00a0 0",
+        "Answer (final answer highlighted)": "D Ox has 6 valence electrons and 7 assigned electrons: 6 - 7 = -1. Both Oy and the N atoms have the same number of valence and assigned electrons, making their formal charges zero.",
+        "ImagePath": "Chemistry/120"
+    },
+    {
+        "Question": "Identify the three gases represented on the Maxwell-Boltzmann diagram below. Assume all gases are at the same temperature.I  \u00a0\u00a0\u00a0\u00a0 II  \u00a0\u00a0\u00a0\u00a0 III\nA. \u00a0\u00a0\u00a0\u00a0 $H_2$  \u00a0\u00a0\u00a0\u00a0 $N_2$  \u00a0\u00a0\u00a0\u00a0 $F_2$\nB. \u00a0\u00a0\u00a0\u00a0 $H_2$  \u00a0\u00a0\u00a0\u00a0 $F_2$  \u00a0\u00a0\u00a0\u00a0 $N_2$\nC. \u00a0\u00a0\u00a0\u00a0 $F_2$  \u00a0\u00a0\u00a0\u00a0 $N_2$  \u00a0\u00a0\u00a0\u00a0 $H_2$\nD. \u00a0\u00a0\u00a0\u00a0 $N_2$  \u00a0\u00a0\u00a0\u00a0 $F_2$  \u00a0\u00a0\u00a0\u00a0 $H_2$",
+        "Answer (final answer highlighted)": "C At identical temperatures, the gases would all have identical amounts of kinetic energy. In order for that to happen, the gas with the lowest mass ($H_2$) would have to have the highest average velocity, and the gas with the highest mass ($F_2$) would have to have the lowest average velocity.",
+        "ImagePath": "Chemistry/121"
+    },
+    {
+        "Question": "If the $H_2C_2O_4$ were to be replaced with an identical volume of $H_2SO_4$, what volume of $NaOH$ would be required to fully neutralize the acid?\nA 0.10 M solution of $NaOH$ is titrated into 20 mL of $H_2C_2O_4$, a diprotic acid, of an unknown concentration. The pH of the $H_2C_2O_4$ solution is monitored as the $NaOH$ is added to it, resulting in the below graph.\nA. 10 mL\nB. 20 mL\nC. 40 mL\nD. 60 mL",
+        "Answer (final answer highlighted)": "B The strength of the acid is irrelevant. $H_2SO_4$ has the same number of protons as $H_2C_2O_4$, and thus it will require the same amount of base to fully neutralize.",
+        "ImagePath": "Chemistry/122"
+    },
+    {
+        "Question": "5mL \u00a0\u00a0\u00a0\u00a0 15mL \u00a0\u00a0\u00a0\u00a0 25mL\n  \nPhenolphthalein is an acid-base indicator with a pKa of 9.1. Its protonated form is often abbreviated as $HIn$, while its conjugate base is abbreviated as $In^-$. At the following volumes of NaOH added, select the option that accurately describes which form of the indicator will be present in a greater concentration.\nA 0.10 M solution of NaOH is titrated into 20 mL of $H_2C_2O_4$, a diprotic acid, of an unknown concentration. The pH of the $H_2C_2O_4$ solution is monitored as the NaOH is added to it, resulting in the below graph.\nA. $HIn$ \u00a0\u00a0\u00a0\u00a0 $HIn$ \u00a0\u00a0\u00a0\u00a0 $In^-$\nB. $HIn$ \u00a0\u00a0\u00a0\u00a0 $In^-$ \u00a0\u00a0\u00a0\u00a0 $In^-$ \u00a0\u00a0\u00a0\u00a0\nC. $In^--$\u00a0\u00a0\u00a0\u00a0 $In^-$ \u00a0\u00a0\u00a0\u00a0 $HIn$ \u00a0\u00a0\u00a0\u00a0\nD. $In^-$ \u00a0\u00a0\u00a0\u00a0 $HIn$ \u00a0\u00a0\u00a0\u00a0 $HIn$",
+        "Answer (final answer highlighted)": "A Below a pH of 9.1, the predominant form of the indicator will be its protonated state, $HAc$. Above 9.1, there will be more of the conjugate base, $Ac^-$.",
+        "ImagePath": "Chemistry/123"
+    },
+    {
+        "Question": "At the point at which 20 mL of NaOH has been added, which of the following species is present in the greatest concentration in solution?\n  \nA 0.10 M solution of NaOH is titrated into 20 mL of $H_2C_2O_4$, a diprotic acid, of an unknown concentration. The pH of the $H_2C_2O_4$ solution is monitored as the NaOH is added to it, resulting in the below graph.\nA. $H^+$\nB. $OH^-$\nC. $HC_2O_4^-$\nD. $C_2O_4^{2-}$",
+        "Answer (final answer highlighted)": "D At a volume of 20 mL, the $OH^-$ has fully reacted with the $H_2C_2O_4$, removing all of its protons. Other than water, the only species present in significant concentrations at that point is the $C_2O_4^{2-}$.",
+        "ImagePath": "Chemistry/124"
+    },
+    {
+        "Question": "What is the concentration of the $H_2C_2O_4$ solution?\n  \nA 0.10 M solution of NaOH is titrated into 20 mL of $H_2C_2O_4$, a diprotic acid, of an unknown concentration. The pH of the $H_2C_2O_4$ solution is monitored as the NaOH is added to it, resulting in the below graph.\nA. 0.025 M\nB. 0.050 M\nC. 0.10 M\nD. 0.20 M",
+        "Answer (final answer highlighted)": "B  ![image](https://img.apstudy.net/ap/chemistry/cr20/0357_Image_0002.jpg)",
+        "ImagePath": "Chemistry/125"
+    },
+    {
+        "Question": "Data considering the conductivity of four different substances in their various phases is given in the table below. Of the four options, which substance is most likely to be $NaCl$?\nA. Substance A\nB. Substance B\nC. Substance C\nD. Substance D",
+        "Answer (final answer highlighted)": "B Ionic substances such as $NaCl$ do not conduct electricity in their solid form, but do when melted and/or dissolved in water.",
+        "ImagePath": "Chemistry/126"
+    },
+    {
+        "Question": "As shown below, four identical containers hold the same number of moles of four different gases at 298 K. If ideal behavior is NOT assumed, in which container would the pressure be the lowest?\nA. $H_2O$\nB. $CH_4$\nC. $Ne$\nD. $He$",
+        "Answer (final answer highlighted)": "A Gases deviate from ideal behavior when their IMFs are significant enough to affect their behavior. When IMFs cause gas molecules to attract each other, that means they will hit the sides of the container less often and decrease the pressure. In this case, $H_2O$ has the strongest IMFs due to hydrogen bonding, and thus $H_2O$ molecules are most likely to deviate from ideal behavior.",
+        "ImagePath": "Chemistry/127"
+    },
+    {
+        "Question": "Based on the mass spectrum shown below, which of the following can be concluded about zirconium?\nA. The most common charge on a zirconium ion is +2.\nB. Zirconium nuclei can have different number of protons.\nC. The average atomic mass of a zirconium atom is 90 amu.\nD. The most common isotope of zirconium has 50 neutrons.",
+        "Answer (final answer highlighted)": "D From the graph, you can see that the most common isotope of zirconium has an atomic mass of 90. Atomic mass is equal to the number of protons plus the number of neutrons, and all zirconium atoms have 40 protons. 90 - 40 = 50 neutrons.",
+        "ImagePath": "Chemistry/128"
+    },
+    {
+        "Question": "The system below is at equilibrium. If it were to be diluted, what would happen to the moles of reactants and the moles product after equilibrium is reestablished?Mole Reactants \u00a0\u00a0\u00a0\u00a0 Moles Product\nA. Increase \u00a0\u00a0\u00a0\u00a0 Increase\nB. Increase \u00a0\u00a0\u00a0\u00a0 Decrease\nC. Decrease \u00a0\u00a0\u00a0\u00a0 Decrease\nD. No Change \u00a0\u00a0\u00a0\u00a0 No Change",
+        "Answer (final answer highlighted)": "B The reaction quotient is $Q = \\frac{[Cu(NH_3)_4^{2+}]}{[Cu^+][NH_3]^4}$. Diluting the equilibrium will decrease the concentration of all ions by the same amount, but that will have a larger effect on the denominator in Q because there are more ions present. This, in turn, means Q will increase, causing a shift to the left, increasing the amount of reactants and decreasing the amount of products.",
+        "ImagePath": "Chemistry/129"
+    },
+    {
+        "Question": "A sample of some $N_2O_5$ gas is placed in a sealed container and allowed to decompose. The concentration of the $N_2O_5$ is tracked over time, and the results are plotted on the above graph. Which of the following represents the possible units on the rate constant for this reaction?\nA. $s^{-1}$\nB. $sM^{-1}$\nC. $Ms^{-1}$\nD. $Ms^{-2}$",
+        "Answer (final answer highlighted)": "A The graph shows a constant half-life-that is, the concentration of the $N_2O_5$ decreases by half every 5 seconds. The rate law is thus rate = k[$N_2O_5$]; dimensional analysis gets us to the units on k: M/s = k(M). k = s$^{-1}$.",
+        "ImagePath": "Chemistry/130"
+    },
+    {
+        "Question": "Vapor Pressure @ 25\u00b0C (torr)\n  \nSubstance\nThree different liquids are mixed together in a flask, and that flask is then hooked up to a distillation apparatus, as shown below. The liquids are initially at 25\u00b0C, and the heat is turned up until the mixture starts to boil. Which liquid would be the first to separate out of the mixture?\nA. $H_2O$\nB. $CH_3OH$\nC. $C_6H_{12}$\nD. Distillation would be an ineffective method of separating the mixture.",
+        "Answer (final answer highlighted)": "B Vapor pressure is inversely proportional with IMF strength, so the substance with the greatest vapor pressure (in this case, $CH_3OH$) would have the weakest IMF strength. That also means it has the lowest boiling point, and would boil first.",
+        "ImagePath": "Chemistry/131"
+    },
+    {
+        "Question": "1.0 mole of $NO_2(g)$ is bubbled through excess water, causing the above reaction to take place. Which of the following statements correctly describes the energy change that will occur during the reaction?\nA. 135 kJ of energy will be emitted.\nB. 45 kJ of energy will be emitted.\nC. 135 kJ of energy will be absorbed.\nD. 405 kJ of energy will be absorbed.",
+        "Answer (final answer highlighted)": "B 1.0 mol $NO_2$ $\\times$  https://img.apstudy.net/ap/chemistry/cr20/041_Image_0001.jpg  = -45 kJ (the negative sign means energy is released).",
+        "ImagePath": "Chemistry/132"
+    },
+    {
+        "Question": "A beaker is filled with some 1.0 M $CuSO_4$, and two carbon electrodes are placed in the beaker with a battery wired between them, as shown below. As current is run through the system, solid copper plates out onto the carbon cathode. Which of the following changes would increase the amount of solid copper that is plated out of solution?\nA. Replacing the 1.0 M $CuSO_4$ solution with 1.0 M $CuCl_2$\nB. Using a 9.0 V battery instead of a 1.5 V battery\nC. Decreasing the pH of the solution\nD. Changing out the carbon electrodes with platinum electrodes",
+        "Answer (final answer highlighted)": "B Using a battery with a larger voltage would lead to a larger current, which in turn would lead to a larger mass of copper being plated out of solution.",
+        "ImagePath": "Chemistry/133"
+    },
+    {
+        "Question": "The photoelectron spectrum of an element is below. Based on the spectrum, what is the charge on the most common ion of the element?\nA. -2\nB. -1\nC. +1\nD. +2",
+        "Answer (final answer highlighted)": "D The PES represents an electron configuration of $1s^22s^22p^63s^2$ that of magnesium. When forming an ion, the most stable pathway is to lose the two electrons in the third energy level, giving the ion a charge of +2.",
+        "ImagePath": "Chemistry/134"
+    },
+    {
+        "Question": "A beaker of saturated zinc iodate is left out overnight. The following morning, some water is found to have evaporated. Assuming the temperature remained constant at 25\u00b0C, which of the following options correctly identifies the changes in the $[Zn^{2+}]$ and the mass of the zinc iodate present in the beaker compared to the previous night?\nZinc iodate dissociates in water via the following equilibrium process $[Zn^{2+}]$  \u00a0\u00a0\u00a0\u00a0 Mass Zn(IO3)2\nA. \u00a0\u00a0\u00a0\u00a0 Increase  \u00a0\u00a0\u00a0\u00a0 Decrease\nB. \u00a0\u00a0\u00a0\u00a0 Increase  \u00a0\u00a0\u00a0\u00a0 No Change\nC. \u00a0\u00a0\u00a0\u00a0 No Change  \u00a0\u00a0\u00a0\u00a0 Increase\nD. \u00a0\u00a0\u00a0\u00a0 No Change  \u00a0\u00a0\u00a0\u00a0 Decrease",
+        "Answer (final answer highlighted)": "C In a saturated solution, the concentration of each component ion will always remain constant. For that to happen if water evaporates, some ions must \"fall\" out of solution, increasing the total amount of precipitate.",
+        "ImagePath": "Chemistry/135"
+    },
+    {
+        "Question": "Zinc iodate dissociates in water via the following equilibrium process. Which of the following solutions would zinc iodate be the LEAST soluble in?\nA. 1.0 M BaCl2\nB. 1.0 M NaIO3\nC. 1.0 M K2CO3\nD. Pure water",
+        "Answer (final answer highlighted)": "B Due to the common ion effect, zinc iodate would be least soluble in a solution with which it shared an ion. Of the options, only $NaIO_3$ shares an ion ($IO_3^-$) with $Zn(IO_3)_2$.",
+        "ImagePath": "Chemistry/136"
+    },
+    {
+        "Question": "What is the approximate molar solubility of zinc iodate at 25\u00b0C?\nZinc iodate dissociates in water via the following equilibrium process\nA. $1.0 \\times 10^{-2}$ M\nB. $2.0 \\times 10^{-3}$ M\nC. $4.0 \\times 10^{-6}$ M\nD. $1.0 \\times 10^{-6}$ M",
+        "Answer (final answer highlighted)": "A $K_{sp} = [Zn^{2+}][IO_3^{-}]^2$ $4.0 \\times 10^{-6} = (x)(2x)^2$ $4.0 \\times 10^{-6} = 4x^3$ $1.0 \\times 10^{-6} = x^3$ $x = 1.0 \\times 10^{-2} M$",
+        "ImagePath": "Chemistry/137"
+    },
+    {
+        "Question": "When the oxidation-reduction reaction below is completely balanced, what is the coefficient on the $MnO_4^-$ ion?\nA. 1\nB. 2\nC. 3\nD. 4",
+        "Answer (final answer highlighted)": "B The manganese goes from an oxidation state of +7 in $MnO_4^-$ to +2 in $Mn^{2+}$, necessitating a gain of 5 electrons. The carbon goes from an oxidation state of +3 in $C_2O_4^{2-}$ to +4 in $CO_2$, and in the balanced equation that would happen twice (i.e., a 2 coefficient is needed in front of the $CO_2$ to balance it), necessitating a loss of 2 electrons. To balance the charge, the manganese half-reaction must be multiplied by 2 while the carbon half-reaction is multiplied by 5.",
+        "ImagePath": "Chemistry/138"
+    },
+    {
+        "Question": "The mass spectrum below shows the distribution of various isotopes of strontium. Based on the data, which of the following conclusions can be drawn?\nA. Strontium most commonly forms ions with a charge of +2.\nB. Strontium isotopes with a mass of 86 or 87 are very unstable.\nC. The number of protons in a strontium atom nucleus can vary.\nD. The most common isotope of strontium has 50 neutrons.",
+        "Answer (final answer highlighted)": "D The most common isotope of strontium has an atomic mass of 88, and a strontium nucleus has 38 protons. As atomic mass = protons + neutrons, that means the most common isotope of strontium must have 50 neutrons.",
+        "ImagePath": "Chemistry/139"
+    },
+    {
+        "Question": "The Lewis diagrams for both ethanol and octane are drawn below. Ethanol's boiling point is 78\u00b0C, while octane's is 125\u00b0C. This is best explained by the fact that\nA. octane has hydrogen bonding, while ethanol does not\nB. octane has a significantly higher molar mass than ethanol\nC. octane's temporary dipoles are stronger than those in ethanol\nD. octane is more symmetrical than ethanol",
+        "Answer (final answer highlighted)": "C Ethanol displays hydrogen bonding, which is the strongest type of intermolecular force. However, London dispersion forces are based on the overall polarizability of a molecule's electron cloud, which in turn is based on the number of electrons that molecule has. Octane has significantly more electrons than ethanol, and the dispersion forces caused by that overwhelm even the hydrogen bonds in ethanol, causing octane to have a higher boiling point.",
+        "ImagePath": "Chemistry/140"
+    },
+    {
+        "Question": "If a small, pinhole-size leak were to be drilled into each container, the container with which gas would experience the fastest pressure decrease?\n10.0 g each of three different gases are present in three glass containers of identical volume, as shown below. The temperature of all three flasks is held constant at 298 K.\nA. $SO_2$\nB. $CH_4$\nC. $NCl_3$\nD. All three containers would decrease pressure at the same rate.",
+        "Answer (final answer highlighted)": "B The rate at which a gas effuses is inversely proportional with its molar mass. A gas with a lower molar mass (in this case, $CH_4$), will have molecules moving with a higher average velocity, meaning they are going to hit that hole more often and will be more likely to escape.",
+        "ImagePath": "Chemistry/141"
+    },
+    {
+        "Question": "10.0 g each of three different gases are present in three glass containers of identical volume, as shown below. The temperature of all three flasks is held constant at 298 K.Which of the gases would have the greatest density?\nA. $SO_2$\nB. $CH_4$\nC. $NCl_3$\nD. All three gases would have the same density.",
+        "Answer (final answer highlighted)": "D Density is simply mass divided by volume. The mass and volume of each gas is identical; therefore, their densities are identical.",
+        "ImagePath": "Chemistry/142"
+    },
+    {
+        "Question": "The container with which gas would have the greatest pressure?\n10.0 g each of three different gases are present in three glass containers of identical volume, as shown below. The temperature of all three flasks is held constant at 298 K.\nA. $SO_2$\nB. $CH_4$\nC. $NCl_3$\nD. All four containers would have the same pressure.",
+        "Answer (final answer highlighted)": "B Pressure is directly related to the number of moles of a gas. $CH_4$ has the lowest molar mass out of the three gases, and therefore 10.0 grams of it represents the greatest number of moles, leading to the greatest pressure.",
+        "ImagePath": "Chemistry/143"
+    },
+    {
+        "Question": "$SiCl_4$ \u00a0\u00a0\u00a0\u00a0 $PCl_3$\nThe Lewis diagrams for $SiCl_4$ and $PCl_3$ are drawn below. What are the approximate bond angles between the terminal chlorine atoms in each structure?\nA. 90 \u00a0\u00a0\u00a0\u00a0 90\nB. 109.5\u00b0\u00a0\u00a0\u00a0\u00a0 < 109.5\u00b0\nC. 90\u00b0\u00a0\u00a0\u00a0\u00a0 109.5\u00b0\nD. < 109.5\u00b0\u00a0\u00a0\u00a0\u00a0 > 90\u00b0",
+        "Answer (final answer highlighted)": "B Both molecules have four electron groups around the central atom, so their base geometry is tetrahedral, which has bond angles of 109.5\u00b0. However, the $PCl_3$ has a lone pair as well, which exerts a slightly greater repulsive force than a bonded pair, bringing the bond angles in that molecule to slightly less than the ideal 109.5\u00b0.",
+        "ImagePath": "Chemistry/144"
+    },
+    {
+        "Question": "X \u00a0\u00a0\u00a0\u00a0Y \u00a0\u00a0\u00a0\u00a0Z\nThe formate ion, $HCO_2^-$, is best represented by the Lewis diagram below. Each bond is labeled with a different letter.What is the bond order for each bond?\nA. 1 \u00a0\u00a0\u00a0\u00a01 \u00a0\u00a0\u00a0\u00a02\nB. 2 \u00a0\u00a0\u00a0\u00a02 \u00a0\u00a0\u00a0\u00a01\nC. 1 \u00a0\u00a0\u00a0\u00a01.5 \u00a0\u00a0\u00a0\u00a01.5\nD. 1.33 \u00a0\u00a0\u00a0\u00a01.33 \u00a0\u00a0\u00a0\u00a01.33",
+        "Answer (final answer highlighted)": "C The $H-C$ bond is a single bond with a bond order of one. The $C-O$ bonds display resonance, and the average bond order between them is $(1 + 2)/1 = 1.5$.",
+        "ImagePath": "Chemistry/145"
+    },
+    {
+        "Question": "Initial pH \u00a0\u00a0\u00a0\u00a0 Equivalence pH \u00a0\u00a0\u00a0\u00a0 Ending pH\nA student titrates some 1.0 M $HCl$ into 20.0 mL of methylamine ($CH_3NH_2$), a weak base which only accepts a single proton. The following titration curve results:The methylamine is replaced by 20.0 mL of sodium hydroxide of an identical concentration. If the sodium hydroxide is titrated with the 1.0 M $HCl$, which of the following options accurately describes the pH levels at various points during the titration when compared to the pH levels at the same point in the $HCl$/methylamine titration?\nA. lower \u00a0\u00a0\u00a0\u00a0same \u00a0\u00a0\u00a0\u00a0higher\nB. higher \u00a0\u00a0\u00a0\u00a0higher \u00a0\u00a0\u00a0\u00a0same\nC. same \u00a0\u00a0\u00a0\u00a0higher \u00a0\u00a0\u00a0\u00a0same\nD. higher \u00a0\u00a0\u00a0\u00a0lower \u00a0\u00a0\u00a0\u00a0lower",
+        "Answer (final answer highlighted)": "B Sodium hydroxide is a strong base, which dissociates completely in solution. Thus, it would initially have a higher pH (be more basic) than any weak base of an identical concentration. At equivalence of a strong acid/strong base titration, water is the only acid or base present, causing the solution to have a neutral pH of 7. Finally, in the post-equivalence region of the graph, the pH is driven by the excess $H^+$ from the $HCl$, and that would not change in the new titration.",
+        "ImagePath": "Chemistry/146"
+    },
+    {
+        "Question": "The buffer region of this titration is located\nA student titrates some 1.0 M $HCl$ into 20.0 mL of methylamine ($CH_3NH_2$), a weak base which only accepts a single proton. The following titration curve results:\nA. below 3.0 mL\nB. between 3.0 mL and 14.0 mL\nC. between 14.0 mL and 16.0 mL\nD. above 16.0 mL",
+        "Answer (final answer highlighted)": "B A buffer solution is one that resists change in pH due to similar amounts of the base ($CH_3NH_2$) and its conjugate acid ($CH_3NH_3^+$). That occurs after the initial pH change, but prior to the equivalence region. The pH is also stable again starting at 16.5 mL, but that is due to the presence of the excess strong acid, and that does not create a buffer region.",
+        "ImagePath": "Chemistry/147"
+    },
+    {
+        "Question": "What is the approximate $pK_b$ for methylamine?\nA student titrates some 1.0 M HCl into 20.0 mL of methylamine ($CH_3NH_2$), a weak base which only accepts a single proton. The following titration curve results:\nA. 3.5\nB. 5.5\nC. 10.5\nD. 12.5",
+        "Answer (final answer highlighted)": "A At the half-equivalence point (7.5 mL) of the titration, $pK_b$ of methylamine = $pOH$ of the solution. To determine the $pOH$, you simply have to see what the $pH$ of the solution is at that half-equivalence point and use $pH + pOH = 14$. The $pH$ at the half-equivalence is 10.5. So, 14 - 10.5 = 3.5.",
+        "ImagePath": "Chemistry/148"
+    },
+    {
+        "Question": "What is the concentration of the methylamine?\nA student titrates some 1.0 M HCl into 20.0 mL of methylamine ($CH_3NH_2$), a weak base which only accepts a single proton. The following titration curve results:\nA. 0.50 M\nB. 0.75 M\nC. 1.0 M\nD. 1.25 M",
+        "Answer (final answer highlighted)": "B There is a 1:1 mole ratio between the $HCl$ and the $CH_3NH_2$, meaning there will be the same number of moles of each present at the equivalence point. The equivalence point is located at 15.0 mL of $HCl$ added. (1.0 M)(0.0150 L) = 0.0150 mol $HCl$ = 0.0150 mol $CH_3NH_2$. Finally, divide that value by the volume of the $CH_3NH_2$, 0.0150 mol $CH_3NH_2$ / 0.020 L = 0.75 M $CH_3NH_2$.",
+        "ImagePath": "Chemistry/149"
+    },
+    {
+        "Question": "Silver sulfate, $Ag_2SO_4$, has a solubility product constant of $1.0 \\times 10^{-5}$. The below diagram shows the products of a precipitation reaction in which some silver sulfate was formed.Which ion concentrations below would have led the precipitate to form?\nA. $[Ag^+] = 0.01 M$ $[SO_4^{2-}] = 0.01 M$\nB. $[Ag^+] = 0.10 M$ $[SO_4^{2-}] = 0.01 M$\nC. $[Ag^+] = 0.01 M$ $[SO_4^{2-}] = 0.10 M$\nD. This is impossible to determine without knowing the total volume of the solution.",
+        "Answer (final answer highlighted)": "B For a precipitate to form, $Q > K_{sp}$. In this case, $Q = [Ag^+]^2[SO_4^{2-}]$. The concentrations in (B) lead to a $Q$ of $1.0 \\times 10^{-4}$, which is greater than the given $K_{sp}$ of $1.0 \\times 10^{-5}$. The other options lead to a $Q$ value that is equal to or less than $K_{sp}$.",
+        "ImagePath": "Chemistry/150"
+    },
+    {
+        "Question": "Silver sulfate, $Ag_2SO_4$, has a solubility product constant of $1.0 \\times 10^{-5}$. The below diagram shows the products of a precipitation reaction in which some silver sulfate was formed.If the beaker above were left uncovered for several hours\nA. some of the $Ag_2SO_4$ would dissolve\nB. some of the spectator ions would evaporate into the atmosphere\nC. the solution would become electrically imbalanced\nD. additional $Ag_2SO_4$ would precipitate",
+        "Answer (final answer highlighted)": "D Leaving the container uncovered will cause some of the water molecules to evaporate. This allows some $Ag^+$ and $SO_4^{2-}$ ions to \"fall\" out of solution and combine to create more $Ag_2SO_4$.",
+        "ImagePath": "Chemistry/151"
+    },
+    {
+        "Question": "Silver sulfate, $Ag_2SO_4$, has a solubility product constant of $1.0 \\times 10^{-5}$. The below diagram shows the products of a precipitation reaction in which some silver sulfate was formed.What is the identity of the excess reactant?\nA. $AgNO_3$\nB. $Ag_2SO_4$\nC. $NaNO_3$\nD. $Na_2SO_4$",
+        "Answer (final answer highlighted)": "A There are no sulfate ions in solution, which means that whatever the sulfate was attached to was the limiting reactant. Thus, silver must have been attached to the excess reactant, which is $AgNO_3$. (Remember, $Ag_2SO_4$ was the product, not a reactant.)",
+        "ImagePath": "Chemistry/152"
+    },
+    {
+        "Question": "The following curve is obtained during the titration of 30.0 mL of 1.0 M $NH_3$, a weak base, with a strong acid:What ions are present in significant amounts during the first buffer region?\nA. $NH_3$ and $NH_4^+$\nB. $NH_3$ and $H^+$\nC. $NH_4^+$ and $OH^-$\nD. $H_3O^+$ and $NH_3$",
+        "Answer (final answer highlighted)": "A The reaction occurring is $NH_3 + H^+ \\rightleftharpoons NH_4^+$. During the first buffer region, all added hydrogen ions immediately react with $NH_3$ to create $NH_4^+$. $NH_3$ remains in excess until equilibrium is achieved.",
+        "ImagePath": "Chemistry/153"
+    },
+    {
+        "Question": "The following curve is obtained during the titration of 30.0 mL of 1.0 M NH3, a weak base, with a strong acid:What is the concentration of the acid?\nA. 0.5 M\nB. 1.0 M\nC. 1.5 M\nD. 2.0 M",
+        "Answer (final answer highlighted)": "D At the equivalence point, the moles of acid are equal to the moles of base. Moles base = $(1.0 M)(0.030 L) = 0.030$ mol base = 0.030 moles acid It requires 15.0 mL of acid to reach equivalence, so:  https://img.apstudy.net/ap/chemistry/cr20/0307_Image_0004.jpg",
+        "ImagePath": "Chemistry/154"
+    },
+    {
+        "Question": "Why is the solution acidic at equilibrium?\nThe following curve is obtained during the titration of 30.0 mL of 1.0 M NH3, a weak base, with a strong acid:\nA. The strong acid dissociates fully, leaving excess $[H^+]$ in solution.\nB. The conjugate acid of NH3 is the only ion present at equilibrium.\nC. The water which is being created during the titration acts as an acid.\nD. The acid is diprotic, donating two protons for every unit dissociated.",
+        "Answer (final answer highlighted)": "B The reaction here is $NH_3 + H^+ \\rightleftharpoons NH_4^+$. At equilibrium, the moles of $NH_3$ and $H^+$ would be equal, leaving behind $NH_4^+$ ions, which will then donate ions to water, creating an acidic medium.",
+        "ImagePath": "Chemistry/155"
+    },
+    {
+        "Question": "The diagram below shows three identical 1.0 L containers filled with the indicated amounts of gas. The stopcocks connecting the containers are originally closed and the gases are all at 25\u00b0C. Assume ideal behavior.The stopcocks are opened. If the tubing connecting the containers has negligible volume, by what percentage will the pressure exerted by the neon gas decrease?\nA. 25%\nB. 33%\nC. 50%\nD. 67%",
+        "Answer (final answer highlighted)": "D $P_1V_1 = P_2V_2$ $P_1(1.0 L) = P_2(3.0 L)$ $P_2/P_1 = 1.0/3.0$ Thus, the pressure of the neon gas is 33% of what it was originally, meaning a decrease of 67%. Note that the same calculation could be used for any of the gases; each gas is expanding to take up three times as much space as it has originally, and thus exerts one-third as much pressure.",
+        "ImagePath": "Chemistry/156"
+    },
+    {
+        "Question": "The diagram below shows three identical 1.0 L containers filled with the indicated amounts of gas. The stopcocks connecting the containers are originally closed and the gases are all at 25\u00b0C. Assume ideal behavior.Which gas has the strongest IMFs?\nA. He\nB. Ne\nC. NO\nD. All gases have identical IMFs.",
+        "Answer (final answer highlighted)": "D One of the precepts of kinetic molecular theory is that gas molecules exert no forces on each other; thus, in all containers there are no IMFs present.",
+        "ImagePath": "Chemistry/157"
+    },
+    {
+        "Question": "The diagram below shows three identical 1.0 L containers filled with the indicated amounts of gas. The stopcocks connecting the containers are originally closed and the gases are all at 25\u00b0C. Assume ideal behavior. Which gas exerts the greatest pressure?\nA. He\nB. Ne\nC. NO\nD. All gases exert the same amount of pressure.",
+        "Answer (final answer highlighted)": "A Pressure is directly dependent on the number of moles. In their respective containers, there are 5 moles of He, 2 moles of Ne, and 1 mole of NO. As there are the most moles of He, the He must exert the greatest pressure.",
+        "ImagePath": "Chemistry/158"
+    },
+    {
+        "Question": "Which structure is more likely to correspond with the actual Lewis diagram for the sulfate ion?\nThere are several different potential Lewis diagrams for the sulfate ion, two of which are below.\nA. Structure A; single bonds are more stable than double bonds\nB. Structure A; it has the most unshared pairs of electrons\nC. Structure B; there are more possible resonance structures\nD. Structure B; fewer atoms have formal charges",
+        "Answer (final answer highlighted)": "D The formal charge tables for each diagram are below (note: for structure B, the double-bonded oxygens are the first two, and the single bonded are the last two).  ![image](https://img.apstudy.net/ap/chemistry/cr20/0141_Image_0001.jpg)  The total formal charge on each potential structure is -2, which is correct, as that is the charge on a sulfate ion. However, the right-hand structure has fewer atoms with formal charges, making it the more likely structure.",
+        "ImagePath": "Chemistry/159"
+    },
+    {
+        "Question": "Which of the following statements regarding the structure B is true?\nThere are several different potential Lewis diagrams for the sulfate ion, two of which are below.\nA. The double bonds must be located opposite of each other due to additional electron repulsion.\nB. It is a more polar molecule than the molecule represented by structure A.\nC. The bonds in the molecule are weaker than those in structure A.\nD. All bonds in the molecule are identical to each other.",
+        "Answer (final answer highlighted)": "D In any molecule displaying resonance, all bonds are identical.",
+        "ImagePath": "Chemistry/160"
+    },
+    {
+        "Question": "What is the S-O bond order in the structure B?\nThere are several different potential Lewis diagrams for the sulfate ion, two of which are below.\nA. 1.0\nB. 1.33\nC. 1.5\nD. 1.67",
+        "Answer (final answer highlighted)": "C Six total bonds divided by four locations gives a bond order of 1.5.",
+        "ImagePath": "Chemistry/161"
+    },
+    {
+        "Question": "What is the molecular geometry in the structure A?\nThere are several different potential Lewis diagrams for the sulfate ion, two of which are below.\nA. Tetrahedral\nB. Trigonal Planar\nC. Trigonal Pyramidal\nD. Octahedral",
+        "Answer (final answer highlighted)": "A Four charge clouds and no lone pairs means tetrahedral geometry.",
+        "ImagePath": "Chemistry/162"
+    },
+    {
+        "Question": "Use the PES spectra below to answer questions.How many valence electrons does this atom have?\nA. 2\nB. 3\nC. 4\nD. 5",
+        "Answer (final answer highlighted)": "D Valence electrons are those in the outermost energy level. In this case, that is the third level, which has five valence electrons in it (two in 3s and three in 3p).",
+        "ImagePath": "Chemistry/163"
+    },
+    {
+        "Question": "An electron from which peak would have the greatest velocity after ejection?\nUse the PES spectra below to answer questions.\nA. The peak at 104 MJ/mol\nB. The peak at 6.84 MJ/mol\nC. The peak at 4.98 MJ/mol\nD. The peak at 1.76 MJ/mol",
+        "Answer (final answer highlighted)": "D The less ionization energy that is required to remove an electron, the more kinetic energy that electron will have after ejection.",
+        "ImagePath": "Chemistry/164"
+    },
+    {
+        "Question": "How many significant digits are present in the temperature read from the thermometer illustrated to the right?\n\nA.1        \nB.2\nC.3        \nD.4",
+        "Answer (final answer highlighted)": "C The number is 27.5, which have 3 significant digits.",
+        "ImagePath": "Chemistry_extra/1"
+    },
+    {
+        "Question": "The marks on the following target represent someone who is:\n\nA.accurate, but not precise.\r\nB.precise, but not accurate.\r\nC.both accurate and precise.\r\nD.neither accurate nor precise.\r\n",
+        "Answer (final answer highlighted)": "D They are not centered on the bulls eye and not close to each other",
+        "ImagePath": "Chemistry_extra/2"
+    },
+    {
+        "Question": "Pictured below is a schematic of the Rutherford experiment.  Which scattered \uf061-particle gives the best evidence for the nuclear atom?\n\nA. a\nB. b\nC. c\nD. d",
+        "Answer (final answer highlighted)": "A ",
+        "ImagePath": "Chemistry_extra/3"
+    },
+    {
+        "Question": "What position on the standing wave shown below corresponds to a crest?\n\nA. a\r\nB. b\r\nC. c\r\nD. d\nE. e",
+        "Answer (final answer highlighted)": "B",
+        "ImagePath": "Chemistry_extra/4"
+    },
+    {
+        "Question": "The value of l that is related to the following orbital is:\n\nA. 0\nB. 1\nC. 2\nD. 3\nE. 4",
+        "Answer (final answer highlighted)": "B This is a p-orbital, whose value l should be 1.",
+        "ImagePath": "Chemistry_extra/5"
+    },
+    {
+        "Question": "The titration curves labeled 1 and 2 were obtained by titrating equal volumes of two different acid samples with portions of the same sodium hydroxide solution. What conclusions can be drawn about the relative concentrations and strengths of acids 1 and 2 from these curves?\n\n(A)\tThe concentrations are the same but acid 1 is weaker than acid 2.\r\n(B)\tThe concentrations are the same but acid 1 is stronger than acid 2.\r\n(C)\tAcid 1 is the same strength as acid 2, but it is less concentrated.\r\n(D)\tAcid 1 is the same strength as acid 2, but it is more concentrated. \r\n",
+        "Answer (final answer highlighted)": "A The concentrations are the same because they take the same amount.",
+        "ImagePath": "Chemistry_extra/6"
+    },
+    {
+        "Question": "According to the above data, what is the half-life of the substance?\n\nA. 1.0 hrs\nB. 2.3 hrs\nC. 3.0 hrs\nD. 8.0 hrs",
+        "Answer (final answer highlighted)": "C",
+        "ImagePath": "Chemistry_extra/7"
+    },
+    {
+        "Question": "What percent of the original sample remains after 4 hours?\n\nA. 80%\nB. 75%\nC. 60%\nD. 40%",
+        "Answer (final answer highlighted)": "D",
+        "ImagePath": "Chemistry_extra/7"
+    },
+    {
+        "Question": "The elements I and Te have similar average atomic masses. A sample that was believed to be a mixture of I and Te was run through a mass spectrometer which separates a sample by mass into isotopes, resulting in the data below. All of the following statements are true. Which one would be the best basis for concluding that the sample was pure Te?\n\nA. Te forms ions with a -2 charge, whereas I forms ions with a -1 charge.\nB. Te is more abundant than I in the universe.\nC. I consists of only one naturally occurring isotope with 74 neutrons, whereas Te has more than one isotope\nD. I has a higher first ionization energy than Te does.",
+        "Answer (final answer highlighted)": "C The graph shows different isotopes by mass. Remember that isotopes of an element have a different number of neutrons, giving them a different mass number. If\nIodine only has one isotope with 74 neutrons, it\u2019s mass should be 127 (74 neutrons + 53 protons). There is no peak at 127, so the mixture must not have any iodine.",
+        "ImagePath": "Chemistry_extra/8"
+    },
+    {
+        "Question": "The diagram below models a change that occurs in matter. Based on what you know about changes in matter, explain why the diagram shows a physical change rather than a chemical change.\r\n\nA. The particles get smaller.\r\nB. The volume of the matter decreases.\r\nC. The composition of the matter stays the same.\r\nD. The particles change into particles of different substances",
+        "Answer (final answer highlighted)": "C  In physical changes, the bonds/particles do not change. In this diagram they did not change, they just condensed. This represents gas becoming liquid or solid.",
+        "ImagePath": "Chemistry_extra/9"
+    },
+    {
+        "Question": "In an experiment, a solid 1 molar sample of Substance A was gradually heated by a source of constant energy for several hours and the temperature was measured periodically. At the end of the heating period, Substance A had been converted to the gas phase. The heating curve produced by this experiment is shown below. During the course of the experiment, there was a period of time when the phase of Substance A was in equilibrium with the liquid phase. At what temperature did this occur?\n\n(A) Between 100 K and 150 K\r\n(B) At 150 K\r\n(C) Between 150 K and 250 K\r\n(D) At 250 K\r\n(E) Between 250 K and 350 K",
+        "Answer (final answer highlighted)": "B The first flat part of the heating curve corresponds to the phase change from solid to liquid. During the phase change, an equilibrium exists between the two phases.",
+        "ImagePath": "Chemistry_extra/10"
+    },
+    {
+        "Question": "In an experiment, a solid 1 molar sample of Substance A was gradually heated by a source of constant energy for several hours and the temperature was measured periodically. At the end of the heating period, Substance A had been converted to the gas phase. The heating curve produced by this experiment is shown below. Based on the data given in the heating curve,which of the following statements is NOTtrue regarding Substance A?\n\n(A) The boiling point of Substance A is 250 K.\n(B) The freezing point of Substance A is150 K.\n(C) The heat of vaporization of Substance A is greater than the heat of fusion.\n(D) Substance A is a liquid at room temperature.\n(E) The intermolecular forces exhibited by Substan",
+        "Answer (final answer highlighted)": "D Choice (D) is the only choice that's not true. Room temperature is about 298 K. At 298 K,Substance A is in the gas phase, not the liquid phase. As for the other answers, Choices (A)and (B) accurately give the boiling and freezing points. Choice (C) is accurate because the vaporization line is much longer than the fusion line. Heat of vaporization is usually much higher than heat of fusion. Choice (E) is accurate because the boiling and freezing points of substance A are lower than those of water, so Substance A must be held together by weaker intermolecular forces. ",
+        "ImagePath": "Chemistry_extra/10"
+    },
+    {
+        "Question": "In an experiment, a solid 1 molar sample of Substance A was gradually heated by a source of constant energy for several hours and the temperature was measured periodically. At the end of the heating period, Substance A had been converted to the gas phase. The heating curve produced by this experiment is shown below. During the course of the experiment,Substance A was gradually heated from 100K to 350 K. When the temperature reached 250 K, the energy absorbed by Substance A?\n\n(A} was used to change from liquid to gas phase.\r\n(B) was used to change from gas to liquid phase.\r\n(C) was used to change from solid to liquid phase.\r\n(D) was used to change from liquid to solid phase.\r\n(E) was reduced to zero. ",
+        "Answer (final answer highlighted)": "A  At 250 K, Substance A boiled. That means that the temperature remained constant while the energy absorbed was used to break up the forces holding the liquid together and convert the substance to a gas. ",
+        "ImagePath": "Chemistry_extra/10"
+    },
+    {
+        "Question": "Which of the following is true of the reactions shown in the diagram above?\n\n(A) The reaction is endothermic because the reactants are at a higher energy level than the products.\n(B) The reaction is endothermic because the reactants are at a lower energy level than the products.\n(C) The reaction is exothermic because the reactants are at a higher energy level than the products.\n(D) The reaction is exothermic because the reactants are at a lower energy level than the products.\n(E) The reaction is endothermic because the reactants are at the same energy level as the products.",
+        "Answer (final answer highlighted)": "C In an exothermic reaction, energy is given off as the products are created because the products have less potential energy than the reactants.",
+        "ImagePath": "Chemistry_extra/11"
+    },
+    {
+        "Question": "Which point on the graph shown above corresponds to an activated complex or transition state?\n\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5 ",
+        "Answer (final answer highlighted)": "C Point 3 represents the activated complex, which is the ppint of highest energy. This point is the transition state between the reactants and the products. ",
+        "ImagePath": "Chemistry_extra/12"
+    },
+    {
+        "Question": "The following titration curve shows the titration of a weak base with a strong acid. Which of the following values most accurately approximates the p$K_b$ of the weak base?\r\n\n(A) 9.8\r\n(B) 8.4\r\n(C) 7\r\n(D) 3.3\r\n(E) 4.2 \r",
+        "Answer (final answer highlighted)": "E The half equivalence point of this titration, is around pH= 9.8. At the half equivalence point, the amount of\r\nbase (which we can call [A-] as we do when talking about acids and pH values) is equal to the neutralized base [HA]. When these two quantities are equal, the H-H equation tells us that the\r\npH = the $pK_a$,  which when subtracted from 14 gives the $pK_b$. Therefore, the answer = 4.2.",
+        "ImagePath": "Chemistry_extra/13"
+    },
+    {
+        "Question": "Given a reaction A+B \u2192C. Based on the following experimental data, what is the rate law for the hypothetical reaction given above?\n\n(A) Rate= $k[A]$\n(B) Rate= $k[A]^2$\n(C) Rate = $k[B]$\n(D) Rate = $k[B]^2$\n(E) Rate = $k[A][B]$\n",
+        "Answer (final answer highlighted)": "C From a comparison of experiments 1 and 2, when [B] is doubled while [A] is held constant, the rate doubles. That means that the reaction is first order with respect to B.From a comparison of experiments 2 and 3, when [A] is doubled while [B] is held constant, the rate doesn't change. That means that the reaction is zero order with respect to A and that A will not appear in the rate law.So the rate law is Rate= k[B]. ",
+        "ImagePath": "Chemistry_extra/14"
+    },
+    {
+        "Question": "Given a reaction A+B \u2192C. Based on the following experimental data, what is the rate law for the hypothetical reaction given above?\r\n\r\n(A) Rate= $k[A]$\r\n(B) Rate= $k[A]^2$\r\n(C) Rate = $k[B]$\r\n(D) Rate = $k[B]^2$\r\n(E) Rate = $k[A][B]$\r",
+        "Answer (final answer highlighted)": "E From a comparison of experiments 1 and 2, when [B] is doubled while [A] is held constant, the rate doubles. That means that the reaction is first order with respect to B.From a comparison of experiments 2 and 3, when both [A] and [B] are doubled, the rate increases by a factor of 4. We would expect the rate to double based on the change in B; because the rate is in fact multiplied by 4, the doubling of A must also change the rate by a factor of 2, so the action is also first order with respect to A.So the rate law is Rate= k[A][B]. ",
+        "ImagePath": "Chemistry_extra/15"
+    },
+    {
+        "Question": "Given a reaction A+B \u2192C. Based on the following experimental data, what is the rate law for the hypothetical reaction given above?\n\n(A) Rate= $k[A][B]$\n(B) Rate= $k[A]^2$\n(C) Rate = $k[A][B]^2$\n(D) Rate = $k[B]^2$\n(E) Rate = $k[A]^2[B]^2$\n",
+        "Answer (final answer highlighted)": "C From a comparison of experiments 1 and 2, when [A] is quadrupled while [B] is held constant, the rate quadruples. That means that the reaction is first order with respect to A. From a comparison of experiments 2 and 3, when [B] is doubled while [A] is held constant, the rate quadruples. That means that the reaction is second order with respect to B.So the rate law is Rate = k[A][B]^2.",
+        "ImagePath": "Chemistry_extra/16"
+    },
+    {
+        "Question": " The formal charge on carbon in the molecule below is.\n\nA) 0 \nB) +1 \nC) -1 \nD) +3 \nE) +2",
+        "Answer (final answer highlighted)": "A",
+        "ImagePath": "Chemistry/165"
+    },
+    {
+        "Question": "The molecular geometry of the left-most carbon atom in the molecule below is:\n\nA) octahedral\nB) tetrahedral\nC) trigonal planar\nD) T-shaped\nE) trigonal bipyramidal",
+        "Answer (final answer highlighted)": "B",
+        "ImagePath": "Chemistry/166"
+    },
+    {
+        "Question": "The bond angles marked a, b, and c in the molecule below are about __________, __________, and __________,\nrespectively.\n\nA) 120, 120, 90\nB) 90, 90, 90\nC) 120, 120, 109.5\nD) 109.5, 90, 120\nE) 109.5, 120, 109.5",
+        "Answer (final answer highlighted)": "E",
+        "ImagePath": "Chemistry/167"
+    },
+    {
+        "Question": "Based on molecular mass and dipole moment of the five compounds in the table below, which should have the\nhighest boiling point?\n\nA) $CH_3OCH_3$\nB) $CH_3CN$\nC) $CH_3CHO$\nD) $CH_3Cl$\nE) $CH_3CH_2CH_3$",
+        "Answer (final answer highlighted)": "B",
+        "ImagePath": "Chemistry/168"
+    },
+    {
+        "Question": "On the phase diagram above, segment __________ corresponds to the conditions of temperature and pressure under which the solid and the gas of the substance are in equilibrium.\n\nA) CD \nB) AB \nC) AD \nD) BC \nE) AC",
+        "Answer (final answer highlighted)": "E",
+        "ImagePath": "Chemistry/169"
+    },
+    {
+        "Question": "The phase diagram of a substance is given above. The region that corresponds to the solid phase is __________.\nA) w \nB) x \nC) y \nD) z \nE) x and y",
+        "Answer (final answer highlighted)": "A",
+        "ImagePath": "Chemistry/170"
+    },
+    {
+        "Question": "Based on the figure above, the boiling point of ethyl alcohol under an external pressure of 0.0724 atm is\n________eC.\n\nA) 60 \nB) 20 \nC) 70 \nD) 80 \nE) 40",
+        "Answer (final answer highlighted)": "B",
+        "ImagePath": "Chemistry/171"
+    },
+    {
+        "Question": "The graph shown below depicts the relationship between concentration and time for the following chemical\nreaction. The slope of this line is equal to __________.\nA) -k \nB) -1/k \nC) k \nD) ln[A]o \nE) 1/k",
+        "Answer (final answer highlighted)": "A",
+        "ImagePath": "Chemistry/172"
+    },
+    {
+        "Question": "Which energy difference in the energy profile below corresponds to the activation energy for the forward\nreaction?\n\nA) x \nB) y \nC) x + y \nD) y - x \nE) x - y",
+        "Answer (final answer highlighted)": "A",
+        "ImagePath": "Chemistry/173"
+    },
+    {
+        "Question": "A 25.0-mL sample of a solution of a monoprotic acid is titrated with a 0.115 M NaOH solution. The titration\ncurve above was obtained. Which of the indicators in the table would be best for this titration?\n\nA) bromocresol purple\nB) bromthymol blue\nC) thymol blue\nD) phenolpthalein\nE) methyl red",
+        "Answer (final answer highlighted)": "B",
+        "ImagePath": "Chemistry/174"
+    },
+    {
+        "Question": "Consider the following table of $K_{sp}$ values. Which compound listed below has the greatest molar solubility in water?\n\nA) $ZnCO_3$ \nB) $CdCO_3$ \nC) $CaF_2$ \nD) $AgI$ \nE) $Cd(OH)_2$",
+        "Answer (final answer highlighted)": "C",
+        "ImagePath": "Chemistry/175"
+    },
+    {
+        "Question": "Consider the following table of $K_{sp}$ values. The solubility of manganese hydroxide ($Mn(OH)_2$) is 2.2e-5 M. What is the Ksp of $Mn(OH)_2$?\n\nA) 2.1e-14 \nB) 4.3e-14 \nC) 1.1e-14 \nD) 2.2e-5 \nE) 4.8e-10",
+        "Answer (final answer highlighted)": "B",
+        "ImagePath": "Chemistry/176"
+    },
+    {
+        "Question": "Consider the following table of $K_{sp}$ values. The molar solubility of __________ is not affected by the pH of the solution.\n\nA) $AlCl_3 $\nB) $Na_3PO_4$\nC) $NaF$ \nD) $KNO_3$\nE) $MnS$",
+        "Answer (final answer highlighted)": "D",
+        "ImagePath": "Chemistry/177"
+    },
+    {
+        "Question": "Consider the following table of $K_{sp}$ values. In which of the following aqueous solutions would you expect AgCl to have the lowest solubility?\n\nA) 0.020 $AgNO_3$\nB) 0.020 M $BaCl_2$\nC) pure water\nD) 0.015 $NaCl$\nE) 0.020 $KCl$",
+        "Answer (final answer highlighted)": "B",
+        "ImagePath": "Chemistry/178"
+    },
+    {
+        "Question": "The equilibrium position corresponds to which letter on the graph of G vs f (course of reaction) below?\n\nA) A \nB) B \nC) C \nD) D \nE) E",
+        "Answer (final answer highlighted)": "C",
+        "ImagePath": "Chemistry/179"
+    }
+]
